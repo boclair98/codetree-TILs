@@ -6,7 +6,7 @@ public class Main {
         int n ;
         n = sc.nextInt();
         
-        for (int i = 0; i<6; i++ ){
+        for (int i = 0; i<n; i++ ){
             System.out.println("LeebrosCode");
         }
         
