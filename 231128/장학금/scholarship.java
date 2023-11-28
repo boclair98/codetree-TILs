@@ -6,7 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
         if (n>=90 && m>=95){
-            System.out.println(1000000);
+            System.out.println(100000);
         }
         else if (n>=90 && m>=90){
             System.out.println(50000);
