@@ -22,6 +22,14 @@ public class Main {
                 System.out.println(c);
             }
         }
+        else if (a>c){
+            if (b>c){
+                System.out.println(b);
+            }
+            else if (c>b){
+                System.out.println(c);
+            }
+        }
         
         }
     }
