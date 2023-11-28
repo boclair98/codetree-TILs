@@ -18,10 +18,10 @@ public class Main {
         }
         else{
             if (n%2 == 1){
-                System.out.println(31);
+                System.out.println(30);
             }
             else{
-                System.out.println(30);
+                System.out.println(31);
             }
         }
     }
