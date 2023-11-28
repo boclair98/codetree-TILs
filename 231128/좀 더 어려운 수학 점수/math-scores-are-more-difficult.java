@@ -15,6 +15,14 @@ public class Main {
         else if (b_math > a_math){
             System.out.println("B");
         }
+        else if (b_math == a_math){
+            if (a_eng>b_eng){
+                System.out.println("A");
+            }
+            else{
+                System.out.println("B");
+            }
+        }
         
     }
 }
