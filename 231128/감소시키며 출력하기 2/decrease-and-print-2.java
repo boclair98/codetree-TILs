@@ -4,7 +4,7 @@ public class Main {
         int i = 26;
         while (i>=10){
             System.out.print(i+" ");
-            i--;
+            --i;
         }
     }
 }
