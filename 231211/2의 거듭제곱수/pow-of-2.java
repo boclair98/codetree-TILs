@@ -1,20 +1,24 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int tal =1;
-        int start = 0;
-        while (true){
-            start =2*tal;
-            if (start == n){
-                System.out.print(tal);
-                break;
-            }
-            
-            tal = tal+1;
+        
+        // 변수 선언 및 입력
+        int n;
+        n = sc.nextInt();
+        int prod = 1;
+	    int x = 0;
 
+        while(true) {
+            // prod가 n이 될 때까지 2를 곱합니다.
+            if(n == prod)
+                break;
+            
+            prod *= 2;
+            x++;
         }
+
+        System.out.println(x);
     }
 }
