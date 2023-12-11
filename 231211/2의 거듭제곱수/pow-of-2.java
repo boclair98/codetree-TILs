@@ -5,9 +5,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int tal =1;
-        int start = 2;
+        int start = 0;
         while (true){
-            start =start*tal;
+            start =2*tal;
             if (start == n){
                 System.out.print(tal);
                 break;
