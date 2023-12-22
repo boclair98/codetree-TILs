@@ -9,7 +9,7 @@ public class Main {
         for(int i = 1; i<=n; i++){
 
             if (i%2 == 1){
-                for(int k = 1; k<=3; k++){
+                for(int k = 1; k<=n; k++){
                     System.out.print(cnt+" ");
                     if(k!=n){
                         cnt++;
