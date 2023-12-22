@@ -18,7 +18,7 @@ public class Main {
                 }
             }
             else{
-                cnt = cnt * i ;
+                cnt = cnt + n ;
                 for(int t = 1 ; t<=n; t++){
                     System.out.print(cnt+" ");
                     if(t!=n){
