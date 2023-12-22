@@ -10,11 +10,13 @@ public class Main {
                 if(i%2 == 0){
                 
                     System.out.print(i+" * "+j+" = "+i*j);
-                    if(i!=2){
+                    if (i!=n){
                         System.out.print(" / ");
                     }
+                    
                 
                 }
+                
             }
             System.out.println();
         }
