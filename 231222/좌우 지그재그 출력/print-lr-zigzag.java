@@ -11,14 +11,22 @@ public class Main {
             if (i%2 == 1){
                 for(int k = 1; k<=3; k++){
                     System.out.print(cnt+" ");
-                    cnt++;
+                    if(k!=n){
+                        cnt++;
+                    }
+                    
                 }
             }
             else{
-                for(int t = 0 ; t<n; t++){
-                    System.out.print(n*i+" ");
-                    n--;
+                cnt = cnt * i ;
+                for(int t = 1 ; t<=n; t++){
+                    System.out.print(cnt+" ");
+                    if(t!=n){
+                        cnt--;
+                    }
+                    
                 }
+                cnt=cnt+n;
             }
             
             System.out.println();
