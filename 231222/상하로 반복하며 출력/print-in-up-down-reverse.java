@@ -5,20 +5,25 @@ public class Main {
         Scanner sc =new Scanner(System.in);
         int n = sc.nextInt();
 
-        for(int i = 0; i<n; i++){
+        int tal = n + 1;
 
-            for(int j = n; j>=1; j--){
+        for(int i = 1; i<=n; i++){
 
-                if(j%2==0){
-                    System.out.print(i+1);
+            for(int j = 0; j<n; j++){
+                if (j%2==0){
+                    System.out.print(i);
                 }
                 else{
-                    System.out.print(n-i);
+                    System.out.print(tal - 1);
+            
                 }
             }
+            tal = tal - 1;
             System.out.println();
-
-
         }
+            
+
+
+        
     }
 }
