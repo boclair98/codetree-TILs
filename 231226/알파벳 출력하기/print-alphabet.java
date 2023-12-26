@@ -10,10 +10,11 @@ public class Main {
             for(int k = 1; k<=i;k++){
                 System.out.print(alp);
                 alp++;
-                if (alp =='Z'){
+                
+            }
+            if (alp =='Z'){
                     alp = 'A';
                 }
-            }
             System.out.println();
         }
     }
