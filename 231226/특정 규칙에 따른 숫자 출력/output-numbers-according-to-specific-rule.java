@@ -16,7 +16,7 @@ public class Main {
                 System.out.print(tal+" ");
                 tal++;
             }
-            if(tal == 10){
+            if(tal >9){
                 tal = 1;
             }
             System.out.println();
