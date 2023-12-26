@@ -9,11 +9,11 @@ public class Main {
         for(int i =1 ; i<=n; i++){
             for(int k = 1; k<=i;k++){
                 System.out.print(alp);
-                
+                alp++;
                 if (alp =='Z'){
                     alp = 'A';
                 }
-                alp++;
+                
             }
             
             System.out.println();
