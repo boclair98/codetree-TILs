@@ -14,8 +14,9 @@ public class Main {
             }
             else{
                 arr[i] = a;
-                cnt++;
+                
             }
+            cnt++;
         }
         
         for(int k = cnt-1 ;k>=0; k--){
