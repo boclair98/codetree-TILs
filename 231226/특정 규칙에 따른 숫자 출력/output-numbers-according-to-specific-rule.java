@@ -7,7 +7,9 @@ public class Main {
         int tal = 1;
         for(int i = 0; i<n; i++){
 
-            
+            if(tal >9){
+                tal = 1;
+            }
             for(int k = 0; k<i; k++){
                 System.out.print("  ");
             }
@@ -16,9 +18,7 @@ public class Main {
                 System.out.print(tal+" ");
                 tal++;
             }
-            if(tal >10){
-                tal = 1;
-            }
+            
             System.out.println();
         }
     }
