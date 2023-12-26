@@ -7,14 +7,9 @@ public class Main {
         int cnt = 0;
         
         for(int i = 0; i<9; i++){
-            int a = sc.nextInt();
-
-            if (a==0){
+            arr[i] = sc.nextInt();
+            if(arr[i]==0){
                 break;
-            }
-            else{
-                arr[i] = a;
-                
             }
             cnt++;
         }
