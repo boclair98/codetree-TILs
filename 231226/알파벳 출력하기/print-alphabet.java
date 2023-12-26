@@ -10,7 +10,7 @@ public class Main {
             for(int k = 1; k<=i;k++){
                 System.out.print(alp);
                 
-                if (alp =='['){
+                if (alp =='Z'){
                     alp = 'A';
                 }
                 alp++;
