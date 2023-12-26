@@ -14,7 +14,7 @@ public class Main {
             cnt++;
         }
         
-        for(int k = cnt-1 ;k>=0; k--){
+        for(int k = cnt ;k>=0; k--){
             System.out.print(arr[k]+" ");
         }
     }
