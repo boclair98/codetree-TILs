@@ -6,7 +6,7 @@ public class Main {
         int[] arr = new int[10];
         int cnt = 0;
         
-        for(int i = 0; i<9; i++){
+        for(int i = 0; i<10; i++){
             arr[i] = sc.nextInt();
             if(arr[i]==0){
                 break;
@@ -14,7 +14,7 @@ public class Main {
             cnt++;
         }
         
-        for(int k = cnt ;k>=0; k--){
+        for(int k = cnt-1 ;k>=0; k--){
             System.out.print(arr[k]+" ");
         }
     }
