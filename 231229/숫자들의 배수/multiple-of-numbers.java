@@ -17,7 +17,7 @@ public class Main {
         }
 
         for(int i = 0 ; i<10; i++){
-            if (cnt2>2){
+            if (cnt2>1){
                 break;
             }
             if (arr[i] %5==0){
