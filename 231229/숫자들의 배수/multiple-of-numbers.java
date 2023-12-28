@@ -6,6 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int[] arr = new int[11];
         int cnt = 1 ;
+        int cnt2 = 0 ;
 
         for(int i = 0; i<10; i++){
             arr[i] = n;
@@ -16,7 +17,18 @@ public class Main {
         }
 
         for(int i = 0 ; i<10; i++){
-            System.out.print(arr[i]+" ");
+            if (cnt2>2){
+                break;
+            }
+            if (arr[i] %5==0){
+                cnt2++;
+                System.out.print(arr[i]+" ");
+            }
+            else{
+                System.out.print(arr[i]+" ");
+            }
+            
+
         }
     }
 }
