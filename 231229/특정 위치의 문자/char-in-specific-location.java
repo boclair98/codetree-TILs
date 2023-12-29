@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         char n = sc.next().charAt(0);
         char[] chr = new char[]{'L','E','B','R','O','S'};
-        int tal = 0 ;
+        int tal = -1 ;
         for(int i = 0 ; i<6; i++){
             if(chr[i] == n){
                 tal = i;
