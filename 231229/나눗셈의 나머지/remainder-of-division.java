@@ -15,7 +15,7 @@ public class Main {
             arr[tal]++;
         }
         int sum = 0;
-        for(int i = 0 ; i<100; i++){
+        for(int i = 0 ; i<b; i++){
             sum = arr[i]*arr[i] + sum;
         }
         System.out.print(sum);
