@@ -8,7 +8,7 @@ public class Main {
         int tal = 0 ;
         int[] arr = new int[100];
 
-        while(a!=0){
+        while(a>1){
             
             
             arr[a%b]++;
