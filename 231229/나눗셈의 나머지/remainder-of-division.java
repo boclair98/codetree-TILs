@@ -10,8 +10,8 @@ public class Main {
 
         while(a!=0){
             
-            a= a/4;
-            tal = a % 4;
+            a= a/b;
+            tal = a %b ;
             arr[tal]++;
         }
         int sum = 0;
