@@ -11,8 +11,7 @@ public class Main {
         while(a!=0){
             
             a= a/b;
-            tal = a %b ;
-            arr[tal]++;
+            arr[a%b]++;
         }
         int sum = 0;
         for(int i = 0 ; i<b; i++){
