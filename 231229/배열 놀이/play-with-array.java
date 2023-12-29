@@ -40,8 +40,9 @@ public class Main {
             else if (a==3){
                 int h = sc.nextInt();
                 int e = sc.nextInt();
-                System.out.print(arr[h-1]+" ");
-                System.out.print(arr[e-1]);
+                for(int z = h-1 ; z<e; z++){
+                    System.out.print(arr[z]+" ");
+                }
             }
         }
     }
