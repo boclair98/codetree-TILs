@@ -43,6 +43,7 @@ public class Main {
                 for(int z = h-1 ; z<e; z++){
                     System.out.print(arr[z]+" ");
                 }
+                System.out.println();
             }
         }
     }
