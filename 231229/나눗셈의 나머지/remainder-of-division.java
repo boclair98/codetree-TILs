@@ -10,8 +10,9 @@ public class Main {
 
         while(a!=0){
             
-            a= a/b;
+            
             arr[a%b]++;
+            a= a/b;
         }
         int sum = 0;
         for(int i = 0 ; i<b; i++){
