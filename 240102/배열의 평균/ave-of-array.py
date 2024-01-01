@@ -18,4 +18,4 @@ for i in range(4):
     print(sum_val2/2,end=" ")
 print()
 
-print(total/6)
+print(f"{total/6:.1f}")
