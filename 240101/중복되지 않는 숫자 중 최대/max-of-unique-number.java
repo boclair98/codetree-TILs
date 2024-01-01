@@ -10,34 +10,33 @@ public class Main {
         for(int i = 0 ; i<n; i++){
             arr[i] = sc.nextInt();
         }
-        int max_val = 0 ;
-        int count = 0 ; 
         
+        int count = 0 ; 
+        int num = 0 ; 
+        for(int j = 0 ; j<n; j++){
+            int max_val = 0 ;
+            for(int k = j+1; k<n; k++){
 
-        for(int i = 0 ; i<n; i++){
-            boolean tr = true;
-            int cnt = 0 ;
-            for(int k = i+1; k<n; k++){
-                if(arr[i] == arr[k]){
-                    tr = false;
+                if(arr[j] == arr[k]){
+                    max_val++;
                     break;
                 }
             }
-            if(tr ==true){
-                if(max_val<=arr[i]){
-                    max_val = arr[i];
-                    count++;
-                }
-                
+            if(max_val==0){
+                count++;
+                num = arr[j];
+            }
+            else{
+                count--;
             }
         }
-        if(count>0){
-            System.out.print(max_val);
+
+        if (count>0){
+            System.out.print(num);
         }
         else{
             System.out.print(-1);
         }
-
        
         
     }
