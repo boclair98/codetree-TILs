@@ -24,7 +24,9 @@ public class Main {
             }
             if(max_val==0){
                 count++;
-                num = arr[j];
+                if(num<arr[j]){
+                    num = arr[j];
+                }
             }
             else{
                 count--;
