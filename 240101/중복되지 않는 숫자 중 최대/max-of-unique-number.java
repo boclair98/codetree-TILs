@@ -17,6 +17,7 @@ public class Main {
             for(int k = i+1; k<n; k++){
                 if(arr[i]==arr[k]){
                     cnt++;
+                    break;
                 }    
             }
             if (cnt == 0){
