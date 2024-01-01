@@ -24,7 +24,7 @@ public class Main {
                 }
             }
             if(tr ==true){
-                if(max_val<arr[i]){
+                if(max_val<=arr[i]){
                     max_val = arr[i];
                     count++;
                 }
