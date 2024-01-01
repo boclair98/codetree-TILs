@@ -15,7 +15,7 @@ public class Main {
         }
 
         for(int i = 0 ; i<n ; i++){
-            if(arr[i]>max_val){
+            if(arr[i]>=max_val){
                 max_val = arr[i];
             }
         }
@@ -24,7 +24,7 @@ public class Main {
             if(arr[i]== max_val){
                 continue;
             }
-            else if(arr[i]>max2_val){
+            else if(arr[i]>=max2_val){
                 max2_val = arr[i];
             }
         }
