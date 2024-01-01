@@ -1,12 +1,9 @@
 n = int(input())
 arr = list(map(int,input().split())) 
-max_val = 0 ;
+max_val = 0 
 for i in range(n):
     for j in range(i+1,n):
-        if arr[i] < arr[j] and max_val<arr[j]-arr[i]:
-            max_val = arr[j] - arr[i]
-            break;
-if max_val == 0 :
-    print(0)
-else:
-    print(max_val)
+        profit = arr[j] - arr[i]
+        if profit > max_val:
+            max_val = profit
+print(max_val)
