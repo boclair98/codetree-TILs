@@ -15,7 +15,7 @@ public class Main {
         int num = 0 ; 
         for(int j = 0 ; j<n; j++){
             int max_val = 0 ;
-            for(int k = j+1; k<n; k++){
+            for(int k = 0; k<n; k++){
 
                 if(arr[j] == arr[k]){
                     max_val++;
