@@ -18,12 +18,12 @@ public class Main {
                     cnt = -1;
                     break;
                 }
-            else{
-                if (arr[i]>min_val){
+            
+            if (arr[i]>min_val){
                     min_val = arr[i];
                     cnt = 0 ;
                 }
-            }
+            
             }
         }
         if (cnt == -1){
