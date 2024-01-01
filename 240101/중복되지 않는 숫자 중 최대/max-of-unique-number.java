@@ -10,29 +10,21 @@ public class Main {
         for(int i = 0 ; i<n; i++){
             arr[i] = sc.nextInt();
         }
-        int cnt = 0 ;
+        
         int min_val= 0 ;
         for(int i = 0 ; i<n; i++){
+            int cnt = 0 ;
             for(int k = i+1; k<n; k++){
-                if (arr[i] == arr[k]){
-                    cnt = -1;
-                    break;
-                }
-            
-            if (arr[i]>min_val){
+                if(arr[i]==arr[k]){
+                    cnt++;
+                }    
+            }
+            if (cnt == 0){
+                if(arr[i]>min_val){
                     min_val = arr[i];
-                    cnt = 0 ;
                 }
-            
             }
         }
-        if (cnt == -1){
-            System.out.print(-1);
-        }
-        else{
-
-        
-            System.out.print(min_val);
-        }
-}
+        System.out.print(min_val);
+    }
 }
