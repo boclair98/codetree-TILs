@@ -33,7 +33,14 @@ public class Main {
             System.out.printf("%.1f ", (double)sum2_val/2);
         }
         System.out.println();
-        System.out.printf("%.1f",(double)total/6);
+        int sum = 0 ;
+
+        for(int i = 0 ; i<2;i++){
+            for (int j = 0 ; j<4; j++){
+                sum = arr[i][j] + sum;
+            }
+        }
+        System.out.printf("%.1f",(double)sum/8);
 
         
     }
