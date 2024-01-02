@@ -3,7 +3,7 @@ arr = [[0] * n for _ in range(n)]
 cnt = n*n
 for i in range(n):
 
-    if i%2==1:
+    if i%2==0:
         for j in range(n-1,-1,-1):
             arr[j][i] = cnt
             cnt-=1
