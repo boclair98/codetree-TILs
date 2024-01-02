@@ -13,13 +13,13 @@ public class Main {
 
             if (i%2==0){
                 for (int q = 0 ; q<n; q++){
-                    arr[i][q] =cnt;
+                    arr[q][i] =cnt;
                     cnt++;
                 }
             }
             else{
                 for(int w = n-1; w>=0; w--){
-                    arr[i][w] = cnt;
+                    arr[w][i] = cnt;
                     cnt++;
                 }
             }
