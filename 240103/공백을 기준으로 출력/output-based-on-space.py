@@ -4,5 +4,5 @@ tal =""
 for i in a:
     tal+=i
 for j in b:
-    tal+=i
+    tal+=j
 print(tal)
