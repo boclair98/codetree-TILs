@@ -10,7 +10,7 @@ else:
 
 cnt2 = 0 
 for i in range(1,len(word)):
-    if word[i]=='a' and word[i-1]=='b':
+    if word[i]=='b' and word[i-1]=='a':
         cnt2+=1
 if cnt2>0:
     print('Yes',end=" ")
