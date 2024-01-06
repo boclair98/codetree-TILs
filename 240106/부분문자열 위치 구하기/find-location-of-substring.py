@@ -6,7 +6,7 @@ for i in range(len(word)):
     if word[i:i+w] == word2:
         cnt+=i
         break
-if cnt>-1:
+if cnt>0:
     print(cnt)
 else:
     print(-1)
