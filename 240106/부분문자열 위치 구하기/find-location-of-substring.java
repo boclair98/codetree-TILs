@@ -8,11 +8,14 @@ public class Main {
         int cnt = -2;
        
         for (int i = 0 ; i<word.length(); i++){
+                if(i + word2 - 1 >= word)
+                    continue;
                 int tal = 0 ;
                 for(int j = 0 ; j<word2.length(); j++){
 
                     if(word.charAt(i+j)==word2.charAt(j)){
                         tal++;
+                        
                     }
                 }
                 if (tal == word2.length()){
@@ -22,7 +25,7 @@ public class Main {
             
         } 
         
-        if (cnt>0){
+        if (cnt>=0){
              System.out.print(cnt);
         }
         else{
