@@ -6,10 +6,12 @@ public class Main {
         String word = sc.next();
         String word2 =sc.next();
         int cnt = -2;
-       
+        int wordlen = word.length();
+        int word2len = word2.length();
         for (int i = 0 ; i<word.length(); i++){
-                if(i + word2 - 1 >= word)
+                if(i + word2len - 1 >= wordlen){
                     continue;
+                }
                 int tal = 0 ;
                 for(int j = 0 ; j<word2.length(); j++){
 
