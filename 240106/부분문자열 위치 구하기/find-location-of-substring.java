@@ -5,17 +5,29 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String word = sc.next();
         String word2 =sc.next();
-        int cnt = 0 ;
-        for (int i = 1 ; i<word.length(); i++){
-            if (word.charAt(i-1) == word2.charAt(0) && word.charAt(i)==word2.charAt(1)){
-                cnt = i-1;
-            }
-        }
+        int cnt = -2;
+       
+        for (int i = 0 ; i<word.length(); i++){
+                int tal = 0 ;
+                for(int j = 0 ; j<word2.length(); j++){
+
+                    if(word.charAt(i+j)==word2.charAt(j)){
+                        tal++;
+                    }
+                }
+                if (tal == word2.length()){
+                    cnt = i ;
+                    break;
+                }
+            
+        } 
+        
         if (cnt>=0){
-            System.out.print(cnt);
+             System.out.print(cnt);
         }
         else{
-            System.out.print(-1);
+             System.out.print(-1);
         }
+        
     }
 }
