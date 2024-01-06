@@ -22,7 +22,7 @@ public class Main {
             
         } 
         
-        if (cnt>=0){
+        if (cnt>0){
              System.out.print(cnt);
         }
         else{
