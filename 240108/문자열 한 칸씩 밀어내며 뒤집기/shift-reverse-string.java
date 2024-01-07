@@ -19,14 +19,9 @@ public class Main {
             else if(num==3){
                 
 
-                for (int k = word.length()-1; k>=0; k--){
-                    word+=word.charAt(k);
-
-                }
-
-                for (int j = word.length()/2; j<word.length(); j++){
-                    System.out.print(word.charAt(j));
-                }
+                StringBuffer sb = new StringBuffer(word);
+                word = sb.reverse().toString();
+                System.out.println(word);
                 
             }
         }
