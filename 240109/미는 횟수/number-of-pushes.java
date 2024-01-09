@@ -14,14 +14,15 @@ public class Main {
             word = word.substring(word.length()-1) + word.substring(0,word.length()-1);
             tal ++;
             
-            if (word.equals(b)){
+            if (word.equals(word2)){
                 System.out.print(tal);
                 break;
             }
-        }
-        if (i == word.length()-1){
+            if (i == word.length()-1){
             System.out.print(-1);
         }
+        }
+        
         }
         
     }
