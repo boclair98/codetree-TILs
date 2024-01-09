@@ -12,7 +12,7 @@ public class Main {
             else if (word.charAt(i)>='A' && word.charAt(i)<='Z'){
                 System.out.print((char)(word.charAt(i)+32));
             }
-            else if(word.charAt(i)>='1' && word.charAt(i)<='9'){
+            else if(word.charAt(i)>='0' && word.charAt(i)<='9'){
                 System.out.print(word.charAt(i));
             }
         }
