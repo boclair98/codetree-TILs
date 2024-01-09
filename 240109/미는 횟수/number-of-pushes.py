@@ -3,7 +3,7 @@ word2 = input()
 cnt = 0
 tot = False
 for i in range(len(word)):
-    word = word[1:]+word[0]
+    word =word[-1]+ word[0:len(word)-1]
     cnt+=1
     if word == word2:
         tot = True
