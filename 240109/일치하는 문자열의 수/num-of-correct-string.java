@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        // 여기에 코드를 작성해주세요.
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String word = sc.next();
+        int tal = 0 ; 
+        for (int i= 0; i<n; i++){
+            String word2 = sc.next();
+            if(word.equals(word2)){
+                tal++;
+            }
+        }
+        System.out.print(tal);
+    }
+}
