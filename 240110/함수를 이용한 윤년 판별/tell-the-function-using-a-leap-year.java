@@ -10,7 +10,9 @@ public class Main {
         else if(a%400==0){
             return true;
         }
-        return false;
+        else{
+            return false;
+        }
     }
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
