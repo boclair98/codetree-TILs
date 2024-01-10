@@ -44,7 +44,7 @@ public class Main {
         if ((m >= 12 || m <= 2) && (d <= nowday1(y, m))) {
             return "Winter";
         }
-        return "Invalid"; // 기본 반환문 추가
+        return "-1"; // 유효하지 않은 경우 -1 반환
     }
 
     public static void main(String[] args) {
@@ -53,10 +53,6 @@ public class Main {
         int m = sc.nextInt();
         int d = sc.nextInt();
 
-        if (!nowday(y, m, d).equals("Invalid")) {
-            System.out.print(nowday(y, m, d));
-        } else {
-            System.out.print(-1);
-        }
+        System.out.print(nowday(y, m, d));
     }
 }
