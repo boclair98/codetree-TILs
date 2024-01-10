@@ -1,29 +1,32 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int sosu(int z,int x){
-        int tal = 0 ;
-        boolean so = false;
-        for (int i = z ; i<=x; i++){
-            int cnt = 0 ;
-            for(int j=1; j<z; j++){
-                if(i%j == 0){
-                    cnt++;
-                }
-
-            }
-            if (cnt == 1){
-                tal = tal+ i;
-            }
+    public static boolean sosu(int i){
+        if (i == 1){
+            return false;
         }
-                    
-        return tal;
-    }
+        
+        for (int k=2; k<i; k++){
+            if (i%k == 0 ){
+                return false;
+                }
+            }
+        return true;
+        }
+        
+    
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        System.out.print(sosu(a,b));
+        int sum = 0 ;
+        for(int i = a; i<=b; i++){
+            if(sosu(i)){
+                sum+=i;
+            }
+        }
+        System.out.print(sum);
+        
     }
 }
