@@ -39,4 +39,7 @@ def day2(y,m,d):
         if(6<=m<=8) and d<=day(y,m):
             return "Summer"
 
-print(day2(y,m,d))
+if(day2(y,m,d)):
+    print(day2(y,m,d))
+else:
+    print(-1)
