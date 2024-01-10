@@ -15,6 +15,9 @@ public class Main {
             }
             so = false;
         }
+        if (z==1 && x==1){
+            tal = 1;
+        }
         return tal;
     }
     public static void main(String[] args) {
