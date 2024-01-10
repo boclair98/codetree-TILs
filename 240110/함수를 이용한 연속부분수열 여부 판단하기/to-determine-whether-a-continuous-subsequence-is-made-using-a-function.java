@@ -16,7 +16,7 @@ public class Main {
         for(int i = 0 ; i<n2; i++){
             arr2[i] = sc.nextInt();
         }
-
+        boolean re = false;
         for(int i = 0 ; i<=n1 - n2 ; i++){
             int cnt = 0;
             for (int j = 0 ; i<n2; j++){
@@ -28,8 +28,15 @@ public class Main {
                 }
             }
             if (cnt == n2){
-                System.out.print("Yes");
+                re = true;
             }
         }
+        if (re){
+            System.out.print("Yes");
+        }
+        else{
+            System.out.print("No");
+        }
+        
     }
 }
