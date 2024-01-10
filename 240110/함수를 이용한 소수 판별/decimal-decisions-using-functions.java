@@ -5,19 +5,18 @@ public class Main {
         int tal = 0 ;
         boolean so = false;
         for (int i = z ; i<=x; i++){
-            for(int j=2; j<z; j++){
+            int cnt = 0 ;
+            for(int j=1; j<z; j++){
                 if(i%j == 0){
-                    so = true;
+                    cnt++;
                 }
+
             }
-            if (so == false){
-                tal+=i;
+            if (cnt == 1){
+                tal = tal+ i;
             }
-            so = false;
         }
-        if (z==1 && x==1){
-            tal = 0;
-        }
+                    
         return tal;
     }
     public static void main(String[] args) {
