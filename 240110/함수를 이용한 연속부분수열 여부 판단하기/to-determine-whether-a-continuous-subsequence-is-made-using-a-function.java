@@ -16,10 +16,10 @@ public class Main {
         for(int i = 0 ; i<n2; i++){
             arr2[i] = sc.nextInt();
         }
-        
+        boolean re = false;
         for(int i = 0 ; i<=n1 - n2 ; i++){
             int cnt = 0;
-            boolean re = false;
+            re = false;
             for (int j = 0 ; i<n2; j++){
                 if (arr[i+j] == arr2[j]){
                     cnt++;
