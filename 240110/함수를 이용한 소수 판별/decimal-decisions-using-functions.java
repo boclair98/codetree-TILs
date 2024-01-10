@@ -16,7 +16,7 @@ public class Main {
             so = false;
         }
         if (z==1 && x==1){
-            tal = 1;
+            tal = 0;
         }
         return tal;
     }
