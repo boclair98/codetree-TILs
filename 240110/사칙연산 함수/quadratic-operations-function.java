@@ -14,7 +14,7 @@ public class Main {
         int c = sc.nextInt();
 
         if (b =='+'){
-            System.out.print(a+" + "+b+" = "+plus(a,c));
+            System.out.print(a+" + "+c+" = "+plus(a,c));
         }
         else if (b =='*'){
             System.out.print(a+" * "+c+" = "+a*c);
