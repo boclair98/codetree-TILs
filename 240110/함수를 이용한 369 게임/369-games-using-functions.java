@@ -3,7 +3,10 @@ public class Main {
     public static int num(int z, int x){
         int cnt = 0;
         for(int i = z; i<=x; i++){
-            if (i%10==3 || i%10==6 || i%10 ==9){
+            if (i%3==0){
+                cnt++;
+            }
+            else if (i%10==3 || i%10==6 || i%10 ==9){
                 cnt++;
                 
             }
@@ -11,10 +14,7 @@ public class Main {
                 cnt++;
                 
             }
-            else if (i%3==0){
-                cnt++;
-                
-            }
+            
             
         }
         return cnt;
