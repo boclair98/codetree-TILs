@@ -26,7 +26,7 @@ public class Main {
             System.out.print(a+" / "+c+" = "+a/c);
         }
         else{
-            System.out.print("false");
+            System.out.print("False");
         }
     }
 }
