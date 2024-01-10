@@ -8,4 +8,5 @@ def min_max(x,y):
         x = x * 2
         y = y + 25
     return x,y
-print(min_max(a,b))
+a,b= min_max(a,b)
+print(a,b)
