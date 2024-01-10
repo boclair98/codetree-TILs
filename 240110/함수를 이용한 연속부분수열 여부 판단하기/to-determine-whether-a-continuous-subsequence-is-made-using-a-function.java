@@ -29,6 +29,7 @@ public class Main {
             }
             if (cnt == n2){
                 re = true;
+                break;
             }
         }
         if (re){
