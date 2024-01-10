@@ -1,17 +1,17 @@
 import java.util.Scanner;
 public class Main {
     public static boolean yun(int a){
-        if (a%4==0){
-            return true;
-        }
-        if(a%4==0 && a% 100 == 0){
+        if (a%4!=0){
             return false;
         }
-        if((a%4==0 && a% 100 == 0) && a%400==0){
+        else if(a%100 != 0){
             return true;
+        }
+        else if(a %400 !=0){
+            return false;
         }
         else{
-            return false;
+            return true;
         }
     }
     public static void main(String[] args) {
