@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-    public static void word3(String word, String word2){
+    public static int word3(String word, String word2){
         int cnt = 0 ; 
         for (int i = 0 ; i<=word.length()-word2.length(); i++){
             cnt = 0 ;
@@ -10,9 +10,10 @@ public class Main {
                 }
             }
             if(cnt == word2.length()){
-                System.out.print(i);
+                return i;
             }
         }
+        return -1;
         
     }
     public static void main(String[] args) {
@@ -21,6 +22,6 @@ public class Main {
         String word = sc.next();
         String word2 = sc.next();
 
-        word3(word,word2);
+        System.out.print(word3(word,word2));
     }
 }
