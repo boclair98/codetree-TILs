@@ -14,4 +14,5 @@ def numberre(n):
     numberre(n-1)
 
 number(n)
+print()
 numberre(n)
