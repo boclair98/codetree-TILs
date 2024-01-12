@@ -4,7 +4,7 @@ public class Main {
         if (n == 1){
             return 1;
         }
-        return add(n-1)*n;
+        return add(n-1)+n;
     }
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.]\
