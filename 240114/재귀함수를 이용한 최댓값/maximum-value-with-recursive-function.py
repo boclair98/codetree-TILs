@@ -6,5 +6,5 @@ def max_val(s):
     if s == 0:
         return num[0]
     
-    return max(s-1,num[s])
-print(max_val(n))
+    return max(max_val(s-1),num[s])
+print(max_val(n-1))
