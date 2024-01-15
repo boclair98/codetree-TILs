@@ -1,5 +1,5 @@
-word = list(map(str,input()))
-word2 = list(map(str,input()))
+word = list(input())
+word2 = list(input())
 
 word.sort()
 word2.sort()
