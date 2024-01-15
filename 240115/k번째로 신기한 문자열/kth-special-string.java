@@ -8,9 +8,9 @@ public class Main {
         int k = sc.nextInt();
         String t = sc.next();
 
-        String[] word = new String[100];
+        String[] word = new String[101];
 
-        for(int i = 0 ; i<n; i++){
+        for(int i = 1 ; i<=n; i++){
             word[i] = sc.next();
         }
 
@@ -19,7 +19,7 @@ public class Main {
 
         String[] word2 = new String[100];
 
-        for (int i = 0; i<n; i++){
+        for (int i = 1; i<=n; i++){
             if (word[i].substring(0,len_t).equals(t)){
                 word2[cnt] = word[i];
                 cnt++;
@@ -28,6 +28,7 @@ public class Main {
 
         Arrays.sort(word2,0,cnt);
 
-        System.out.print(word2[k - 1]);
+        System.out.print(word2[k -1]);
+        
     }
 }
