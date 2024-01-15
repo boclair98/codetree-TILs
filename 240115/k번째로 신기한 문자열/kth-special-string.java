@@ -2,34 +2,56 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        String t = sc.next();
+    public static int n;
+    public static int k;
+    public static String m ;
+    public static String[] word = new String[100];
+    public static String[] new_word = new String[100];
 
-        String[] word = new String[n];
-
-        for (int i = 0; i < n; i++) {
-            word[i] = sc.next();
+    public static boolean same(String a, String b){
+        if (a.length() < b.length()){
+            return false;
         }
+        
+        for(int i = 0 ; i<b.length(); i++){
+                if (a.charAt(i) != b.charAt(i)){
+                    return false;
+                }
+            }
+        return true;
+        }
+    
+    
 
-        int len_t = t.length();
-        int cnt = 0;
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        n = sc.nextInt();
 
-        String[] word2 = new String[n];
+        k = sc.nextInt();
 
-        for (int i = 0; i < n; i++) {
-            if (word[i].substring(0, len_t).equals(t)) {
-                word2[cnt] = word[i];
+        m = sc.next();
+
+        int cnt = 0 ;
+        for(int i = 0 ; i<n; i++){
+            word[i] = sc.next();
+
+            if (same(word[i],m)){
+                new_word[cnt] = word[i];
                 cnt++;
             }
         }
 
-        Arrays.sort(word2, 0, cnt);
+        Arrays.sort(new_word,0,cnt);
 
-        if (k >= 1 && k <= cnt) {
-            System.out.print(word2[k - 1]);
-        } 
+        System.out.print(new_word[k-1]);
+
+
+
+        
+
+
+
     }
 }
