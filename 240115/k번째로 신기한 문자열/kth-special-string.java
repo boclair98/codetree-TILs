@@ -15,7 +15,7 @@ public class Main {
         }
 
         int len_t = t.length();
-        int cnt = 0 ;
+        int cnt = 1 ;
 
         String[] word2 = new String[100];
 
@@ -26,9 +26,9 @@ public class Main {
             }
         }
 
-        Arrays.sort(word2,0,cnt);
+        Arrays.sort(word2,1,cnt);
 
-        System.out.print(word2[k -1]);
+        System.out.print(word2[k]);
         
     }
 }
