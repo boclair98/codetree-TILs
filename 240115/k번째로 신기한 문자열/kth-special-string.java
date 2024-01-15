@@ -8,7 +8,7 @@ public class Main {
         int k = sc.nextInt();
         String t = sc.next();
 
-        String[] word = new String[n];
+        String[] word = new String[100];
 
         for(int i = 0 ; i<n; i++){
             word[i] = sc.next();
@@ -17,7 +17,7 @@ public class Main {
         int len_t = t.length();
         int cnt = 0 ;
 
-        String[] word2 = new String[n];
+        String[] word2 = new String[100];
 
         for (int i = 0; i<n; i++){
             if (word[i].substring(0,len_t).equals(t)){
