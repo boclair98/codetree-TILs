@@ -1,4 +1,4 @@
-name, age = map(str,input().split())
+name, age = tuple(input().split())
 
 class people:
 
