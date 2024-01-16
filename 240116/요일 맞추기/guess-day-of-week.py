@@ -1,66 +1,21 @@
-m1,d1,m2,d2 = map(int,input().split())
-day=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
-day1 = [0,31,28,31,30,31,30,31,31,30,31,30,31]
-cnt = 1
-if m1 ==m2 and d1 > d2:
-        while True:
-            if m1 == m2 and d1 == d2:
-                break
-            d1 = d1 - 1
+m1, d1 , m2, d2 = map(int,input().split())
+day=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+mon = [0,31,28,31,30,31,30,31,31,30,31,30,31]
 
-            
+def weather(x,y):
+    tal = 0 
+    for i in range(1,x):
+        tal+=mon[i]
+    tal+=y
+    return tal
 
-            if d1<1:
-                m1 = m1 - 1
-                d1 = day1[m1]
-            cnt = cnt - 1
-            if cnt<0:
-                cnt = 6
-        print(day[cnt])
-elif m1>m2 and d2 > d1:
+diff = weather(m2,d2) - weather(m1,d1)
+
+if diff<0:
     while True:
-            if m1 == m2 and d1 == d2:
-                break
-            d2 = d2 - 1
-
-            
-
-            if d2<1:
-                m1 = m1 - 1
-                d2 = day1[m1]
-            cnt = cnt - 1
-            if cnt<0:
-                cnt = 6
-    print(day[cnt])
-
-elif m1>m2 and d1>d2:
-    while True:
-            if m1 == m2 and d1 == d2:
-                break
-            d1 = d1 - 1
-
-           
-
-            if d1<1:
-                m1 = m1 - 1
-                d1 = day1[m1]
-            cnt = cnt - 1
-            if cnt<0:
-                cnt = 6
-    print(day[cnt])
-
+        if diff >=0:
+            break
+        diff+=7
+    print(day[diff])
 else:
-    while True:
-            if m1 == m2 and d1 == d2:
-                break
-            d1 = d1 + 1
-
-            
-
-            if d1>day1[cnt]:
-                m1 = m1 +1
-                d1 =1
-            cnt = cnt + 1
-            if cnt>6:
-                cnt = 0
-    print(day[cnt])
+    print(day[diff])
