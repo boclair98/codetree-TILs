@@ -6,6 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int[] num = new int[202];
         int max_val = 0 ;
+        int tal = 1;
         for (int i = 0 ; i<n;i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
@@ -15,11 +16,11 @@ public class Main {
             }
             
             for(int k = 1; k<202; k++){
-                if (max_val < num[k]){
-                    max_val = num[k];
+                if (tal <  num[k]){
+                    tal = num[k];
                 }
             }
         }
-        System.out.print(max_val);
+        System.out.print(tal);
     }
 }
