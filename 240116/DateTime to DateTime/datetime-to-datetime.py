@@ -2,7 +2,7 @@ a,b,c = map(int,input().split())
 
 a1,b1,c1 = 11,11,11
 cnt = 0
-if a1>a or b1>b  or c1>c:
+if a1>a :
     print(-1)
 else: 
     while True:
