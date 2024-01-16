@@ -16,20 +16,17 @@ if m1 ==m2 and d1 > d2:
             if cnt<0:
                 cnt = 6
         print(day[cnt])
-elif m1<=m2:
-
+elif m1>m2 and d2 > d1:
     while True:
+            if m1 == m2 and d1 == d2:
+                break
+            d2 = d2 - 1
 
-        if m1 == m2 and d1 == d2:
-            break
-        
-        d1 = d1 + 1
-        cnt = cnt+1
+            cnt = cnt - 1
 
-        if d1>day1[m1]:
-            m1 = m1 +1 
-            d1 = 1
-        if cnt>6:
-            cnt = 0
-
+            if d2<1:
+                m1 = m1 - 1
+                d2 = day1[m1]
+            if cnt<0:
+                cnt = 6
     print(day[cnt])
