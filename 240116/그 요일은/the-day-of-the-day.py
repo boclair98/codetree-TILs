@@ -7,11 +7,9 @@ cnt = 0
 sat_cnt = 0
 while True:
     if m1 == m2 and d1 == d2:
-        cnt+=1
-        if day[cnt%7] == 'Sat':
-            sat_cnt += 1
+        
         break
-    if day[cnt%7] == 'Sat':
+    if day[cnt%7] == word:
         sat_cnt += 1
     d1 = d1 + 1
     cnt+=1
