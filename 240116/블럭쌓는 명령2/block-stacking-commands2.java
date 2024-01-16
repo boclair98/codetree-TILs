@@ -15,7 +15,7 @@ public class Main {
                 arr[i]+=1;
             }
 
-            for(int z = 1 ; z<=n; z++){
+            for(int z = 1 ; z<n; z++){
                 if (arr[z]>max_val){
                     max_val = arr[z];
                 }
