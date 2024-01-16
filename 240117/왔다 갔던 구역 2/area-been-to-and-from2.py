@@ -1,29 +1,29 @@
 n = int(input())
 
-num =[0]*201
-
-max_val = 2
-
+num = [0] * 201
+cur =  0 
 cnt = 0 
-for i in range(n):
-
+for _ in range(n):
     x,r = map(str,input().split())
     x = int(x)
-    tal = int(x)+100
-
-    if r == 'R':
-
-        for i in range(100,tal):
-            num[i]+=1
     
+
+    if r =='R':
+        right = cur + x
+        left =cur
+        cur =cur + x
+
+        for i in range(left,right):
+            num[i]+=1
+
     elif r == 'L':
-        
-        for i in range(tal-1,tal-x,-1):
-            num[i]+=1
-    
-    
-for j in range(0,201):
-    if num[j]>=max_val:
-        cnt+=1
+        right = cur  
+        left = cur - x
+        cur = cur - x
+        for j in range(right,left,-1):
+            num[j]+=1
 
+for i in range(0,201):
+    if num[i] >= 2:
+        cnt+=1
 print(cnt)
