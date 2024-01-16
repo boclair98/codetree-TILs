@@ -18,7 +18,7 @@ for i in range(n):
     
     elif r == 'L':
         
-        for i in range(x-1,100,-1):
+        for i in range(x-1,101,-1):
             num[i]+=1
     
     
