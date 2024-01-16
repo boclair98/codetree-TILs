@@ -1,23 +1,25 @@
-m1,d1,m2,d2 = map(int,input().split())
+def calculate_days(month, day):
+    total = 0
+    for i in range(1, month):
+        total += month_days[i]
+    total += day
+    return total
 
+m1, d1, m2, d2 = map(int, input().split())
 word = input()
-month = [0,31,29,31,30,31,30,31,31,30,31,30,31]
-day =["Mon",'Tue','Wed','Thu','Fri','Sat','Sun']
-cnt = 0
 
-def mon(x, y):
-    tal = 0
+month_days = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+days_of_week = ["Mon", 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
-    for i in range(1,x):
-        tal+=month[i]
-    tal = tal+y
-    return tal
+def get_day_index(day_name):
+    return days_of_week.index(day_name)
 
-diff = mon(m2,d2) - mon(m1,d1)
+start_day = get_day_index(word)
+diff = abs(calculate_days(m1, d1) - calculate_days(m2, d2))
 
+count = 0
 for i in range(diff):
-    if day[i%6] == word:
-        cnt+=1
+    if days_of_week[(start_day + i) % 7] == word:
+        count += 1
 
-
-print(cnt)
+print(count)
