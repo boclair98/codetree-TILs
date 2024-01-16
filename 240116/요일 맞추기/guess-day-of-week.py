@@ -16,6 +16,6 @@ if diff<0:
         if diff >=0:
             break
         diff+=7
-    print(day[diff-1])
+    print(day[diff%7])
 else:
-    print(day[diff-1])
+    print(day[diff%7])
