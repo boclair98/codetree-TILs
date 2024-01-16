@@ -12,15 +12,19 @@ public class Main {
             int b = sc.nextInt();
 
             for(int j = a; j<=b; j++){
-                arr[i]+=1;
+                arr[j]+=1;
             }
 
-            for(int z = 1 ; z<n; z++){
+            for(int z = 1 ; z<=n; z++){
                 if (arr[z]>max_val){
                     max_val = arr[z];
                 }
+                
             }
+            
         }
         System.out.print(max_val);
+
+        
     }
 }
