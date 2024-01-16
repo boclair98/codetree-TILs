@@ -18,7 +18,7 @@ if m1 >=m2 and d1>d2:
             cnt = 6
 
     print(day[cnt])
-elif m1<=m2 and d1<=d2:
+elif m1<=m2:
 
     while True:
 
