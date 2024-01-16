@@ -20,7 +20,7 @@ for _ in range(n):
         right = cur  
         left = cur - x
         cur = cur - x
-        for j in range(right,left-1,-1):
+        for j in range(right,left+1,-1):
             num[j]+=1
 
 for i in range(0,201):
