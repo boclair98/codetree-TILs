@@ -14,7 +14,7 @@ public class Main {
                 num[j]+=1;
             }
             
-            for(int k = 1; k<102; k++){
+            for(int k = 1; k<202; k++){
                 if (max_val < num[k]){
                     max_val = num[k];
                 }
