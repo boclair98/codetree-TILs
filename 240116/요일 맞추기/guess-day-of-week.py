@@ -2,7 +2,7 @@ m1,d1,m2,d2 = map(int,input().split())
 day=["Sun","Mon","Tue","Wed","Fri","Sat"]
 day1 = [0,31,28,31,30,31,30,31,31,30,31,30,31]
 cnt = 1
-if m1 >=m2 and (d1>d2 or d2<d1):
+if (m1 >=m2 and (d1>d2 or d2<d1)):
 
     while True:
         if m1 == m2 and d1 == d2:
