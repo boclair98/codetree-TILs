@@ -29,7 +29,7 @@ public class Main {
         int cnt = 0;
         for(int i = 0; i<800; i++){
             for (int j = 0 ; j<800; j++){
-                if(num[i][j]==3){
+                if(num[i][j]==n){
                     cnt++;
                 }
             }
