@@ -15,7 +15,7 @@ public class Main {
 
             if (k1 == 'R'){
                 right = cur + k;
-                left = cur ;
+                left = cur;
                 cur = right;
                 for (int j = left; j<right; j++){
                     num[j]+=1;
@@ -25,7 +25,7 @@ public class Main {
             }
 
             if(k1 == 'L'){
-                right = cur ;
+                right = cur  ;
                 left =  cur - k;
                 cur = left;
                 for (int z = left; z<right; z++){
