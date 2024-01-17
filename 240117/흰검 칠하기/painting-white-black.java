@@ -9,6 +9,7 @@ public class Main {
         int cur = 100;
         int right = 0 ;
         int left = 0 ;
+        int start = 1 ;
         for(int i = 0 ; i<n ; i++){
             int k = sc.nextInt();
             char k1 = sc.next().charAt(0);
@@ -18,8 +19,12 @@ public class Main {
                 left = cur;
                 cur = right;
                 for (int j = left; j<right; j++){
-                    num[j]+=1;
+                    num[j]=start;
+                    start++;
                     word[j] = "Black";
+                    if (start  > 4){
+                        start = 1;
+                    }
             }
 
             }
@@ -29,8 +34,12 @@ public class Main {
                 left =  cur - k;
                 cur = left;
                 for (int z = left; z<right; z++){
-                    num[z]+=1;
+                    num[z]=start;
+                    start++;
                     word[z] = "White";
+                    if (start  > 4){
+                        start = 1;
+                    }
             }
             }
             
@@ -38,11 +47,17 @@ public class Main {
         }
         int cnt = 0 ;
         for(int i =0; i<201; i++){
-            if (num[i]>=4){
+            //num[i] = num[i] % 4;
+            if (num[i]==0){
                 word[i] ="gray";
             }
+
+            
             
         }
+        // for (int i = 0 ; i<201; i++){
+        //     System.out.print(num[i]+" ");
+        // }
         int wh = 0 ;
         int bl = 0 ;
         int gr = 0;
