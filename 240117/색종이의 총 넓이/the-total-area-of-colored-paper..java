@@ -16,12 +16,10 @@ public class Main {
 
             for(int j = a; j<tal; j++){
                 for(int k = b; k<val; k++){
-                    if (num[j][k] == gijoon){
-                        num[j][k] += 1;
-                    }
+                    num[j][k] = 1;
                 }
             }
-            gijoon++;
+            
 
 
             
@@ -29,11 +27,11 @@ public class Main {
         int cnt = 0;
         for(int i = 0; i<800; i++){
             for (int j = 0 ; j<800; j++){
-                if(num[i][j]==n){
+                if(num[i][j]>0){
                     cnt++;
                 }
             }
         }
-        System.out.print(cnt * 8);
+        System.out.print(cnt );
     }
 }
