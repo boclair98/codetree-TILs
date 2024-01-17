@@ -17,7 +17,7 @@ public class Main {
                 right = cur + k;
                 left = cur ;
                 cur = right;
-                for (int j = left+1; j<right+1; j++){
+                for (int j = left; j<right; j++){
                     num[j]+=1;
                     word[j] = "Black";
             }
@@ -28,7 +28,7 @@ public class Main {
                 right = cur ;
                 left =  cur - k;
                 cur = left;
-                for (int z = left+1; z<right+1; z++){
+                for (int z = left; z<right; z++){
                     num[z]+=1;
                     word[z] = "White";
             }
