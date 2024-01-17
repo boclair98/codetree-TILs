@@ -9,6 +9,8 @@ public class Main {
         for(int i = 0 ; i<n; i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
+            a= a+400;
+            b =b+400;
             int tal = a + 8;
             int val = b + 8;
 
