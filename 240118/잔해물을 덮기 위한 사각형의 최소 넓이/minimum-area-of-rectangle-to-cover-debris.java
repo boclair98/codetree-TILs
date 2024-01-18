@@ -32,23 +32,28 @@ public class Main {
         x+=1000;
         v+=1000;
         n+=1000;
-        for(int j = z; j<v; j++){
-            for(int k = x; k<n; k++){
-                if(num[j][k]==1){
-                    num[j][k] -= 1;
-                    tr[j][k] = true;
+        if (a+c < z+v && b+d<x+n){
+            System.out.print(0);
+        }
+        else{
+            for(int j = z; j<v; j++){
+                for(int k = x; k<n; k++){
+                    if(num[j][k]==1){
+                        num[j][k] -= 1;
+                        tr[j][k] = true;
+                    }
                 }
             }
-        }
 
-        for(int i = 0 ; i<2000; i++){
-            for(int j = 0 ; j<2000; j++){
-                if(num[i][j] <=1 && tr[i][j]==true ){
-                    cnt++;
+            for(int i = 0 ; i<2000; i++){
+                for(int j = 0 ; j<2000; j++){
+                    if(num[i][j] <=1 && tr[i][j]==true ){
+                        cnt++;
+                    }
                 }
             }
-        }
-        System.out.print(cnt);
+            System.out.print(cnt);
 
     }
+}
 }
