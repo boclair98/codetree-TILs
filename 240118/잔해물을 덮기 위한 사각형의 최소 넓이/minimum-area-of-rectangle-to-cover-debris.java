@@ -5,6 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int[][] num = new int[2001][2001];
+        boolean[][] tr = new boolean[2001][2001];
         int cnt = 0;
         int a = sc.nextInt();
         int b = sc.nextInt();
@@ -19,6 +20,7 @@ public class Main {
         for(int j = a; j<c; j++){
             for(int k = b; k<d; k++){
                 num[j][k] = 1;
+                tr[j][k] = true;
             }
         }
         
@@ -33,14 +35,15 @@ public class Main {
         for(int j = z; j<v; j++){
             for(int k = x; k<n; k++){
                 if(num[j][k]==1){
-                    num[j][k] = 2;
+                    num[j][k] -= 1;
+                    tr[j][k] = true;
                 }
             }
         }
 
         for(int i = 0 ; i<2000; i++){
             for(int j = 0 ; j<2000; j++){
-                if(num[i][j]>=1){
+                if(num[i][j] <=1 && tr[i][j]==true ){
                     cnt++;
                 }
             }
