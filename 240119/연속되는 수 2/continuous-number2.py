@@ -5,9 +5,9 @@ for _ in range(n):
 
 cnt = 0 
 tal = 0 
-for i in range(n-1):
+for i in range(n):
 
-    if i>=1 and num[i] == num[i+1]:
+    if i>=1 and num[i] == num[i-1]:
         cnt+=1
     
     else:
