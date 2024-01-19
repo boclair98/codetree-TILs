@@ -56,7 +56,7 @@ public class Main {
             }
         }
         int ans = - 1;
-        for(int i = 0 ; i<101; i++){
+        for(int i = 1 ; i<101; i++){
             if(num[i]==num2[i]){
                 ans = i ;
                 break;
