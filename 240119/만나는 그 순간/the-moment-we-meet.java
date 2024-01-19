@@ -16,7 +16,7 @@ public class Main {
             int count = sc.nextInt();
 
             if (word == 'R'){
-                for(int j = cur+1; j<cur+count+1; j++){
+                for(int j = cur; j<cur+count; j++){
                     cnt+=1;
                     num[j] = cnt;
                     
@@ -25,7 +25,7 @@ public class Main {
             }
             if (word == 'L'){
                 
-                for(int j = cur+1; j<cur+count+1; j++){
+                for(int j = cur; j<cur+count; j++){
                     cnt = cnt - 1;
                     num2[j] = cnt;
                 }
@@ -39,7 +39,7 @@ public class Main {
             int count = sc.nextInt();
 
             if (word == 'R'){
-                for(int j = cur2+1; j<cur2+count+1; j++){
+                for(int j = cur2; j<cur2+count; j++){
                     cnt2+=1;
                     num2[j] = cnt2;
                     
@@ -48,7 +48,7 @@ public class Main {
             }
             if (word == 'L'){
                 
-                for(int j = cur2+1; j<cur2+count+1; j++){
+                for(int j = cur2; j<cur2+count; j++){
                     cnt2 = cnt2 - 1;
                     num2[j] = cnt2;
                 }
