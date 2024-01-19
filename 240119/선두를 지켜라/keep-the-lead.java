@@ -5,8 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[] asok = new int[10001];
-        int[] bsok = new int[10001];
+        int[] asok = new int[100001];
+        int[] bsok = new int[100001];
         int cnt = 0;
         int now = 0;
         int cnt2= 0;
