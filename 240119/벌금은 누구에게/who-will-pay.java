@@ -12,16 +12,13 @@ public class Main {
             num[i] = cnt1;
             cnt1++;
         }
-
+        int ans = -1;
         for(int i = 0 ; i<m; i++){
             int now = sc.nextInt();
             num[now]+=1;
-        }
-        int ans = -1;
-        for(int i = 1; i<=n; i++){
-            if(num[i]>=k){
-                ans = i;
-                break;
+            if(num[now]>=k){
+                ans = now ;
+                break; 
             }
         }
         System.out.print(ans);
