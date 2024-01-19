@@ -1,11 +1,11 @@
 n = int(input())
 
-color  = [False] * 201
+color  = [False] * 2001
 
-num = [0] * 201
+num = [0] * 2001
 right = 0 
 left = 0 
-cur  = 100
+cur  = 1000
 for i in range(n):
     a , b = map(str,input().split())
     a = int(a)
@@ -29,7 +29,7 @@ for i in range(n):
 wh = 0 
 bl = 0
 
-for i in range(201):
+for i in range(2001):
     if num[i]>0 and color[i] == "White":
         wh+=1
     if num[i]>0 and color[i] == "Black":
