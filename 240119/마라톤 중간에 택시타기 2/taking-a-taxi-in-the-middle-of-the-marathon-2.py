@@ -8,19 +8,27 @@ val = []
 for i in range(n):
 
     a , b = map(int,input().split())
-    val.append((a,b))
+    if a <0:
+        a = -a
+    if b<0:
+        b = -b
+    val.append([a,b])
 
 
-cnt1 = 0 
-cnt2 = 0
+
 for i in range(1,n-1):
-    cnt1 = abs(val[i][0]-val[0][0])
-    cnt2 = abs(val[i][1]-val[0][1])
+    dist = 0 
+    pre_idx = 0
 
-    cnt3 = abs(val[-1][0] - cnt1) + cnt1
-    cnt4 = abs(val[-1][1] - cnt2) + cnt2
+
+
+    for j in range(n):
+        if i == j :
+            continue
+        
+        dist+= abs(val[pre_idx][0] - val[j][0]) + abs(val[pre_idx][1]-val[j][1])
+
+        pre_idx = j
     
-
-    min_value = min(min_value,cnt3+cnt4)
-
+    min_value = min(min_value,dist)
 print(min_value)
