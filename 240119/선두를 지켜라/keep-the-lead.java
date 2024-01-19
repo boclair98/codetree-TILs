@@ -11,7 +11,7 @@ public class Main {
         int now = 0;
         int cnt2= 0;
         int now2= 0;
-        for(int i = 1; i<=n ; i++){
+        for(int i = 0; i<n ; i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
             
@@ -24,7 +24,7 @@ public class Main {
 
         }
 
-        for(int i = 1; i<=m ; i++){
+        for(int i = 0; i<m ; i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
             
