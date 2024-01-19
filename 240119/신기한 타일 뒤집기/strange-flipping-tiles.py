@@ -1,12 +1,12 @@
 n = int(input())
 
-# color 리스트를 False 대신 None으로 초기화
+# color 리스트를 None으로 초기화
 color = [None] * 2001
 
 num = [0] * 2001
-right = 0 
-left = 0 
-cur  = 1000
+right = 0
+left = 0
+cur = 1000
 
 for i in range(n):
     a, b = map(str, input().split())
@@ -17,16 +17,18 @@ for i in range(n):
         left = cur
         cur = right
         for j in range(left, right):
-            num[j] += 1
-            color[j] = "Black"
+            if j >= 0 and j < 2001:  # 인덱스가 범위 내에 있는지 확인
+                num[j] += 1
+                color[j] = "Black"
 
     if b == 'L':
         right = right
         left = right - a
         cur = left
         for j in range(left, right):
-            num[j] += 1
-            color[j] = "White"
+            if j >= 0 and j < 2001:  # 인덱스가 범위 내에 있는지 확인
+                num[j] += 1
+                color[j] = "White"
 
 wh = 0
 bl = 0
