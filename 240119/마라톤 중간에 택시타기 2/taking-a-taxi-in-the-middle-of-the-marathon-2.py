@@ -8,10 +8,7 @@ val = []
 for i in range(n):
 
     a , b = map(int,input().split())
-    if a <0:
-        a = -a
-    if b<0:
-        b = -b
+    
     val.append([a,b])
 
 
