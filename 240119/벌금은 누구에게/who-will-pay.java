@@ -16,7 +16,7 @@ public class Main {
         for(int i = 0 ; i<m; i++){
             int now = sc.nextInt();
             num[now]+=1;
-            if(num[now]>=k){
+            if(num[now]==k){
                 ans = now ;
                 break; 
             }
