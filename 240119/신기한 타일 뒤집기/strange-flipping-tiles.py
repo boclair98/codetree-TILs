@@ -16,7 +16,7 @@ for i in range(n):
         right = cur + a
         left = cur
         cur = right
-        for j in range(left+1, right+1):
+        for j in range(left, right):
             num[j] += 1
             color[j] = "Black"
 
@@ -24,7 +24,7 @@ for i in range(n):
         right = right
         left = right - a
         cur = left
-        for j in range(left+1, right+1):
+        for j in range(left, right):
             num[j] += 1
             color[j] = "White"
 
