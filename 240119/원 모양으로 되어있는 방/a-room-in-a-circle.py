@@ -1,3 +1,5 @@
+import sys
+ins = sys.maxsize
 n  = int(input())
 
 num = []
@@ -11,4 +13,5 @@ for i in range(n):
 
         dist = (j+n - i) % n
         val +=dist*num[j]
-        print(val)
+    ins = min(ins,val)
+print(ins)
