@@ -12,52 +12,64 @@ public class Main {
         }
 
         int cnt = 0 ;
-
-        for(int i = 0; i<n; i++){
-            for (int j = 0 ; j<m-2; j++){
-                if (word[i].charAt(j)=='L' && word[i].charAt(j+1)=='E' && word[i].charAt(j+2)=='E'){
-                    cnt++;
-                }
-                else if (word[i].charAt(j)=='E' && word[i].charAt(j+1)=='E' && word[i].charAt(j+2)=='L'){
-                    cnt++;
-                }
-
-            }
-        }
-
-        for (int i = 0 ; i<n-2; i++){
-            for(int j = 0 ; j<m; j++){
-                if(word[i].charAt(j)=='L' && word[i+1].charAt(j)=='E' && word[i+2].charAt(j)=='E'){
-                    cnt++;
-                }
-                if(word[i].charAt(j)=='E' && word[i+1].charAt(j)=='E' && word[i+2].charAt(j)=='L'){
-                    cnt++;
+        if(m == 1){
+             for (int i = 0 ; i<n-2; i++){
+                for(int j = 0 ; j<m; j++){
+                    if(word[i].charAt(j)=='L' && word[i+1].charAt(j)=='E' && word[i+2].charAt(j)=='E'){
+                        cnt++;
+                    }
+                    if(word[i].charAt(j)=='E' && word[i+1].charAt(j)=='E' && word[i+2].charAt(j)=='L'){
+                        cnt++;
+                    }
                 }
             }
         }
+        else{
+            for(int i = 0; i<n; i++){
+                for (int j = 0 ; j<m-2; j++){
+                    if (word[i].charAt(j)=='L' && word[i].charAt(j+1)=='E' && word[i].charAt(j+2)=='E'){
+                        cnt++;
+                    }
+                    else if (word[i].charAt(j)=='E' && word[i].charAt(j+1)=='E' && word[i].charAt(j+2)=='L'){
+                        cnt++;
+                    }
 
-        for (int i = 0 ; i<n-2; i++){
-            for (int j = 0; j<m-2; j++){
-                if(word[i].charAt(j)=='L' && word[i+1].charAt(j+1)=='E' && word[i+2].charAt(j+2)=='E'){
-                    cnt++;
                 }
-                if(word[i].charAt(j)=='E' && word[i+1].charAt(j+1)=='E' && word[i+2].charAt(j+2)=='L'){
-                    cnt++;
+            }
+
+            for (int i = 0 ; i<n-2; i++){
+                for(int j = 0 ; j<m; j++){
+                    if(word[i].charAt(j)=='L' && word[i+1].charAt(j)=='E' && word[i+2].charAt(j)=='E'){
+                        cnt++;
+                    }
+                    if(word[i].charAt(j)=='E' && word[i+1].charAt(j)=='E' && word[i+2].charAt(j)=='L'){
+                        cnt++;
+                    }
+                }
+            }
+
+            for (int i = 0 ; i<n-2; i++){
+                for (int j = 0; j<m-2; j++){
+                    if(word[i].charAt(j)=='L' && word[i+1].charAt(j+1)=='E' && word[i+2].charAt(j+2)=='E'){
+                        cnt++;
+                    }
+                    if(word[i].charAt(j)=='E' && word[i+1].charAt(j+1)=='E' && word[i+2].charAt(j+2)=='L'){
+                        cnt++;
+                    }
+                }
+            }
+
+            for (int i = 2 ; i<n; i++ ){
+                for(int j = 0; j<m; j++){
+                    if(word[i].charAt(j)=='L' && word[i-1].charAt(j)=='E' && word[i-2].charAt(j)=='E'){
+                        cnt++;
+                    }
+                    if(word[i].charAt(j)=='E' && word[i-1].charAt(j)=='E' && word[i-2].charAt(j)=='L'){
+                        cnt++;
+                    }
                 }
             }
         }
-
-        for (int i = 2 ; i<n; i++ ){
-            for(int j = 0; j<m; j++){
-                if(word[i].charAt(j)=='L' && word[i-1].charAt(j)=='E' && word[i-2].charAt(j)=='E'){
-                    cnt++;
-                }
-                if(word[i].charAt(j)=='E' && word[i-1].charAt(j)=='E' && word[i-2].charAt(j)=='L'){
-                    cnt++;
-                }
-            }
-        }
-
         System.out.print(cnt);
         
 
