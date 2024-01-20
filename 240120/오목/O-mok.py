@@ -47,7 +47,7 @@ elif omok_true ==False:
                 break
             if omok[i][j] == 2 and omok[i+1][j+1] == 2 and omok[i+2][j+2]==2 and omok[i+3][j+3] ==2 and omok[i+4][j+4] == 2:
                 omok_true=True
-                cntx = i
+                cntx = i+2
                 cnty = j+2
                 tal = 2
                 break
