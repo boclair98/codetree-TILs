@@ -40,7 +40,9 @@ public class Main {
                 if(h==g){
                     int size = j-i;
                     ans = Math.max(ans,size);
+                    
                 }
+                
                 
         }
         
