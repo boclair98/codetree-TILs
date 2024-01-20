@@ -6,8 +6,8 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
 
-        int[] num1 = new int[n];
-        int[] num2 = new int[m];
+        int[] num1 = new int[101];
+        int[] num2 = new int[101];
 
         for(int i = 0; i<n; i++){
             num1[i] = sc.nextInt();
