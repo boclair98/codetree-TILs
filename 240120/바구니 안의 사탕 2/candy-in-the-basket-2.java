@@ -6,7 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
 
-        int[] candy = new int[101];
+        int[] candy = new int[1001];
 
         for(int i = 0 ; i<n; i++){
             int a = sc.nextInt();
@@ -14,7 +14,7 @@ public class Main {
             candy[b] = a;
         }
         int ans = 0;
-        for(int i =k ; i<101-k; i++){
+        for(int i =k ; i<1001-k; i++){
             int tal = 0;
             for(int j = i-k+1; j<= k+n; j++){
                 tal += candy[j];
