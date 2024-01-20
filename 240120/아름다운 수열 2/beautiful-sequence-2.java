@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
@@ -8,7 +9,8 @@ public class Main {
 
         int[] num1 = new int[101];
         int[] num2 = new int[101];
-
+        int[] tot = new int[101];
+        int cnt = 0 ;
         for(int i = 0; i<n; i++){
             num1[i] = sc.nextInt();
         }
@@ -16,20 +18,30 @@ public class Main {
         for(int i = 0; i<m; i++){
             num2[i] = sc.nextInt();
         }
-        int tot = 0;
-        for(int i =0; i<=n-m;i++){
-            int cnt = 0;
+        Arrays.sort(num2,0,m);
+        for(int i = 0 ; i<=n-m; i++){
             for(int j = 0; j<m; j++){
-                if (num1[i]==num2[j] || num1[i+1]==num2[j] || num1[i+2]==num2[j]){
-                    cnt++;
+                tot[j] = num1[i+j];
+            }
+            Arrays.sort(tot,0,m);
+            boolean now =true;
+
+            for(int k = 0; k<m; k++){
+                if(tot[k]!=num2[k]){
+                    now =false;
+                    break;
                 }
             }
-            if (cnt == m){
-                tot++;
+
+            if(now){
+                cnt++;
             }
-            
+
         }
-        System.out.println(tot);
+        System.out.println(cnt);
+
+        
+        
         
     }
 }
