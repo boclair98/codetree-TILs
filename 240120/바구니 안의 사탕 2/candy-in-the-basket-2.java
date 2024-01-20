@@ -16,13 +16,15 @@ public class Main {
         int ans = 0;
         for(int i =n ; i<101-n; i++){
             int tal = 0;
-            for(int j = i-n; j< n+ i; j++){
+            for(int j = i-n+1; j<= n+ i; j++){
                 tal += candy[j];
             }
             ans = Math.max(tal,ans);
+            
         }
-
         System.out.print(ans);
+
+        
 
 
 
