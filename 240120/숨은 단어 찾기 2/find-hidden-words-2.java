@@ -60,11 +60,11 @@ public class Main {
             }
 
             for (int i = 2 ; i<n; i++ ){
-                for(int j = 0; j<m; j++){
-                    if(word[i].charAt(j)=='L' && word[i-1].charAt(j)=='E' && word[i-2].charAt(j)=='E'){
+                for(int j = 0; j<m-2; j++){
+                    if(word[i].charAt(j)=='L' && word[i-1].charAt(j+1)=='E' && word[i-2].charAt(j+2)=='E'){
                         cnt++;
                     }
-                    if(word[i].charAt(j)=='E' && word[i-1].charAt(j)=='E' && word[i-2].charAt(j)=='L'){
+                    if(word[i].charAt(j)=='E' && word[i-1].charAt(j+1)=='E' && word[i-2].charAt(j+2)=='L'){
                         cnt++;
                     }
                 }
