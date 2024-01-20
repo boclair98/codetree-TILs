@@ -53,4 +53,4 @@ elif omok_true ==False:
                 break
     if omok_true==True:
         print(tal)
-        print(cntx+1,cnty+1)
+        print(cntx,cnty+1)
