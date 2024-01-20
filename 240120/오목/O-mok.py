@@ -56,8 +56,8 @@ elif omok_true ==False:
         print(cntx+1,cnty+1)
 
 elif omok_true == False:
-    for i in range(18,5,-1):
-        for j in range(18,5,-1):
+    for i in range(18,4,-1):
+        for j in range(18,4,-1):
             if omok[i][j] == 1 and omok[i-1][j-1] == 1 and omok[i-2][j-2]==1 and omok[i-3][j-3] ==1 and omok[i-4][j-4] == 1:
                 omok_true=True
                 cntx = i - 2
