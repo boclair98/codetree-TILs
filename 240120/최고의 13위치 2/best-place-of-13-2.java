@@ -5,21 +5,30 @@ public class Main {
         Scanner sc =new Scanner(System.in);
         int n = sc.nextInt();
 
-        int[][] num = new int[n][n];
+        int[][] arr = new int[n][n];
 
         for (int i = 0 ; i<n; i++){
             for(int j = 0 ; j<n; j++){
-                num[i][j] = sc.nextInt();
+                arr[i][j] = sc.nextInt();
             }
         }
         int ans = -100000000;
-        for(int i = 0; i<n-1; i++){
-            int tal = 0;
-            for(int j = 0 ; j<n-2; j++){
-                tal = num[i][j]+num[i][j+1]+num[i][j+2]+num[i+1][j] + num[i+1][j+1]+num[i+1][j+2];
+        for(int i =0; i<n; i++){
+            for(int j = 0; j < n-2; j++){
+                for(int k = 0 ; k<n; k++){
+                    for(int l = 0; l<n-2; l++){
+                        if(i==k && Math.abs(j-l)<=2){
+                            continue;
+                        }
+                        int cnt1 = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
+                        int cnt2 = arr[k][l] + arr[k][l + 1] + arr[k][l + 2];
+                        ans = Math.max(ans,cnt1+cnt2);
+
+                    }
+                }
             }
-            ans = Math.max(tal,ans);   
         }
+        
         System.out.print(ans);
     }
 }
