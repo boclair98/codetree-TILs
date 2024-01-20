@@ -41,7 +41,7 @@ elif omok_true ==False:
         for j in range(15):
             if omok[i][j] == 1 and omok[i+1][j+1] == 1 and omok[i+2][j+2]==1 and omok[i+3][j+3] ==1 and omok[i+4][j+4] == 1:
                 omok_true=True
-                cntx = i
+                cntx = i + 2
                 cnty = j+2
                 tal = 1
                 break
@@ -53,4 +53,4 @@ elif omok_true ==False:
                 break
     if omok_true==True:
         print(tal)
-        print(cntx,cnty+1)
+        print(cntx+1,cnty+1)
