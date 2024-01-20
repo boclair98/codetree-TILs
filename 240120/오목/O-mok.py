@@ -20,6 +20,18 @@ for i in range(19):
             cnty = j+2
             tal = 2
             break
+        if omok[j][i] == 1 and omok[j+1][i]==1 and omok[j+2][i]==1 and omok[j+3][i]==1 and omok[j+4][i] == 1:
+                omok_true = True
+                cntx = i
+                cnty = j+2
+                tal = 2
+                break
+        if omok[j][i] == 1 and omok[j+1][i]==1 and omok[j+2][i]==1 and omok[j+3][i]==1 and omok[j+4][i] == 1:
+                omok_true = True
+                cntx = i
+                cnty = j+2
+                tal = 2
+                break
 if omok_true==True:
     print(tal)
     print(cntx+1,cnty+1)
