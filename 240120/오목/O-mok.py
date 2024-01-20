@@ -22,4 +22,4 @@ for i in range(19):
             break
 if omok_true==True:
     print(tal)
-    print(cntx,cnty)
+    print(cntx+1,cnty+1)
