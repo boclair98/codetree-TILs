@@ -6,17 +6,17 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
 
-        int[] candy = new int[1001];
+        int[] candy = new int[101];
 
         for(int i = 0 ; i<n; i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
-            candy[b] = a;
+            candy[b-1] = a;
         }
         int ans = 0;
-        for(int i =k ; i<1001-k+n; i++){
+        for(int i =k ; i<101-k; i++){
             int tal = 0;
-            for(int j = i-k+1; j<= k+i+1; j++){
+            for(int j = i-k; j<= k+i; j++){
                 tal += candy[j];
             }
             ans = Math.max(tal,ans);
