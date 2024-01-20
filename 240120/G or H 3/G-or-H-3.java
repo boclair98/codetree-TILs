@@ -16,7 +16,7 @@ public class Main {
             
         }
         int ans = -1000000;
-        for(int i = 0; i<100001; i++){
+        for(int i = 0; i<10001; i++){
             int tal = 0;
             for(int j = i; j<=i+m; j++){
                 if(word[j]=='G'){
