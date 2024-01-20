@@ -14,9 +14,9 @@ public class Main {
             candy[b] = a;
         }
         int ans = 0;
-        for(int i =k ; i<1001-k; i++){
+        for(int i =k ; i<1001-7; i++){
             int tal = 0;
-            for(int j = i-k+1; j<= k+n; j++){
+            for(int j = i-k+1; j<= k+i+1; j++){
                 tal += candy[j];
             }
             ans = Math.max(tal,ans);
