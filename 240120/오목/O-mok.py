@@ -20,7 +20,7 @@ def check_winner():
                 return omok[i][j], i+2, j+2
             # 대각선 /
             if j >= 4 and omok[i][j] == omok[i+1][j-1] == omok[i+2][j-2] == omok[i+3][j-3] == omok[i+4][j-4] and omok[i][j] != 0:
-                return omok[i][j], i+2, j+5
+                return omok[i][j], i+2, j-3
 
     return 0, 0, 0  # 무승부
 
