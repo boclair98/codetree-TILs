@@ -22,14 +22,14 @@ for i in range(19):
             break
         if omok[j][i] == 1 and omok[j+1][i]==1 and omok[j+2][i]==1 and omok[j+3][i]==1 and omok[j+4][i] == 1:
                 omok_true = True
-                cntx = j
-                cnty = i+2
+                cntx = j +2
+                cnty = i
                 tal = 1
                 break
         if omok[j][i] == 1 and omok[j+1][i]==1 and omok[j+2][i]==1 and omok[j+3][i]==1 and omok[j+4][i] == 1:
                 omok_true = True
-                cntx = j
-                cnty = i+2
+                cntx = j + 2
+                cnty = i
                 tal = 2
                 break
 if omok_true==True:
