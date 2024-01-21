@@ -19,6 +19,7 @@ public class Main {
                 for(int k = j+1; k<6; k++){
                     int num = tal[i]+tal[j]+tal[k] ;
                     int score = value - num;
+                    System.out.print(score+" ");
 
                     min_value = Math.min(min_value,Math.abs(num-score)); 
                     
