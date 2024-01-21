@@ -10,7 +10,7 @@ public class Main {
             value+=tal[i];
         }
         
-        int min_value = 100;
+        int min_value = 1000000;
 
         for(int i = 0 ; i<6; i++){
 
