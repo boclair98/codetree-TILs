@@ -11,7 +11,7 @@ public class Main {
 
     public static int dfs(int x, int y){
         int tal = 0 ;
-        for(int i = 0 ; i<n; i++){
+        for(int i = 0 ; i<4; i++){
             int nx = x+x_s[i] , ny = y+y_s[i];
             if (inrange(nx,ny) && arr[nx][ny]==1){
                 tal++;
