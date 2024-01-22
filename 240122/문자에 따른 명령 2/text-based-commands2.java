@@ -17,7 +17,7 @@ public class Main {
             } else if(arr[i]=='R' && arr[i+1]=='F'){
                 startx+=1;
             }
-        System.out.print(startx+" "+starty);
+            System.out.print(startx+" "+starty);
 
 
     }
