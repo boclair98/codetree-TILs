@@ -18,7 +18,7 @@ public class Main {
                 startx+=1;
             }
             else{
-                 System.out.print(startx+" "+starty);
+                 System.out.print(startx+""+starty);
             }
 
            
