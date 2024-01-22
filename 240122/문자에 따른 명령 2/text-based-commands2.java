@@ -10,18 +10,25 @@ public class Main {
 
         int[] x_y = new int[]{1,0,-1,0};
         int[] y_x = new int[]{0,-1,0,1};
-
+        int x_tal = 0 ;
+        
         for(int i = 0 ; i<arr.length-1; i++){
-            if(arr[i]=='L'&& arr[i+1]=='F'){
-                startx-=1;
-            } else if(arr[i]=='R' && arr[i+1]=='F'){
-                startx+=1;
-            }
             
+            if(arr[i]=='L'){
+                x_tal -=1;
+                if(arr[i+1]=='F'){
+                    startx=startx+x_tal;
+                    x_tal = 0;
+                }
+            }
 
-           
-
-
+            if(arr[i]=='R'){
+                x_tal +=1;
+                if(arr[i+1]=='F'){
+                    startx=startx+x_tal;
+                    x_tal = 0;
+                }
+            }
     }
      System.out.print(startx+" "+starty);
 }
