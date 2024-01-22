@@ -7,7 +7,7 @@ public class Main {
         char[] arr = word.toCharArray(); 
         int startx = 0;
         int starty = 0;
-
+        int dinum = 3;
         int[] x_y = new int[]{1,0,-1,0};
         int[] y_x = new int[]{0,-1,0,1};
         int x_tal1 = 0 ;
@@ -16,15 +16,16 @@ public class Main {
         for(int i = 0 ; i<arr.length; i++){
             
             if(arr[i]=='L'){
-                x_tal1  -= 1;
+                dinum = (dinum-1+4)%4;
             }
-
-            if(arr[i]=='R'){
-                x_tal2+=1;
+            else if(arr[i]=='R'){
+                dinum = (dinum+1) %4;
             }
-            if(arr[i]=='F'){
-                startx= startx+(x_tal1-x_tal2);
+            else{
+                startx = startx+x_y[dinum];
+                starty+=y_x[dinum];
             }
+            
     }
      System.out.print(startx+" "+starty);
 }
