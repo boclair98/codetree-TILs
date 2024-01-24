@@ -13,6 +13,6 @@ for i in range(len(list1)):
 list1.sort()
 
 for j in range(len(list1)):
-    if list1[j] >=0:
+    if list1[j] >0:
         print(list1[j])
         break
