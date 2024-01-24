@@ -15,20 +15,26 @@ for i in range(a,c):
     for j in range(b,d):
         square[i][j] = 1
 
-for i in range(a1,c1):
-    for j in range(b1,d1):
-        
-        square[i][j] = 2
-        
-cnt1 = 0
-cnt2 = 0 
-for i in range(a,c):
-    for j in range(b,d):
+for j in range(a1,c1):
+    for i in range(b1,d1):
+        square[j][i] = 2
+
+min_x ,max_x ,min_y , max_y = 20001,0,20001,0
+exist = False
+
+for i in range(2001):
+    for j in range(2001):
+
         if square[i][j] == 1:
-            cnt1+=1
-        elif square[i][j] ==2:
-            cnt2+=1
-if cnt1 ==0:
-    print(0)
+            exist = True
+
+            min_x = min(min_x,i)
+            max_x = max(max_x,i)
+            min_y = min(min_y,j)
+            max_y = max(max_y,j)
+
+if exist:
+    area = (max_x-min_x+1) * (max_y - min_y+1)
 else:
-    print(tal)
+    area = 0
+print(area)
