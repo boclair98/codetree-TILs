@@ -2,15 +2,15 @@ a,b,c,d = map(int,input().split())
 a1,b1,c1,d1 = map(int,input().split())
 tal = (c-a) * (d-b)
 square = [[0]*2001 for _ in range(2001)]
-a+=500
-b+=500
-c+=500
-d+=500
+a+=1000
+b+=1000
+c+=1000
+d+=1000
 
-a1+=500
-b1+=500
-c1+=500
-d1+=500
+a1+=1000
+b1+=1000
+c1+=1000
+d1+=1000
 for i in range(a,c):
     for j in range(b,d):
         square[i][j] = 1
@@ -25,7 +25,7 @@ exist = False
 for i in range(2001):
     for j in range(2001):
 
-        if square[i][j] == 2:
+        if square[i][j] == 1:
             exist = True
 
             min_x = min(min_x,i)
