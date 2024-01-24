@@ -25,7 +25,7 @@ exist = False
 for i in range(2001):
     for j in range(2001):
 
-        if square[i][j] == 1:
+        if square[i][j] == 2:
             exist = True
 
             min_x = min(min_x,i)
