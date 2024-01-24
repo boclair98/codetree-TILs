@@ -1,7 +1,7 @@
 n = int(input())
 
-color = ["no"] * 2001
-num = [0]*2001
+color = ["no"] * 100001
+num = [0]*100001
 
 now,right,left = 1000,0,0
 
@@ -27,7 +27,7 @@ for _ in range(n):
             num[i]+=1
             color[i] ="White"
 wh ,bl = 0 ,0
-for i in range(2001):
+for i in range(100001):
     if num[i]>0 and color[i]=='White':
         wh+=1
     elif num[i]>0 and color[i]=='Black':
