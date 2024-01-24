@@ -17,11 +17,18 @@ for i in range(a,c):
 
 for i in range(a1,c1):
     for j in range(b1,d1):
-        if square[i][j] == 1:
-            square[i][j] =2
-cnt = 0 
+        
+        square[i][j] = 2
+        
+cnt1 = 0
+cnt2 = 0 
 for i in range(a,c):
     for j in range(b,d):
-        if square[i][j] == 1 or square[i][j] ==2:
-            cnt+=1
-print(cnt)
+        if square[i][j] == 1:
+            cnt1+=1
+        elif square[i][j] ==2:
+            cnt2+=1
+if cnt1 ==0:
+    print(0)
+else:
+    print(cnt1+cnt2)
