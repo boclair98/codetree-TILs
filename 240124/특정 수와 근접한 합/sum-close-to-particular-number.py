@@ -13,7 +13,7 @@ min_value = 1000000
 for i in range(len(list1)):
     val = list1[i] - n 
 
-    if val>0:
+    if val>=0:
         min_value = min(val,min_value)
         
 print(min_value)
