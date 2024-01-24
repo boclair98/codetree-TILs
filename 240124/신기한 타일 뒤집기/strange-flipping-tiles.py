@@ -3,7 +3,7 @@ n = int(input())
 color = ["no"] * 100001
 num = [0]*100001
 
-now,right,left = 1000,0,0
+now,right,left = 50000,0,0
 
 for _ in range(n):
     tal = input().split()
