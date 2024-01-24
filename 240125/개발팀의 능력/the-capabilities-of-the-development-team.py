@@ -1,34 +1,36 @@
-arr = list(map(int, input().split()))
+import sys
+arr = list(map(int,input().split()))
 
-def find_minVal(i, j, k, s):
-    sum1 = arr[i]+arr[j]
-    sum2 = arr[k]+arr[s]
-    sum3 = sum(arr) - (sum1+sum2)
+n = len(arr)
 
-    #능력이 가장 큰팀과 작은 팀의 차이
-    min_val = float('inf')
-    max_val = 0 
+min_val = sys.maxsize
 
-    min_val = min(sum1, sum2, sum3)
-    max_val = max(sum1, sum2, sum3)
+def diff(a,b,c,d):
+    sum1 = arr[a] + arr[b]
+    sum2 = arr[c] + arr[d]
+    sum3 = sum(arr) - sum1 - sum2
 
-    calc = 0
-    if(sum1 != sum2 and sum2!= sum3 and sum1 !=sum3):
-        calc= max_val - min_val
+    cnc = 3
 
-    return calc
+    if (sum1 != sum2 and sum1!=sum3 and sum2!= sum3):
+        min_val = min(sum1,sum2,sum3)
+        max_val = max(sum1,sum2,sum3)
+
+        cnc = max_val - min_val
     
+    return cnc
 
-min_val = float('inf')
-#첫번째 매칭
-for i in range(5):
-    for j in range(i+1, 5):
-        # 두 번째 매칭 
-        for k in range(0, 5):
-            for s in range(k+1, 5):
-                if(i != k and j!= k and s!= i and s!= j):
-                    cal = find_minVal(i,j,k,s)
-                    if(cal != 0):
-                        min_val = min(min_val,cal)
+for i in range(n):
+
+    for j in range(i+1,n):
+
+        for k in range(n):
+
+            for t in range(k+1,n):
+
+                if i==k or i==t or j==k or j==t:
+                    continue
+                
+                min_val = min(min_val,diff(i,j,k,t))
 
 print(min_val)
