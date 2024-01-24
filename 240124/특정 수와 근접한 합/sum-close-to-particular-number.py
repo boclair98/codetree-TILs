@@ -8,12 +8,11 @@ for i in combinations(num,s-2):
     tal = sum(i)
     list1.append(tal)
 
-min_value = 1000000
-
 for i in range(len(list1)):
-    val = list1[i] - n 
+    list1[i] = list1[i] - n
+list1.sort()
 
-    if val>=0:
-        min_value = min(val,min_value)
-        
-print(min_value)
+for j in range(len(list1)):
+    if list1[j] >=0:
+        print(list1[j])
+        break
