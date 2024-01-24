@@ -1,38 +1,35 @@
 n = int(input())
 
-color = ["False"]*2001
+color = ["no"] * 2001
+num = [0]*2001
 
-time = [0] * 2001
-
-right ,left,now =0,0,1000
+now,right,left = 1000,0,0
 
 for _ in range(n):
     tal = input().split()
 
     if tal[1] =='R':
-
         right = now + int(tal[0])
+        left = now
+        now = right
 
-        
-
-        for i in range(now,right):
-            color[i] = 'Black'
-        
-        now = right 
-
+        for i in range(left,right):
+            num[i]+=1
+            color[i] = "Black"
+            
     
-    if tal[1] =='L':
-
+    elif tal[1] =='L':
+        right = now
         left = now - int(tal[0])
-
-        for i in range(left,now):
-            color[i] = 'White'
-
         now = left
-wh,bl=0,0
+
+        for i in range(left,right):
+            num[i]+=1
+            color[i] ="White"
+wh ,bl = 0 ,0
 for i in range(2001):
-    if color[i]=='White':
+    if num[i]>0 and color[i]=='White':
         wh+=1
-    elif color[i]=='Black':
-        bl+=1
+    elif num[i]>0 and color[i]=='Black':
+        bl +=1
 print(wh,bl)
