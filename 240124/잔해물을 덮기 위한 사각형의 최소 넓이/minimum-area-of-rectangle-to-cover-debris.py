@@ -31,4 +31,4 @@ for i in range(a,c):
 if cnt1 ==0:
     print(0)
 else:
-    print(cnt1+cnt2)
+    print(cnt1)
