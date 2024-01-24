@@ -1,6 +1,6 @@
 a,b,c,d = map(int,input().split())
 a1,b1,c1,d1 = map(int,input().split())
-
+tal = (c-a) * (d-b)
 square = [[0]*2001 for _ in range(2001)]
 a+=500
 b+=500
@@ -31,4 +31,4 @@ for i in range(a,c):
 if cnt1 ==0:
     print(0)
 else:
-    print(cnt1)
+    print(tal)
