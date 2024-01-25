@@ -12,5 +12,6 @@ for i in range(n):
         if i == j:
             continue
         
-        ans = min(ans,(tal1 - x)**2 + (tal2 -x) **2)
+        ans = min(ans,(tal1 - x)**2 + (tal2 -y) **2)
+
 print(ans)
