@@ -20,6 +20,6 @@ for i in range(n):
         max_y = max(y, max_y)
         min_y = min(y, min_y)
     
-    ans = max(ans, (max_x - min_x) * (max_y - min_y))
-    
+    ans = max(ans, abs(max_x - min_x) * abs(max_y - min_y))
+
 print(ans)
