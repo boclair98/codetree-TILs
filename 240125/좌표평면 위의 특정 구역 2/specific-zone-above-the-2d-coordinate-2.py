@@ -1,28 +1,27 @@
 import sys
-
-INT_MAX = sys.maxsize
-
-# 변수 선언 및 입력
 n = int(input())
-points = [
-    tuple(map(int, input().split()))
-    for _ in range(n)
-]
-ans = INT_MAX
+INTMAX = sys.maxsize
+
+square = [tuple(map(int,input().split())) for _ in range(n)]
+
+ans = INTMAX
+
+
 for i in range(n):
 
-    min_x,max_x = INT_MAX,1
-    min_y,max_y = INT_MAX,1
+    max_x ,min_x = 0,INTMAX
+    max_y , min_y = 0, INTMAX
 
-    for j,(x,y) in enumerate(points):
-
+    for j,(x,y) in enumerate(square):
         if i == j :
             continue
 
-        min_x = min(min_x,x)
-        max_x = max(max_x,x)
-        min_y = min(min_y,y)
-        max_y = max(max_y,y)
+        max_x = max(x,max_x)
+        min_x = min(x,min_x)
+        min_y = min(y,min_y)
+        max_y = max(y,max_y)
 
-    ans = min(ans,(max_x - min_x ) * (max_y - min_y))
+    ans = min(ans, (max_x - min_x) * (max_y - min_y))
+    
+
 print(ans)
