@@ -25,7 +25,7 @@ public class Main {
                 }
                 
             }
-            if (index == n){
+            if (index == n-1){
                 break;
             }
             index++;
