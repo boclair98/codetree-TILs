@@ -25,7 +25,7 @@ public class Main {
                 }
                 
             }
-            if (index > student.length){
+            if (index == n){
                 break;
             }
             index++;
