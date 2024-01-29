@@ -6,9 +6,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int p = sc.nextInt();
-        int[] student = new int [n];
+        int[] student = new int [1001];
 
-        for(int i = 0 ; i < n ; i++){
+        for(int i = 1 ; i <= n ; i++){
             student[i] = sc.nextInt();
         }
         Arrays.sort(student);
@@ -32,6 +32,6 @@ public class Main {
             index++;
             
         }
-        System.out.print(count );
+        System.out.print(index);
     }
 }
