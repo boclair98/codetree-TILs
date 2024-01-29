@@ -19,7 +19,7 @@ public class Main {
             coin = coin + student[index];
             
             if (coin > p ){
-                coin = coin - (student[index] / 2);
+                coin = coin - (student[index]) + (student[index] / 2);
                 if (coin <= p){
                     break;
                 }
