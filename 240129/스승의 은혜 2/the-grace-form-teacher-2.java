@@ -20,6 +20,9 @@ public class Main {
                 if (coin < p){
                     break;
                 }
+                else{
+                    index = index - 1;
+                }
             }
             coin = coin + student[index];
             index++;
