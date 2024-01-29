@@ -15,18 +15,18 @@ public class Main {
         int coin = 0 ;
         int index = 0;
         while (true){
+            
+            coin = coin + student[index];
+            
             if (coin > p ){
                 coin = coin - (student[index] / 2);
                 if (coin < p){
                     break;
                 }
-                else{
-                    index = index - 1;
-                }
+                
             }
-            coin = coin + student[index];
             index++;
         }
-        System.out.print(index);
+        System.out.print(index + 1);
     }
 }
