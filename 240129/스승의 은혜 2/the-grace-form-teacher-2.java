@@ -25,6 +25,9 @@ public class Main {
                 }
                 
             }
+            if (index > student.length){
+                break;
+            }
             index++;
         }
         System.out.print(index + 1);
