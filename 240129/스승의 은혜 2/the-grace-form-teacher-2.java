@@ -18,20 +18,23 @@ public class Main {
         while (true){
             
             coin = coin + student[index];
-            count +=1;
+            
             if (coin > p ){
                 coin = coin - (student[index]) + (student[index] / 2);
                 if (coin <= p){
+                    
                     break;
                 }
                 
             }
+            
             if (index == n-1){
                 break;
             }
             index++;
+            count++;
             
         }
-        System.out.print(index);
+        System.out.print(count);
     }
 }
