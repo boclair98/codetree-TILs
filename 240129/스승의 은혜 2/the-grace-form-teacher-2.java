@@ -14,10 +14,11 @@ public class Main {
         Arrays.sort(student);
         int coin = 0 ;
         int index = 0;
+        int count = 0 ;
         while (true){
             
             coin = coin + student[index];
-            
+            count +=1;
             if (coin > p ){
                 coin = coin - (student[index]) + (student[index] / 2);
                 if (coin <= p){
@@ -29,7 +30,8 @@ public class Main {
                 break;
             }
             index++;
+            
         }
-        System.out.print(index + 1);
+        System.out.print(count );
     }
 }
