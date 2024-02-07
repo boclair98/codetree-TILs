@@ -15,7 +15,7 @@ public class Main {
                 start += 1 % (4);
             }
             if (wor=='R'){
-                start = 0;
+                start = (start - 1 + 4) % 4;
             }
             if (wor =='F'){
                 x += x+dx[start];
