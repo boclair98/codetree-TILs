@@ -18,7 +18,7 @@ def dfs(x,y):
 total = 0
 for i in range(n):
     for j in range(n):
-        if graph[i][j] == 1:
-            if dfs(i,j)>=3 :
-                total+=1
+        
+        if dfs(i,j)>=3 :
+            total+=1
 print(total)
