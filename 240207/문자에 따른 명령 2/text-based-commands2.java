@@ -12,10 +12,10 @@ public class Main {
         for (int i = 0; i<word.length(); i++){
             char wor = word.charAt(i);
             if (wor =='L'){
-                start += 1 % (4);
+                start= (start +1) % 4;
             }
             if (wor=='R'){
-                start = (start - 1 + 4) % 4;
+                start = (start -1 +4) % 4;
             }
             if (wor =='F'){
                 x += x+dx[start];
