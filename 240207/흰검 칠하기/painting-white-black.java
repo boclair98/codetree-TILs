@@ -4,14 +4,14 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int [] tile = new int[2001];
-        String[] visited = new String[2001];
+        int [] tile = new int[201];
+        String[] visited = new String[201];
         
-        for(int i = 0; i<2001; i++){
+        for(int i = 0; i<201; i++){
             visited[i]="No";
         }
-        int left = 1000;
-        int right = 1000;
+        int left = 100;
+        int right = 100;
 
         for (int i = 0; i<n; i++){
             int a = sc.nextInt();
@@ -39,7 +39,7 @@ public class Main {
         int white = 0;
         int black = 0;
         int gray = 0 ;
-        for (int i = 0; i<2001; i++){
+        for (int i = 0; i<201; i++){
             if(visited[i].equals("White")&& tile[i]<4){
                 white+=1;
             }
