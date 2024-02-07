@@ -18,12 +18,12 @@ public class Main {
                 start = 0;
             }
             if (wor =='F'){
-                x += x+dy[start];
-                y += y+dx[start];
+                x += x+dx[start];
+                y += y+dy[start];
             }
             
 
         }
-        System.out.print(x+" "+y);
+        System.out.print(y+" "+x);
     }
 }
