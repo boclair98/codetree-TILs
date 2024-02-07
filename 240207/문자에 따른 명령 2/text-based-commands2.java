@@ -19,8 +19,8 @@ public class Main {
                 start = (start  +1 ) % 4;
             }
             if (wor =='F'){
-                x += x+dx[start];
-                y += y+dy[start];
+                x += dx[start];
+                y += dy[start];
             }
             
 
