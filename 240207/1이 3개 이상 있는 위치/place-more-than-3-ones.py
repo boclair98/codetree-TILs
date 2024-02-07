@@ -5,9 +5,9 @@ n = int(input())
 graph = [list(map(int,input().split())) for _ in range(n)]
 dx = [1,0,-1,0]
 dy = [0,-1,0,1]
-cnt = 0
+
 def dfs(x,y):
-    global cnt
+    cnt = 0
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]
