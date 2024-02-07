@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i<word.length(); i++){
             char wor = word.charAt(i);
             if (wor =='L'){
-                start = 1;
+                start += 1 % (4);
             }
             if (wor=='R'){
                 start = 0;
