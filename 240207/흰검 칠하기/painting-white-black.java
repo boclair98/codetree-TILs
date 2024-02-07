@@ -12,28 +12,28 @@ public class Main {
         }
         int left = 100;
         int right = 100;
+        int now = 100;
 
         for (int i = 0; i<n; i++){
             int a = sc.nextInt();
             char word = sc.next().charAt(0);
-
             if (word=='R'){
-                right = left + a;
-                
-                for (int j = left; j<right; j++){
+                right = now + a;
+                for (int j = now; j<right; j++){
                     visited[j] ="Black";
                     tile[j] +=1;
                 }
-                
+                now = right ;
             }
-
-            if(word=='L'){
-                left = right  - a;
-                for (int j = left; j<right; j++){
+            if (word=='L'){
+                left = now - a;
+                for (int j = left; j<now; j++){
                     visited[j] ="White";
                     tile[j] +=1;
                 }
+                now = left ;
             }
+            
             
         }
         int white = 0;
@@ -46,7 +46,7 @@ public class Main {
             if (visited[i].equals("Black") && tile[i]<4){
                 black+=1;
             }
-            if(tile[i]>3){
+            if(tile[i]>=4){
                 gray+=1;
             }
         }
