@@ -8,22 +8,22 @@ public class Main {
         int[] dx = new int[]{0,0,-1,1};
         int x = 0;
         int y = 0;
-        int start = 0;
+        int start = 3;
         for (int i = 0; i<word.length(); i++){
             char wor = word.charAt(i);
             if (wor =='L'){
-                start= (start +1) % 4;
+                start= (start -1 + 4) % 4;
             }
             if (wor=='R'){
-                start = (start -1 +4) % 4;
+                start = (start  +1 ) % 4;
             }
             if (wor =='F'){
-                x = x+dx[start];
-                y = y+dy[start];
+                x += x+dx[start];
+                y += y+dy[start];
             }
             
 
         }
-        System.out.print(y+" "+x);
+        System.out.print(x+" "+y);
     }
 }
