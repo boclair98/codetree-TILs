@@ -1,10 +1,9 @@
 n = int(input())
 
-def star(n):
+def recu(n):
     if n == 0:
         return 
-    
-    star(n-1)
-    print("*"*n)
+    recu(n-1)
+    print('*'*n)
 
-star(n)
+recu(n)
