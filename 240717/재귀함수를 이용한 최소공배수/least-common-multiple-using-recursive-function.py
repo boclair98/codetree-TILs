@@ -14,10 +14,14 @@ def lcm(a,b):
  
 n = int(input())
 num = list(map(int,input().split()))
-tal = []
-init = 0
-nums = lcm(num[0],num[1])
-for i in range(2,n-1):
-    tal.append(lcm(nums,num[i]))
-    nums = lcm(tal[-1],num[i+1])  
-print(tal[-1])
+if n == 1:
+    print( num[0])
+elif n == 2:
+    print( num[0] * num[1])
+else:
+    tal = []
+    nums = lcm(num[0],num[1])
+    for i in range(2,n-1):
+        tal.append(lcm(nums,num[i]))
+        nums = lcm(tal[-1],num[i+1])  
+    print(tal[-1])
