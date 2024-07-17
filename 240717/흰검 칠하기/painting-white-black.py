@@ -34,7 +34,7 @@ for _ in range(n):
     
 gray,white,black = 0,0,0
 for i in range(10000):
-    if visited[i] >= 5:
+    if visited[i] >= 7:
         gray+=1
     elif visited[i]>=1:
         if color[i]=='White':
