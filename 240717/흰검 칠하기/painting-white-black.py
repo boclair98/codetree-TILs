@@ -23,7 +23,7 @@ black = 0
 for i in range(10000):
     if visited[i] >=4:
         gray+=1
-    elif visited[i]>=2:
+    elif visited[i]>=1:
         if color[i] =='Black':
             black+=1
         elif color[i]=='White':
