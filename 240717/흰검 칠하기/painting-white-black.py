@@ -1,7 +1,7 @@
 n = int(input())
 
-visited = [0] *(200)
-color = ['Yellow'] *(200)
+visited = [0] *(400)
+color = ['Yellow'] *(400)
 now = 100 
 for _ in range(n):
     s,r = input().split() 
@@ -18,7 +18,7 @@ for _ in range(n):
             color[i] = 'Black'
         now=now+s-1
 
-for i in range(200):
+for i in range(400):
     if visited[i] >=4:
         color[i] ='gray'
 
