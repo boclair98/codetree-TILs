@@ -16,6 +16,9 @@ n = int(input())
 num = list(map(int,input().split()))
 if n == 1:
     print(num[0])
+elif n == 2:
+    tal = lcm(num[0],num[1])
+    print(tal)
 else:
     tal = []
     nums = lcm(num[0],num[1])
