@@ -9,23 +9,30 @@ for _ in range(n):
     
     if r =='L':
         for i in range(now,now-s,-1):
-            visited[i]+=1
-            color[i] = 'White'
+            if color[i] =='Yellow':   
+                visited[i]+=1
+                color[i] = 'White'
+            elif color[i] =='Black':
+                color[i] = 'White'
+                visited[i]+=2
         now = now - s+1 
     elif r == 'R':
         for i in range(now,now+s):
-            visited[i]+=1
-            color[i] = 'Black'
+            if color[i] =='Yellow':   
+                visited[i]+=1
+                color[i] = 'Black'
+            elif color[i] =='White':
+                color[i] = 'Black'
+                visited[i]+=2
         now=now+s-1
-gray = 0
-white = 0
-black = 0
+
+gray,white,black = 0,0,0
 for i in range(10000):
-    if visited[i] >=4:
+    if visited[i] >= 7:
         gray+=1
     elif visited[i]>=1:
-        if color[i] =='Black':
-            black+=1
-        elif color[i]=='White':
+        if color[i]=='White':
             white+=1
+        else:
+            black+=1
 print(white,black,gray)
