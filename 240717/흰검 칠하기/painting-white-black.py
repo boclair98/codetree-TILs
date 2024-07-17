@@ -15,6 +15,9 @@ for _ in range(n):
             elif color[i] =='Black':
                 color[i] = 'White'
                 visited[i]+=2
+            else:
+                color[i]='White'
+                visited[i]+=2
         now = now - s+1 
     elif r == 'R':
         for i in range(now,now+s):
@@ -24,8 +27,11 @@ for _ in range(n):
             elif color[i] =='White':
                 color[i] = 'Black'
                 visited[i]+=2
+            else:
+                color[i]='Black'
+                visited[i]+=2
         now=now+s-1
-
+    
 gray,white,black = 0,0,0
 for i in range(10000):
     if visited[i] >= 7:
@@ -35,4 +41,5 @@ for i in range(10000):
             white+=1
         else:
             black+=1
+
 print(white,black,gray)
