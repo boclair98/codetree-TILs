@@ -1,7 +1,8 @@
 n = int(input())
 
-visited = [0] *(10000)
-color = ['Yellow'] *(10000)
+a = [0] *(10000)
+colorw = [0] *(10000)
+colorb = [0] *(10000)
 now = 100 
 for _ in range(n):
     s,r = input().split() 
@@ -9,37 +10,23 @@ for _ in range(n):
     
     if r =='L':
         for i in range(now,now-s,-1):
-            if color[i] =='Yellow':   
-                visited[i]+=1
-                color[i] = 'White'
-            elif color[i] =='Black':
-                color[i] = 'White'
-                visited[i]+=2
-            else:
-                color[i]='White'
-                visited[i]+=2
+            colorw[i]+=1
+            a[i] = 1
         now = now - s+1 
     elif r == 'R':
         for i in range(now,now+s):
-            if color[i] =='Yellow':   
-                visited[i]+=1
-                color[i] = 'Black'
-            elif color[i] =='White':
-                color[i] = 'Black'
-                visited[i]+=2
-            else:
-                color[i]='Black'
-                visited[i]+=2
+            colorb[i]+=1
+            a[i] = 2
         now=now+s-1
     
 gray,white,black = 0,0,0
 for i in range(10000):
-    if visited[i] >= 7:
+    if colorb[i]>=2 and colorw[i]>=2:
         gray+=1
-    elif visited[i]>=1:
-        if color[i]=='White':
-            white+=1
-        else:
-            black+=1
+    elif a[i] == 1:
+        white+=1
+    elif a[i] == 2:
+        black+=1
+    
 
 print(white,black,gray)
