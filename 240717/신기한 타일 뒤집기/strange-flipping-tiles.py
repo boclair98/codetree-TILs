@@ -8,7 +8,7 @@ for _ in range(n):
     if r =='L':
         for i in range(now,now-s,-1):
             tile[i] = 1 
-        now = now - s - 1
+        now = now - s +1
     else:
         for i in range(now,now+s):
             tile[i] = 2 
