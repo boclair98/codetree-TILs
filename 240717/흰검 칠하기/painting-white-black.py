@@ -19,7 +19,7 @@ for _ in range(n):
         now=now+s-1
 
 for i in range(1000000):
-    if visited[i] >=4:
+    if visited[i] >3:
         color[i] ='gray'
 
 white = color.count('White')
