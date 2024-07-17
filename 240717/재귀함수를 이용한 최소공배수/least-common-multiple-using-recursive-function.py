@@ -15,7 +15,7 @@ def lcm(a,b):
 n = int(input())
 num = list(map(int,input().split()))
 if n == 1:
-    print( num[0])
+    print(num[0])
 else:
     tal = []
     nums = lcm(num[0],num[1])
