@@ -1,0 +1,6 @@
+n = int(input())
+num = list(map(int,input().split()))
+num.sort()
+print(' '.join(map(str,num)))
+num.sort(reverse = True)
+print(" ".join(map(str,num)))
