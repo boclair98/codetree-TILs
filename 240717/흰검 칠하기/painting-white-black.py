@@ -26,6 +26,6 @@ for i in range(10000):
     elif visited[i]>=2:
         if color[i] =='Black':
             black+=1
-        else:
+        elif color[i]=='White':
             white+=1
 print(white,black,gray)
