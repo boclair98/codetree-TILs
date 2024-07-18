@@ -1,7 +1,7 @@
 from collections import deque 
 n = []
-
-for _ in range(n):
+t = int(input())
+for _ in range(t):
     s = input().split()
     if s[0] == 'push':
         n.append(int(s[1]))
