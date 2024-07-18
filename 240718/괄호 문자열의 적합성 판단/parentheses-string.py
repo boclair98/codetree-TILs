@@ -9,7 +9,7 @@ for i in h:
         if num[-1]=='(':
             num.pop()
     elif i ==')' and len(num) == 0:
-        print('No')
+        num.append(i)
         break
 
 if len(num) == 0:
