@@ -2,18 +2,17 @@ n = int(input())
 coin = [list(map(int,input().split())) for _ in range(n)]
 s_idx = 0 
 s_idy = 0 
-e_idx = n - 3 
-e_idy = n - 3
-max_cnt = 0 
-while True : 
-    if e_idx <= s_idx and e_idy <= s_idy:
-        break
-    cnt = 0  
-    for i in range(s_idx,s_idx+3):
-        for j in range(s_idy,s_idy+3):
+total = 0 
+def tot_coin(row,col,row3,col3):
+    tot = 0 
+    for i in range(row,row3):
+        for j in range(col,col3):
             if coin[i][j] == 1:
-                cnt+=1 
-    max_cnt = max(max_cnt,cnt)
-    s_idx+=1
-    s_idy+=1
-print(max_cnt)
+                tot+=1 
+    return tot 
+
+
+for row in range(n-2):
+    for col in range(n-2):
+        total = max(total,tot_coin(row,col,row+3,col+3))
+print(total)
