@@ -8,8 +8,9 @@ for i in range(n):
     for j in range(1,n):
         if first != num[i][j]:
             first = num[i][j]
-            cnt = 1
+            
         else:
+            first = num[i][j]
             cnt+=1
     if cnt >=m:
         total+=1
@@ -20,8 +21,9 @@ for i in range(n):
     for j in range(1,n):
         if two != num[j][i]:
             two = num[j][i]
-            cnt1 = 1
+
         else:
+            two = num[j][i]
             cnt1+=1
     if cnt1>=m:
         total+=1
