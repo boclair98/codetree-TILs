@@ -10,7 +10,7 @@ for i in range(n):
             first = num[i][j]
             
         else:
-            first = num[i][j]
+            
             cnt+=1
     if cnt >=m:
         total+=1
@@ -23,7 +23,7 @@ for i in range(n):
             two = num[j][i]
 
         else:
-            two = num[j][i]
+            
             cnt1+=1
     if cnt1>=m:
         total+=1
