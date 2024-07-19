@@ -6,7 +6,7 @@ e_idx = n - 3
 e_idy = n - 3
 max_cnt = 0 
 while True : 
-    if e_idx < s_idx and e_idy < s_idy:
+    if e_idx <= s_idx and e_idy <= s_idy:
         break
     cnt = 0  
     for i in range(s_idx,s_idx+3):
