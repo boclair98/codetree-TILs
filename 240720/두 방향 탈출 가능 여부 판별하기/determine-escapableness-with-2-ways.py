@@ -13,11 +13,12 @@ def dfs(x,y):
         if 0<=nx<n and 0<=ny<m:
             if visited[nx][ny] == False and graph[nx][ny] == 1:
                 visited[nx][ny] = True 
-                graph[nx][ny]+=1
+                graph[nx][ny] = graph[x][y] + 1 
                 dfs(nx,ny)
     return graph[n-1][m-1]
 
 num = dfs(0,0)
+
 if num == 1:
     print(0)
 else:
