@@ -4,7 +4,7 @@ num = [list(map(int,input().split())) for _ in range(n)]
 
 def first_case(x,y):
     tal = 0 
-    if x <= n-2 and y <=n-2:
+    if x <= n-2 and y <=m-2:
         tal = num[x][y] + num[x+1][y] + num[x+1][y+1]
     return tal  
 
@@ -15,7 +15,7 @@ def second_case(x,y):
     return tal 
 def third_case(x,y):
     tal = 0 
-    if x>=0 and x<=n-2 and y >= 0 and y<=n-2:
+    if x>=0 and x<=n-2 and y >= 0 and y<=m-2:
         tal = num[x][y] + num[x][y+1] + num[x+1][y+1]
     return tal 
 def four_case(x,y):
@@ -26,7 +26,7 @@ def four_case(x,y):
 
 def five_case(x,y):
     tal = 0 
-    if y<=n-3:
+    if y<=m-3:
         tal = num[x][y]+num[x][y+1]+num[x][y+2]
     return tal
 
