@@ -22,12 +22,10 @@ def bfs(x,y):
                     q.append((nx,ny))
     return cnt 
 
-if n == 1 and k == 1:
-    print(1)
-else:
-    for _ in range(k):
-        x,y = map(int,input().split())
-        
-        if visited[x-1][y-1] == False:
-            tal = bfs(x-1,y-1)
-    print(tal)
+
+
+for _ in range(k):
+    x,y = map(int,input().split())
+    if visited[x-1][y-1] == False:
+        tal = bfs(x-1,y-1)
+print(tal)
