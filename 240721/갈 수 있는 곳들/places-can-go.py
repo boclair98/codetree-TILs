@@ -2,11 +2,12 @@ from collections import deque
 n,k = map(int,input().split())
 num = [list(map(int,input().split())) for _ in range(n)]
 visited = [[False]*n for _ in range(n)]
-cnt = 0
+cnt = k
 dx = [1,0,-1,0]
 dy = [0,1,0,-1]
 
 def bfs(x,y):
+
     global cnt 
     q = deque()
     q.append((x,y))
@@ -27,5 +28,6 @@ def bfs(x,y):
 for _ in range(k):
     x,y = map(int,input().split())
     if visited[x-1][y-1] == False:
+        visited[x-1][y-1] = True 
         tal = bfs(x-1,y-1)
 print(tal)
