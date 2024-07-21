@@ -11,6 +11,7 @@ def coins(x,y):
             cnt+=1
     else:
         cnt+=1
+    
     nx = x + 1
     ny = y 
     if 0<=nx<n and 0<=ny<n:
@@ -21,6 +22,7 @@ def coins(x,y):
             cnt+=1
     else:
         cnt+=1
+    
     ny = y - 1
     if 0<=nx<n and 0<=ny<n:
         if num[nx][ny] == 1:
@@ -30,6 +32,7 @@ def coins(x,y):
             cnt+=1
     else:
         cnt+=1
+    
     ny = y + 1
     if 0<=nx<n and 0<=ny<n:
         if num[nx][ny] == 1:
@@ -39,7 +42,7 @@ def coins(x,y):
             cnt+=1
     else:
         cnt+=1
-    
+
     nx = x + 2
     ny = y 
     if 0<=nx<n and 0<=ny<n:
@@ -50,9 +53,10 @@ def coins(x,y):
             cnt+=1
     else:
         cnt+=1
+
     total *= k 
     if total >= k: 
-        return total 
+        return total
     else:
         return 0
 
@@ -70,7 +74,7 @@ def coins2(x,y):
             cnt+=1
     else:
         cnt+=1
-
+    
     nx = x + 1 
     if 0<=nx<n and 0<=ny<n:
         if num[nx][ny] == 1:
@@ -87,7 +91,7 @@ def coins2(x,y):
             total+=1
             cnt+=1 
         else:
-            cnt+=1 
+            cnt+=1
     else:
         cnt+=1
 
@@ -97,7 +101,7 @@ def coins2(x,y):
             total+=1
             cnt+=1 
         else:
-            cnt+=1 
+            cnt+=1
     else:
         cnt+=1
 
@@ -193,7 +197,7 @@ def coins2(x,y):
             cnt+=1 
     else:
         cnt+=1
-        
+
     total *= k 
     if total >= k: 
         return total 
