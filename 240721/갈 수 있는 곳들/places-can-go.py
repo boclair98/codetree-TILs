@@ -25,6 +25,7 @@ def bfs(x,y):
 
 for _ in range(k):
     x,y = map(int,input().split())
-    
-    tal = bfs(x-1,y-1)
+    if visited[x-1][y-1] == False:
+
+        tal = bfs(x-1,y-1)
 print(tal)
