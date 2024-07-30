@@ -25,7 +25,7 @@ def check(number):
                 idx+=1 
 
         elif number[idx]=='3' :
-            if idx == n -2:
+            if idx == n-2 or idx==n-1:
                 fail+=1
                 break
             if number[(idx+1)%n]=='3' and number[(idx+2)%n]=='3':
