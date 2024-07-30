@@ -33,5 +33,5 @@ for cnt in range(1,max_val+1):
 
     count.append((cnt,total))
 
-count.sort(lambda x :(x[1],-x[0]), reverse = True)
+count.sort(lambda x :(x[1],x[0]),reverse = True)
 print(count[0][0],count[0][1])
