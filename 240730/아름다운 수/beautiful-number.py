@@ -7,7 +7,14 @@ total = 0
 def check(number):
     idx = 0
     su = 0 
-    fail = 0  
+    fail = 0
+    if number.count('1') == n:
+        return True   
+    elif number.count('2') == n:
+        if n % 2 == 0:
+            return True 
+        else:
+            return False
     while idx < n:
         if number[idx] =='1':
             su+=1
