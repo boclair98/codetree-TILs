@@ -1,7 +1,6 @@
 n = int(input())
 cnt = 0 
 num = [] 
-visited = [False] * (n+1)
 total = 0 
     
 def check(number):
@@ -26,11 +25,11 @@ def backtracking():
         return 
 
     for i in range(1,5):
-        visited[i] = True 
+        
         num.append(i)
         backtracking()
         num.pop()
-        visited[i]=False 
+        
 backtracking()
 
 print(total)
