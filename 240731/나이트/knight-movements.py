@@ -21,7 +21,7 @@ def bfs(x,y,ex,ey):
                     q.append((nx,ny))
                     num[nx][ny] = num[x1][y1]+1 
     
-    return num 
+    return -1
 
 
 print(bfs(sx-1,sy-1,ex-1,ey-1)+1)
