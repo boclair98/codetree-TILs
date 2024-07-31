@@ -15,18 +15,17 @@ def bfs(sx,sy,count):
     while q : 
         x,y = q.popleft()
         if x == ex and y == ey :
-            num[ex][ey] = num[x][y] + 1 
+            num[ex][ey] = num[x][y]+1
             return num[ex][ey]
+
         for i in range(8):
             nx = x + dx[i]
             ny = y + dy[i]
             if 0<=nx<n and 0<=ny<n:
-                if visited[nx][ny] == False:
-                    num[nx][ny] = num[x][y] + 1
-                    visited[nx][ny] = True 
-                    q.append((nx,ny))
+                num[nx][ny] = num[x][y] + 1
+                q.append((nx,ny))
     
     return -1
 
 
-print(bfs(sx,sy,count))
+print(bfs(sx,sy,count)+1)
