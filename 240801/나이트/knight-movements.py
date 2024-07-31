@@ -14,8 +14,8 @@ def bfs(sx,sy,count):
     visited[sx][sy] = True 
     while q : 
         x,y = q.popleft()
-        if x == ex and y == ey : 
-            
+        if x == ex and y == ey :
+            num[ex][ey] = num[x][y] + 1 
             return num[ex][ey]
         for i in range(8):
             nx = x + dx[i]
@@ -25,7 +25,6 @@ def bfs(sx,sy,count):
                     num[nx][ny] = num[x][y] + 1
                     visited[nx][ny] = True 
                     q.append((nx,ny))
-        
     
     return -1
 
