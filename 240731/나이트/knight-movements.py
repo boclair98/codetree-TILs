@@ -24,4 +24,4 @@ def bfs(x,y,ex,ey):
     return num 
 
 
-print(bfs(sx,sy,ex,ey)+1)
+print(bfs(sx-1,sy-1,ex-1,ey-1)+1)
