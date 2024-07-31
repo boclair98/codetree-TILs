@@ -21,4 +21,8 @@ def bfs(x,y):
 
     return num[n-1][m-1]
 
-print(bfs(x,y)-1)
+tal = bfs(x,y)
+if tal > 1:
+    print(tal-1)
+else:
+    print(-1)
