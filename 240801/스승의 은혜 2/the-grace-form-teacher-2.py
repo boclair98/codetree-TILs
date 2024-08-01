@@ -2,19 +2,19 @@ n,b = map(int,input().split())
 num= [] 
 for i in range(n):
     num.append(int(input()))
-tal = [] 
-for i in range(n):
-    money = 0
-    count = 0
-    money +=(num[i]//2)
-    count+=1 
-    for j in range(i+1,n):
-        money+=num[j]
-        count+=1
-        if money >b:
-            count-=1
-            money-=num[j]
-            tal.append((count,money))
+tal = []
+num.sort() 
+money = 0 
+count = 0
+idx = 0 
+while money<b:
+    money+=num[idx]
+    count+=1
+    if money < b:
+        idx+=1
+    else:
+        money-=num[idx]
+        money+=(num[idx]//2)
+        if money >=b:
             break 
-tal.sort(key = lambda x:-x[0])
-print(tal[0][0])
+print(count-1)
