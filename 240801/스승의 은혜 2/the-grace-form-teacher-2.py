@@ -15,7 +15,8 @@ while money<b:
     else:
         money-=num[idx]
         money+=(num[idx]//2)
-        if money >=b:
-            count-=1
+        if money ==b:
             break 
+        elif money > b:
+            count-=1
 print(count)
