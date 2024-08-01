@@ -11,6 +11,6 @@ for i in range(n):
         if i == j :
             continue 
         x1,y1 = num[j]
-        if y>x1 and y<y1:
-            cnt+=1
+        if x>x1 and x <y1 and y>x1 and y<y1:
+            cnt+=2
 print(cnt)
