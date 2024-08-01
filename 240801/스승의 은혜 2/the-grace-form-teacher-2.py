@@ -17,9 +17,13 @@ while money<b:
         money-=num[idx]
         if chance:
             money+=(num[idx]//2)
-        if money ==b:
-            break 
-        elif money > b:
+            chance = False 
+            if money ==b:
+                break 
+            elif money > b:
+                count-=1
+        else:
             count-=1
+            break
 
 print(count)
