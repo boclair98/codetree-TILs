@@ -6,13 +6,11 @@ for _ in range(n):
 cnt = 0
 
 for i in range(n):
-    sx,sy = num[i]
     flag =True 
     for j in range(n):
         if i == j :
             continue 
-        x1,y1 = num[j]
-        if (sx <=x1 and sy>=y1) or (sx>=x1 and sy<=y1):
+        if (num[i][0] <=num[j][0] and num[i][1]>=num[j][1]) or (num[i][0]>=num[j][0] and num[i][1]<=num[j][1]):
             flag = False 
             break 
     if flag == False:
