@@ -4,17 +4,16 @@ for _ in range(n):
     x,y = map(int,input().split())
     num.append((x,y))
 
-cnt = 0
+cnt = []
 for i in range(n):
     sx,sy = num[i]
     for j in range(n):
         if i == j :
             continue 
         x1,y1 = num[j]
-
-        if sx<x1 and y1<sy:
-            cnt+=1
-        if sx > x1 and sy < y1:
-            cnt+=1
+        if x1<sx<y1 and x1<sy<y1:
+            cnt.append((sx,sy,x1,y1))
+        
+        
             
 print(cnt)
