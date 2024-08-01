@@ -6,12 +6,12 @@ for _ in range(n):
 cnt = 0
 
 for i in range(n):
-    flag =True 
+    flag =False 
     for j in range(n):
         if i == j :
             continue 
         if (num[i][0] <=num[j][0] and num[i][1]>=num[j][1]) or (num[i][0]>=num[j][0] and num[i][1]<=num[j][1]):
-            flag = False 
+            flag = True 
             break 
     if flag == False:
         cnt+=1
