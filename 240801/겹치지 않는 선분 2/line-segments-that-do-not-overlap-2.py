@@ -14,5 +14,7 @@ for i in range(n):
         if x1<sx<y1 and x1<sy<y1:
             cnt.add((sx,sy))
             cnt.add((x1,y1))
-
-print(n-len(cnt))
+        if y1<sx<x1 and y1<sy<x1:
+            cnt.add((sx,sy))
+            cnt.add((x1,y1))
+print(n - len(cnt))
