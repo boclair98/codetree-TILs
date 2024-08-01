@@ -3,8 +3,8 @@ num = []
 for _ in range(n):
     x,y = map(int,input().split())
     num.append((x,y))
-
-cnt = []
+cnt = set()
+cnt2 = [] 
 for i in range(n):
     sx,sy = num[i]
     for j in range(n):
@@ -12,8 +12,7 @@ for i in range(n):
             continue 
         x1,y1 = num[j]
         if x1<sx<y1 and x1<sy<y1:
-            cnt.append((sx,sy,x1,y1))
-        
-        
-            
-print(cnt)
+            cnt.add((sx,sy))
+            cnt.add((x1,y1))
+
+print(n-len(cnt))
