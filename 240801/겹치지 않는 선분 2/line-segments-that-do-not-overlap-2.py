@@ -13,4 +13,6 @@ for i in range(n):
         x1,y1 = num[j]
         if x1<y<y1 and x1<x<y1:
             cnt-=2
+        elif x1>y>y1 and x1>x>y1:
+            cnt-=2
 print(cnt)
