@@ -4,8 +4,8 @@ tal = []
 visited = [False] * (k+1) 
 def check(num):
     flag = False 
-    for i in range(len(num)-1):
-        if num[i] == num[i+1]:
+    for i in range(len(num)-2):
+        if num[i] == num[i+1] == num[i+2]:
             flag = True 
         else :
             flag = False 
