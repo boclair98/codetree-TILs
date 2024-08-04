@@ -14,4 +14,7 @@ for _ in range(m):
     if s.isdigit():
         print(dic[int(s)])
     else:
-        print(suc(dic,s))
+        for i in range(1,n+1):
+            if dic[i] ==s:
+                print(i)
+                break
