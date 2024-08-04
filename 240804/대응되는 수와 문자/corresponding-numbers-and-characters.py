@@ -1,5 +1,9 @@
 n, m = map(int,input().split())
 dic = {i:0for i in range(1,n+1)} 
+def suc(num,s):
+    for x,y in num.items():
+        if s == y:
+            return x
 
 for i in range(1,n+1):
     s = input()
@@ -10,7 +14,4 @@ for _ in range(m):
     if s.isdigit():
         print(dic[int(s)])
     else:
-        for x,y in dic.items():
-            if y == s:
-                print(x)
-                break
+        print(suc(dic,s))
