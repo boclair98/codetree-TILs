@@ -13,3 +13,4 @@ for _ in range(m):
         for x,y in dic.items():
             if y == s:
                 print(x)
+                break
