@@ -14,7 +14,5 @@ for _ in range(m):
     if s.isdigit():
         print(dic[int(s)])
     else:
-        for i in range(1,n+1):
-            if dic[i] ==s:
-                print(i)
-                break
+        dic2= {y:x for x,y in dic.items()}
+        print(dic2[s])
