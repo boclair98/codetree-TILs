@@ -14,4 +14,4 @@ for i in range(3,n+1):
         dp[i] = dp[i-1] * 2 - 1
     else:
         dp[i] = dp[i-1] * 2 + 1
-print(dp[n])
+print(dp[n] % 10007)
