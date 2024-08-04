@@ -1,15 +1,11 @@
 n, m = map(int,input().split())
-dic = {i:input() for i in range(1,n+1)} 
-
+dic = [input() for _ in range(n)]
+dic2 ={}
+for i in range(n):
+    dic2[dic[i]] = i + 1
 for _ in range(m):
     s = input()
     if s.isdigit():
-        print(dic[int(s)])
+        print(dic[int(s)-1])
     else:
-        idx = 1
-        while idx <= n:
-            if dic[idx] == s:
-                print(idx)
-                break
-            else:
-                idx+=1
+        print(dic2[s])
