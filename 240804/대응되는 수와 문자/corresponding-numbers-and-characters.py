@@ -7,7 +7,7 @@ for _ in range(m):
         print(dic[int(s)])
     else:
         idx = 1
-        while idx < n:
+        while idx <= n:
             if dic[idx] == s:
                 print(idx)
                 break
