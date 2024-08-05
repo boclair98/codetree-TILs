@@ -3,7 +3,6 @@ import copy
 n,h,m = map(int,input().split())
 rain = [list(map(int,input().split())) for _ in range(n)]
 rain2 = copy.deepcopy(rain)
-rain3 = [[0]* n for _ in range(n)]
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 
@@ -38,8 +37,10 @@ for i in range(n):
         if rain2[i][j] == 2 : 
             visited = [[False] * n for _ in range(n)] 
             visited[i][j] = True
+            rain3 = [[0]* n for _ in range(n)]
             tal = bfs(i,j)
             rain2[i][j] = tal 
+    
 
 for i in range(n):
     for j in range(n):
