@@ -10,7 +10,6 @@ dy = [-1,1,2,2,1,-1,-2,-2]
 def bfs(i,j):
     q = deque()
     q.append((i,j))
-    visited[i][j] = True
     if i == r2 and j == c2:
         return 0 
     while q: 
