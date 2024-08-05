@@ -16,7 +16,7 @@ def bfs(i,j):
         x,y = q.popleft()
         if x == r2 and y == c2:
             chess[x][y] +=1 
-            return chess[x][y]
+            return chess[r2][c2]
         for i in range(8):
             nx = x + dx[i]
             ny = y + dy[i]
@@ -24,7 +24,7 @@ def bfs(i,j):
                 q.append((nx,ny))
                 chess[nx][ny] = chess[x][y] + 1 
                 if nx == r2 and ny == c2:
-                    return chess[nx][ny]
+                    return chess[r2][c2]
     return -1
 
 
