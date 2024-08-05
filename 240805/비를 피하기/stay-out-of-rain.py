@@ -26,7 +26,9 @@ def bfs(i,j):
                 if visited[nx][ny] == False and ((rain[nx][ny]==0 or rain[nx][ny]==2)):
                     visited[nx][ny] = True 
                     q.append((nx,ny))
-                    rain3[nx][ny] = rain3[x][y] + 1 
+                    rain3[nx][ny] = rain3[x][y] + 1
+                    if rain3[nx][ny] == 3:
+                        return rain3[nx][ny] 
                 if visited[nx][ny] == False and (rain[nx][ny]==3):
                     rain3[nx][ny] = rain3[x][y] + 1
                     visited[nx][ny] == True  
