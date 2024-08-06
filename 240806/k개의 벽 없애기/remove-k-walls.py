@@ -52,7 +52,7 @@ for i in combinations(one_c,k):
         visited2[x][y] = True 
 
     total = bfs(sx,sy,k,visited,visited2)
-    print(total)
+    
     if total > 0 :
         total_list.append(total) 
 if len(total_list) == 0:
