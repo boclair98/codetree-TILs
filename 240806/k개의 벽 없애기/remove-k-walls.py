@@ -24,25 +24,22 @@ def bfs(s,y,k,visited,visited2):
     cnt = 0  
     while q: 
         x,y = q.popleft()
-        if x == ex and y == ey:
-            
-            return cnt 
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             if nx == ex and ny == ey:
-                
-                return cnt
+                distance[nx][ny] = distance[x][y] + 1
+                return distance[nx][ny]
+
             if 0<=nx<n and 0<=ny<n:
                 if visited[nx][ny] == False and num[nx][ny] == 0:
-                    
                     visited[nx][ny] = True 
                     q.append((nx,ny))
+                    distance[nx][ny] = distance[x][y] + 1
                 elif visited[nx][ny] == False and num[nx][ny] == 1 and visited2[nx][ny] == True :
-                    
                     visited[nx][ny] = True 
                     q.append((nx,ny))
-        cnt+=1
+                    distance[nx][ny] = distance[x][y] + 1
 
     return -2
 
@@ -51,14 +48,15 @@ for i in combinations(one_c,k):
     tal = deque(i)
     visited = [[False]*n for _ in range(n)]
     visited2 = [[False]*n for _ in range(n)]
+    distance = [[0]*n for _ in range(n)]
     while tal :
         x,y = tal.popleft() 
         visited2[x][y] = True 
 
     total = bfs(sx,sy,k,visited,visited2)
-    
-    if total > 0 :
-        total_list.append(total) 
+    if total > 0:
+        total_list.append(total)
+
 if len(total_list) == 0:
     print(-1)
 else:
