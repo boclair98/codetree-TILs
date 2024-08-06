@@ -31,13 +31,14 @@ def bfs(s,y,k,visited,visited2):
                 return cnt
             if 0<=nx<n and 0<=ny<n:
                 if visited[nx][ny] == False and num[nx][ny] == 0:
-                    cnt+=1 
+                    
                     visited[nx][ny] = True 
                     q.append((nx,ny))
                 elif visited[nx][ny] == False and num[nx][ny] == 1 and visited2[nx][ny] == True :
-                    cnt+=1
+                    
                     visited[nx][ny] = True 
                     q.append((nx,ny))
+        cnt+=1
 
     return -2
 
@@ -51,6 +52,7 @@ for i in combinations(one_c,k):
         visited2[x][y] = True 
 
     total = bfs(sx,sy,k,visited,visited2)
+    print(total)
     if total > 0 :
         total_list.append(total) 
 if len(total_list) == 0:
