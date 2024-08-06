@@ -24,10 +24,14 @@ def bfs(s,y,k,visited,visited2):
     cnt = 0  
     while q: 
         x,y = q.popleft()
+        if x == ex and y == ey:
+            
+            return cnt 
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             if nx == ex and ny == ey:
+                
                 return cnt
             if 0<=nx<n and 0<=ny<n:
                 if visited[nx][ny] == False and num[nx][ny] == 0:
