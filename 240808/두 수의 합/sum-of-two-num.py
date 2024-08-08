@@ -7,9 +7,8 @@ for i in range(n):
     for j in range(i+1,n):
         if i == j:
             continue
-        if cnt not in p_t:
-            p_t[cnt] = num[i] + num[j]
-            cnt+=1
+        p_t[cnt] = num[i] + num[j]
+        cnt+=1
 idx = 1 
 count = 0
 while idx < cnt :
