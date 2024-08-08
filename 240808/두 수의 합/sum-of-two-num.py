@@ -1,10 +1,15 @@
 n, k = map(int,input().split())
 num = list(map(int,input().split()))
+pt = {}
+count = 0 
 
-p_t = {}
-cnt = 1
 for i in range(n):
-    for j in range(i+1,n):
-        if num[i] + num[j] == k:
-            cnt+=1
-print(cnt-1)
+    total = k - num[i]
+
+    if total in pt:
+        count+=pt[total]
+    if num[i] in pt:
+        pt[num[i]]+=1
+    else:
+        pt[num[i]] = 1
+print(count)
