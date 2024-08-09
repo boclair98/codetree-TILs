@@ -1,5 +1,5 @@
 n,m = map(int,input().split())
-num = list(map(int,input().split()))
+num = [0]+list(map(int,input().split()))
 num2 = list(map(int,input().split()))
 def binary(k):
     idx = n 
@@ -12,7 +12,7 @@ def binary(k):
             idx = min(idx,mid)
         else:
             start = mid + 1
-    return idx + 1
+    return idx 
 
 for i in num2:
     t = binary(i) 
