@@ -1,13 +1,14 @@
 n, m, q = map(int,input().split())
 num = [list(map(int,input().split())) for _ in range(n)]
 
-def up_compressed(num,k):
+#
+def up_compare(num,k):
     for i in range(m):
         if num[k][i] == num[k-1][i]:
             return True 
     return False 
 
-def down_compressed(num,k):
+def down_compare(num,k):
     for i in range(m):
         if num[k][i] == num[k+1][i]:
             return True 
@@ -37,7 +38,7 @@ for _ in range(q):
         fir = right(num,k)
         
         while k > 0:
-            gal = up_compressed(fir,k)
+            gal = up_compare(fir,k)
             k = k -1
             if gal:
                 if cnt % 2 == 1:
@@ -53,7 +54,7 @@ for _ in range(q):
         k = sn
         cnt = 1  
         while k < n-1:
-            gal = down_compressed(fir,k)
+            gal = down_compare(fir,k)
             if gal:
                 if cnt % 2 == 1:
                     k = k + 1
@@ -69,7 +70,7 @@ for _ in range(q):
         cnt = 2
         fir = left(num,k)
         while k > 0:
-            gal = up_compressed(fir,k)
+            gal = up_compare(fir,k)
             k = k -1
             if gal:
                 if cnt % 2 == 1:
@@ -85,7 +86,7 @@ for _ in range(q):
         k = sn
         cnt = 2  
         while k < n-1:
-            gal = down_compressed(fir,k)
+            gal = down_compare(fir,k)
             if gal:
                 if cnt % 2 == 1:
                     k = k + 1
