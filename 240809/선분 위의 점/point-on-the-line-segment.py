@@ -1,6 +1,6 @@
 n, m = map(int,input().split())
 num = list(map(int,input().split()))
-val = [0] * 100000
+val = [0] * 100000000000
 for i in num:
     val[i]+=1
 
