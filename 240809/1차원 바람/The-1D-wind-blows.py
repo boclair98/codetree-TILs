@@ -89,10 +89,10 @@ for _ in range(q):
             if gal:
                 if cnt % 2 == 1:
                     k = k + 1
-                    fir = right(fir,k)
+                    fir = left(fir,k)
                 else:
                     k = k + 1
-                    fir = left(fir,k)
+                    fir = right(fir,k)
                 cnt+=1
             else:
                 break
