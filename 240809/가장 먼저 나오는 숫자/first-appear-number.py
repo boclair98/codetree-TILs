@@ -12,11 +12,11 @@ def binary(k):
             idx = min(idx,mid)
         else:
             start = mid + 1
-    return idx 
+    return idx + 1
 
 for i in num2:
     t = binary(i) 
     if t<=n and num[t] == i:
-        print(t+1)
+        print(t)
     else:
         print(-1)
