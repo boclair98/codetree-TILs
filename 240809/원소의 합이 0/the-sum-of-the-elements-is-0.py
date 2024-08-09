@@ -9,10 +9,11 @@ for i in range(n):
             dic[num[0][i] + num[1][j]] = 1
         else:
             dic[num[0][i] + num[1][j]] += 1 
+
 count = 0 
 for i in range(n):
     for j in range(n):
-        diff = num[2][i] + num[3][j]
+        diff = -num[2][i] - num[3][j]
         if diff in dic:
             count+=dic[diff]
 print(count)
