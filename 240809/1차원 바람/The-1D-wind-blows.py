@@ -63,7 +63,40 @@ for _ in range(q):
                     fir = right(fir,k)
                 cnt+=1
             else:
+                break
+
+    elif ver =='R':
+        cnt = 2
+        fir = left(num,k)
+        while k > 0:
+            gal = up_compressed(fir,k)
+            k = k -1
+            if gal:
+                if cnt % 2 == 1:
+                    
+                    fir = right(fir,k)
+                else:
+                    
+                    fir = left(fir,k)
+                cnt+=1
+            else:
                 break 
+        
+        k = sn
+        cnt = 2  
+        while k < n-1:
+            gal = down_compressed(fir,k)
+            if gal:
+                if cnt % 2 == 1:
+                    k = k + 1
+                    fir = right(fir,k)
+                else:
+                    k = k + 1
+                    fir = left(fir,k)
+                cnt+=1
+            else:
+                break
+
 
 for i in range(n):
     for j in range(m):
