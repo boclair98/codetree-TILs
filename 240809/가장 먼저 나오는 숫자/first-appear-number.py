@@ -8,15 +8,15 @@ def binary(k):
     while start <= end:
         mid = (start+end) // 2
         if num[mid] >= k:
-            idx = min(idx,mid)
             end = mid - 1
+            idx = min(idx,mid)
         else:
             start = mid + 1
     return idx 
 
 for i in num2:
-    t = binary(i) -1 
+    t = binary(i) 
     if t<=n and num[t] == i:
-        print(t)
+        print(t+1)
     else:
         print(-1)
