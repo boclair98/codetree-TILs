@@ -15,8 +15,8 @@ def binary(k):
     return idx 
 
 for i in num2:
-    t = binary(i)
+    t = binary(i) -1 
     if t<=n and num[t] == i:
-        print(t+1)
+        print(t)
     else:
         print(-1)
