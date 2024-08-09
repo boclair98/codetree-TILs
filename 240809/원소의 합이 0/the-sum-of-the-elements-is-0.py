@@ -8,16 +8,11 @@ for i in range(n):
         if num[0][i] + num[1][j] not in dic:
             dic[num[0][i] + num[1][j]] = 1
         else:
-            dic[num[0][i] + num[1][j]]+=1 
-        if num[2][i] + num[3][j] not in dic2:
-            dic2[num[2][i] + num[3][j]] = 1
-        else:
-            dic2[num[2][i] + num[3][j]] +=1
-        
+            dic[num[0][i] + num[1][j]] += 1 
 count = 0 
-for i in dic:
-    dic[i]-=1 
-    for j in dic2:
-        if i + j == 0:
-            count+=dic2[j]
+for i in range(n):
+    for j in range(n):
+        diff = num[2][i] + num[3][j]
+        if diff in dic:
+            count+=dic[diff]
 print(count)
