@@ -18,5 +18,5 @@ for i in dic:
     for j in dic2:
         if tal + dic2[j] == 0:
             count+=1
-            break 
+            
 print(count)
