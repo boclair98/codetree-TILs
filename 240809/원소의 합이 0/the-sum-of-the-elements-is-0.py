@@ -5,18 +5,19 @@ dic2 = {}
 cnt  = 0 
 for i in range(n):
     for j in range(n):
-        dic[cnt] = num[0][i] + num[1][j]
-        dic2[cnt] = num[2][i] + num[3][j]
-        cnt+=1
-
-tot = 0 
+        if num[0][i] + num[1][j] not in dic:
+            dic[num[0][i] + num[1][j]] = 1
+        else:
+            dic[num[0][i] + num[1][j]]+=1 
+        if num[2][i] + num[3][j] not in dic2:
+            dic2[num[2][i] + num[3][j]] = 1
+        else:
+            dic2[num[2][i] + num[3][j]] +=1
+        
 count = 0 
-
 for i in dic:
-    tal = dic[i]
-    
+    dic[i]-=1 
     for j in dic2:
-        if tal + dic2[j] == 0:
-            count+=1
-            
+        if i + j == 0:
+            count+=dic2[j]
 print(count)
