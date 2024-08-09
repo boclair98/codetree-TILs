@@ -67,7 +67,7 @@ for _ in range(q):
 
 for i in range(n):
     for j in range(m):
-        print(fir[i][j],end=' ')
+        print(num[i][j],end=' ')
     print()
 
                 
