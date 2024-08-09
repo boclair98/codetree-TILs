@@ -2,18 +2,17 @@ from itertools import combinations
 n, k = map(int,input().split())
 count = 0
 num = list(map(int,input().split()))
-tal = []
-cnt = 0  
-def backtracking(cnt):
-    global count
-    if len(tal) == 3:
-        if sum(tal) == k:
-            count+=1
-        return 
-    
-    for i in range(cnt,n):
-        tal.append(num[i])
-        backtracking(i+1)
-        tal.pop()
-backtracking(cnt)
+dic ={}
+for i in num:
+    if i in dic:
+        dic[i]+=1
+    else:
+        dic[i] = 1
+
+for i in range(n):
+    dic[num[i]] -=1 
+    for j in range(i):
+        diff = k - num[i] - num[j]
+        if diff in dic:
+            count+=dic[diff]
 print(count)
