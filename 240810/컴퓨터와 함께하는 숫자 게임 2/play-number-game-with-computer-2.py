@@ -1,6 +1,8 @@
 m = int(input())
 a,b = map(int,input().split())
-num = [i for i in range(1,m+1)]
+num = []
+for i in range(1,m+1):
+    num.append(i)
 def binary(x):
     start = 0 
     end = m - 1
