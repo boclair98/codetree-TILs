@@ -17,7 +17,7 @@ def backtracking(n):
                 n = n - 1
             elif (n+1) % 2 == 0:
                 n = n + 1
-            else: 
+            elif(n-1) % 2 == 0:
                 n = n - 1
             count+=1 
     return count
