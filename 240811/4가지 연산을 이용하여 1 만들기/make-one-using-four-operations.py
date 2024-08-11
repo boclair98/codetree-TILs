@@ -15,4 +15,4 @@ def backtracking(n):
             count+=1 
     return count
 
-print(backtracking(n-1))
+print(backtracking(n))
