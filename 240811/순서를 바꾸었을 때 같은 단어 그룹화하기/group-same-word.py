@@ -1,7 +1,7 @@
 n = int(input())
 dic = {}
 for _ in range(n):
-    b = list(input().lower())
+    b = list(input())
     b.sort()
     t = ''.join(map(str,b))
     if t not in dic:
