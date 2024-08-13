@@ -1,19 +1,17 @@
+from functools import reduce
 n, m = map(int,input().split())
 num = list(map(int,input().split()))
 
 tal = [] 
 max_val = 0 
 visited = [False] * n
-def xor(tal):
-    num = 0 
-    for i in range(1,m):
-        num=(tal[i-1] ^ tal[i])
-    return num 
+
 
 def back(s):
     global max_val
     if len(tal) == m:
-        max_val = max(max_val,xor(tal))
+        result = reduce(lambda x, y: x ^ y, tal)
+        max_val = max(max_val,result)
 
         return
     
