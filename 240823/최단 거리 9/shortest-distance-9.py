@@ -13,7 +13,7 @@ for _ in range(m):
     graph[v].append((u,w))
 
 start,end = map(int,input().split())
-path = [] 
+path = [0 for _ in range(n+1)]
 def dijkstra(start,end):
     q = []
     heapq.heappush(q,(0,start))
@@ -27,10 +27,14 @@ def dijkstra(start,end):
             cost = costs+ distance[node]
             if cost < distance[nodes]:
                 distance[nodes] = cost 
-                path.append(node)
+                path[nodes] = node 
                 heapq.heappush(q,(cost,nodes))
 dijkstra(start,end)
 print(distance[end])
-path.append(end)
-path = list(set(path))
-print(" ".join(map(str,path)))
+
+x = end
+ret =[x] 
+while x!=start:
+    x = path[x]
+    ret.append(x)
+print(" ".join(map(str,ret[::-1]) ))
