@@ -5,7 +5,8 @@ public class Main {
         int b = 2;
         int c = 3;
 
-        a ,b = c, c;
+        a = c;
+        b = c;
         System.out.println(a+" "+b+" "+c);
     }
 }
