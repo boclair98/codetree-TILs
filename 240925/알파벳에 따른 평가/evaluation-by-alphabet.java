@@ -15,6 +15,8 @@ public class Main {
             System.out.print("Usually");
         }else if(s.equals("D")){
             System.out.print("Effort");
+        }else{
+            System.out.print("Failure");
         }
     }
 }
