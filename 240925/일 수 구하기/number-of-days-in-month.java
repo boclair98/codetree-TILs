@@ -5,11 +5,15 @@ public class Main {
         Scanner sc= new Scanner(System.in);
         int n = sc.nextInt();
         if(n%2==1){
+
             System.out.println(31);
         }else{
             if(n==2){
                 System.out.println(28);
-            }else{
+            }else if(n==8){
+                System.out.println(31);
+            }
+            else{
                 System.out.println(30);
             }
         }
