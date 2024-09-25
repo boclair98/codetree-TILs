@@ -5,12 +5,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int ag1 = sc.nextInt();
-        String s1 = sc.next();
+        char s1 = sc.next().charAt(0);
 
         int ag2 = sc.nextInt();
-        String s2 = sc.next();
+        char s2 = sc.next().charAt(0);
 
-        if((ag1>=19 || s1.equals("M")) && (ag2>=19 || s2.equals("M")) ){
+        if((ag1>=19 || s1 =='M') && (ag2>=19 || s2=='M') ){
             System.out.println(1);
         }else{
             System.out.println(0);
