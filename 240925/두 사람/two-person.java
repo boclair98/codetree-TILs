@@ -10,10 +10,10 @@ public class Main {
         int ag2 = sc.nextInt();
         String s2 = sc.next();
 
-        if((ag1>=19 || ag2>=19) &&(s1.equals("M") || s2.equals("M")) ){
+        if((ag1>=19 || ag2>=19) && (s1.equals("M") || s2.equals("M")) ){
             System.out.println(1);
         }else{
-            System.out.println(2);
+            System.out.println(0);
         }
 }
 }
