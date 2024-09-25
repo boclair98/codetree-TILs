@@ -11,9 +11,9 @@ public class Main {
         char s2 = sc.next().charAt(0);
 
         if((ag1>=19 || s1 =='M') && (ag2>=19 || s2=='M') ){
-            System.out.println(1);
+            System.out.println("1");
         }else{
-            System.out.println(0);
+            System.out.println("0");
         }
 }
 }
