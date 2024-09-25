@@ -9,6 +9,8 @@ public class Main {
                 System.out.println(28);
             }else if(n==8){
                 System.out.println(31);
+            }else{
+                System.out.println(30);
             }
         }
         else{
