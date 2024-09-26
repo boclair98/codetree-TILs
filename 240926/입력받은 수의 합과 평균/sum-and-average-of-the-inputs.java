@@ -8,7 +8,7 @@ public class Main {
         int cnt = 0 ;
         for(int i = 0 ; i<n; i++){
             int s = sc.nextInt();
-            total=s
+            total+=s;
         }
         double avg = (double) total/n;
         System.out.printf("%d %.1f",total,avg);
