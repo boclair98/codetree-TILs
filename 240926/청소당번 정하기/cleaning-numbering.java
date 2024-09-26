@@ -8,14 +8,12 @@ public class Main {
         int bok = 0;
         int bath = 0;
         for(int i = 1 ; i<=n; i++){
-            if (i%2 == 0){
-                classroom++;
-            }
-            else if(i%3==0){
-                bok++;
-            }
-            else if(i%12==0){
+            if(i%12 == 0){
                 bath++;
+            }else if(i%3 == 0){
+                bok++;
+            }else if(i%2==0){
+                classroom++;
             }
         }
         System.out.print(classroom+" "+bok+" "+bath);
