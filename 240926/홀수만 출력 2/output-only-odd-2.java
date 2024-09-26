@@ -6,8 +6,10 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        for (int i =b; i>=a; i--){
-            System.out.print(i+" ");
+        for (int i =a; i>=b; i--){
+            if(i%2 ==1){
+                System.out.print(i+" ");
+            }
         }
     }
 }
