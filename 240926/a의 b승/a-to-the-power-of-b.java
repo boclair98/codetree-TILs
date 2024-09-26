@@ -7,7 +7,7 @@ public class Main {
         int b = sc.nextInt();
         int tal = 1;
         for(int i =0; i<b; i++ ){
-            b*=b;
+            a*=a;
         }
         System.out.print(b);
     }
