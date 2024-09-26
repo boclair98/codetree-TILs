@@ -5,16 +5,16 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        int start = 1;
-        while (true){
-            if(start == n){
-                System.out.print("P");
-                break;
-            }else if(start>n){
-                System.out.print("N");
-            }else{
-                start++;
+        int start = 0;
+        for(int i = 1; i<n; i++){
+            if (n%i == 0){
+                start+=i;
             }
+        }
+        if (start == n){
+            System.out.print("P");
+        }else{
+            System.out.print("N");
         }
     }
 }
