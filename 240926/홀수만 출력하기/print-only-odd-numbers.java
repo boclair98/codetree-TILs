@@ -7,7 +7,7 @@ public class Main {
 
         for (int i = 0 ; i<n; i++){
             int s = sc.nextInt();
-            if(s%2 == 1 || s %3 == 0){
+            if(s%2 == 1 && s %3 == 0){
                 System.out.println(s);
             }
         }
