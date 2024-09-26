@@ -9,6 +9,9 @@ public class Main {
         int start = 1;
         while (start<=n){
             a+=n;
+            start++;
+            System.out.println(a);
         }
-        System.out.print(a);
+        
+}
 }
