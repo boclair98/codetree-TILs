@@ -6,7 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int total = 0 ;
         for(int i = n; i<=100; i++){
-            total+=n;
+            total+=i;
         }
         System.out.print(total);
     }
