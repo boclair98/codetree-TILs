@@ -11,10 +11,10 @@ public class Main {
             if (i%2 == 0){
                 classroom++;
             }
-            if(i%3==0){
+            else if(i%3==0){
                 bok++;
             }
-            if(i%12==0){
+            else if(i%12==0){
                 bath++;
             }
         }
