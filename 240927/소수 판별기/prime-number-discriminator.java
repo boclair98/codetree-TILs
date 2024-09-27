@@ -12,10 +12,10 @@ public class Main {
                 state = true;
             }
         }
-        if(state = true){
-            System.out.print('P');
-        }else{
+        if(state == true){
             System.out.print('C');
+        }else{
+            System.out.print('P');
         }
     }
 }
