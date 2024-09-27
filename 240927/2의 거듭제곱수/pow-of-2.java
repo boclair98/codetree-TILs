@@ -7,10 +7,10 @@ public class Main {
         int start = 2;
         int cnt = 1;
         while (true){
-            if(start == cnt){
+            if(start ==n){
                 break;
             }
-            start*=cnt;
+            start*=2;
             cnt++;
         }
         System.out.print(cnt);
