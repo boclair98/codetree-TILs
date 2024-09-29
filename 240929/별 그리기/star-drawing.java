@@ -17,10 +17,10 @@ public class Main {
         }
 
         for(int i =n-1; i>=1; i--){
-            for(int s =1; s<=n; s++){
+            for(int s =0; s<n-i; s++){
                 System.out.print(" ");
             }
-            for(int k =1; k<=(2*n)-(2*i)-3; k++){
+            for(int k =0; k<(2*i)-1; k++){
                 System.out.print("*");
             }
             System.out.println();
