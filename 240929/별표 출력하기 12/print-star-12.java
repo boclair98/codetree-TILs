@@ -8,7 +8,7 @@ public class Main {
 
             if(i==1){
                 for(int j = 0 ; j< n; j++){
-                    System.out.println("* ");
+                    System.out.print("* ");
                 }
             }else{
                 for(int k = 1 ; k<=n; k++){
@@ -20,6 +20,7 @@ public class Main {
                 }
 
             }
+            System.out.println();
 
 
 
