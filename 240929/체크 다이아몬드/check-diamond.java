@@ -15,11 +15,11 @@ public class Main {
             System.out.println();
         }
 
-        for(int k = 1; k<=n-1; k++){
-            for(int s = 0; s<k; s++){
-                System.out.print("  ");
+        for(int k = n-2; k>=0; k--){
+            for(int s = 0; s<n-k-1; s++){
+                System.out.print(" ");
             }
-            for(int j = 0; j<=(2*k)-1; j++){
+            for(int j = 0; j<k+1; j++){
                 System.out.print("* ");
             }
             System.out.println();
