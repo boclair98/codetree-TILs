@@ -8,7 +8,12 @@ public class Main {
         for(int i =1; i<=n; i++){
             for(int j = 0; j<i; j++){
                 System.out.print((char)cnt);
+                if((char)cnt =='Z'){
+                    cnt = 65;
+                }else{
                 cnt++;
+                }
+                
             }
             System.out.println();
         }
