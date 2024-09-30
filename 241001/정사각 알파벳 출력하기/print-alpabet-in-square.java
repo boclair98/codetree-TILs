@@ -7,7 +7,7 @@ public class Main {
         int cnt = 65;
 
         for(int i = 1;i<=n; i++){
-            for(int j = 0; j<i; j++){
+            for(int j = 0; j<n; j++){
                 System.out.print((char)cnt);
                 cnt++;
             }
