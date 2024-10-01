@@ -16,6 +16,6 @@ public class Main {
             }
         }
         double avg = (double) total / cnt;
-        System.out.print(total+" " +avg);
+        System.out.printf("%d %.1f",total,avg);
     }
 }
