@@ -12,7 +12,11 @@ public class Main {
             }
             for(int k =i; k<n; k++){
                 System.out.print((char)cnt+" ");
+                if((char)cnt == 'Z'){
+                    cnt = 65;
+                }else{
                 cnt++;
+                }
             }
             System.out.println();
         }
