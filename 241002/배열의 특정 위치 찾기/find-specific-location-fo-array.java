@@ -8,12 +8,12 @@ public class Main {
         int cnt = 0;
         int thr = 0;
 
-        for(int i = 0 ; i<10; i++){
-            arr[i] = sc.nextInt();
-            if(arr[i]%2==0){
-                total+=arr[i];
-            }else if(arr[i]%3==0){
-                thr+=arr[i];
+        for(int i = 1 ; i<=10; i++){
+            arr[i-1] = sc.nextInt();
+            if(i%2==0){
+                total+=arr[i-1];
+            }else if(arr[i-1]%3==0){
+                thr+=arr[i-1];
                 cnt++;
             }
         }
