@@ -7,12 +7,10 @@ public class Main {
         int b = sc.nextInt();
         int[] arr = new int[10];
 
-        while (true){
+        while (a>1){
             arr[a%b]+=1;
             a = a / b;
-            if (a<1){
-                break;
-            }
+            
         }
         int total = 0 ;
         for(int i = 0 ;i<b; i++){
