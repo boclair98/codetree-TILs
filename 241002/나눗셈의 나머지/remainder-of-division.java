@@ -8,11 +8,12 @@ public class Main {
         int[] arr = new int[10];
 
         while (true){
-            arr[a%b]+=1;
-            a = a / b;
             if (a<1){
                 break;
             }
+            arr[a%b]+=1;
+            a = a / b;
+            
         }
         int total = 0 ;
         for(int i = 0 ;i<b; i++){
