@@ -16,7 +16,7 @@ public class Main {
         }
         int total = 0 ;
         for(int i = 0 ;i<b; i++){
-            total+=Math.pow(arr[i],2);
+            total+=(arr[i]*arr[i]);
         }
         System.out.print(total);
     }
