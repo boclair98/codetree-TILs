@@ -25,7 +25,7 @@ public class Main {
             } else if(s==2){
                 int b = sc.nextInt();
                 int idx = -1;
-                for(int k = 0; k<n; k++){
+                for(int k = 0; k<b; k++){
                     if(arr[k]==b){
                         idx = k+1;
                         break;
