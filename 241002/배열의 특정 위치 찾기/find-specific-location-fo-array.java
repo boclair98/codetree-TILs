@@ -18,7 +18,7 @@ public class Main {
             }
         }
         double avg = (double) thr / cnt;
-        System.out.printf("%d %.1lf",total,avg);
+        System.out.printf("%d %.1f",total,avg);
 
     }
 }
