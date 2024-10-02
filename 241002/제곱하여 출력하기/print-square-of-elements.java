@@ -3,10 +3,10 @@ public class Main {
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
-        int s = sc.nextInt();
-        for(int i = 0 ;i<s; i++){
-            int n = sc.nextInt();
-            System.out.print(n*n+" ");
+        int n = sc.nextInt();
+        for(int i = 0 ; i<n; i++){
+            int s = sc.nextInt();
+            System.out.print(s*s+" ");
         }
     }
 }
