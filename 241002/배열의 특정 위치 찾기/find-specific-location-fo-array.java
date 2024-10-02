@@ -12,7 +12,8 @@ public class Main {
             arr[i-1] = sc.nextInt();
             if(i%2==0){
                 total+=arr[i-1];
-            }else if(arr[i-1]%3==0){
+            }
+            if(i%3==0){
                 thr+=arr[i-1];
                 cnt++;
             }
