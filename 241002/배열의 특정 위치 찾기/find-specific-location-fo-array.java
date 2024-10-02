@@ -12,13 +12,13 @@ public class Main {
             arr[i-1] = sc.nextInt();
             if(i%2==0){
                 total+=arr[i-1];
-            }else if(i%3==0){
+            }else if(arr[i-1]%3==0){
                 thr+=arr[i-1];
                 cnt++;
             }
         }
         double avg = (double) thr / cnt;
-        System.out.printf("%d %.1f",total,avg);
+        System.out.printf("%d %.1lf",total,avg);
 
     }
 }
