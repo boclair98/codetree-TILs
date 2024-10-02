@@ -10,7 +10,7 @@ public class Main {
         while (true){
             arr[a%b]+=1;
             a = a / b;
-            if (a==0){
+            if (a<1){
                 break;
             }
         }
