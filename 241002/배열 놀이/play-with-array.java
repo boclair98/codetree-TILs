@@ -22,6 +22,7 @@ public class Main {
                 for(int z =b-1; z<c; z++){
                     System.out.print(arr[z]+" ");
                 }
+                System.out.println();
             } else if(s==2){
                 int b = sc.nextInt();
                 int idx = -1;
