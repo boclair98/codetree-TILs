@@ -22,6 +22,10 @@ public class Main {
         for(int i = 0 ; i<n1; i++){
             boolean check = true;    
             for(int j = 0; j<n2; j++){
+                if(i+j>=n1){
+                    check = false;
+                    break;
+                }
                 if(arr[i+j]!=arr2[j]){
                     check = false;
                     break;
