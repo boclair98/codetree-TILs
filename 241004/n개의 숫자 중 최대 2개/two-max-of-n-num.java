@@ -17,7 +17,7 @@ public class Main {
             }
         }
         for(int i = 0; i<n; i++){
-            if(arr[i]>value2 && value1>arr[i]){
+            if(arr[i]>value2 && value1>=arr[i]){
                 value2 = arr[i];
             }
         }
