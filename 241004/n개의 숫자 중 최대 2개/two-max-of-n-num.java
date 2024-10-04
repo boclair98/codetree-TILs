@@ -9,7 +9,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         int value1 = 0 ;
-        int value2 = 0 ;
+        int value2 = -Integer.MAX_VALUE ;
         int idx = -1 ;
         for(int i = 0; i<n; i++){
             if(arr[i]>value1){
