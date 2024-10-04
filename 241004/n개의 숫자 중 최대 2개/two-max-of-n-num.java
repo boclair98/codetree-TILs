@@ -10,14 +10,15 @@ public class Main {
         }
         int value1 = 0 ;
         int value2 = 0 ;
-
+        int idx = -1 ;
         for(int i = 0; i<n; i++){
             if(arr[i]>value1){
                 value1 = arr[i];
+                idx = i ;
             }
         }
         for(int i = 0; i<n; i++){
-            if(arr[i]>value2 && value1>=arr[i]){
+            if(arr[i]>value2 && idx!=i){
                 value2 = arr[i];
             }
         }
