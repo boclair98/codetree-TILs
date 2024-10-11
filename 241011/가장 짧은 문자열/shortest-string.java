@@ -6,12 +6,13 @@ public class Main {
         String f = sc.next();
         String w = sc.next();
         String t = sc.next();
-        int max_val = sf ;
-        int min_val = sf;
+        
 
         int sf = f.length();
         int sw = w.length();
         int st = t.length();
+        int max_val = sf;
+        int min_val = sf;
         if(sf<sw){
             max_val = sw;
         }
