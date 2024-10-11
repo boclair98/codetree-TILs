@@ -13,17 +13,18 @@ public class Main {
         int st = t.length();
         int max_val = sf;
         int min_val = sf;
-        if(sf<sw){
+
+        if(max_val<sw){
             max_val = sw;
         }
-        if(sw<st){
+        if(max_val<st){
             max_val = st;
         }
 
-        if(sw>min_val){
+        if(sw<min_val){
             min_val = sw;
         }
-        if(st>min_val){
+        if(st<min_val){
             min_val = st;
         }
         System.out.print(max_val-min_val);
