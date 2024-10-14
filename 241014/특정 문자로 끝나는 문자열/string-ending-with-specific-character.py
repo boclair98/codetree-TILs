@@ -4,7 +4,7 @@ for _ in range(10):
 
 s = input()
 cnt = 0 
-for i in range(10):
+for i in word:
     if i[-1] == s:
         print(i)
         cnt+=1
