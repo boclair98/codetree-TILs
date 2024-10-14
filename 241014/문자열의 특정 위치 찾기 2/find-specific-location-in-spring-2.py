@@ -7,3 +7,4 @@ for i in f:
     if i[2] == alpha or i[3]== alpha:
         total+=1 
         print(i)
+print(total)
