@@ -2,6 +2,6 @@ a = input()
 b = input()
 
 if a+b == b+a:
-    print(true)
+    print("true")
 else:
-    print(false)
+    print("false")
