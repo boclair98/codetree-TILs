@@ -5,10 +5,13 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
         String b = sc.next();
-        if(a+b == b+a){
+        String aa = a+b;
+        String bb = b+a;
+        if(aa.equals(bb)){
             System.out.print("true");
         }else{
             System.out.print("false");
+            
         }
     }
 }
