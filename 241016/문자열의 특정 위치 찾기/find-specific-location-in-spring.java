@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         char word = sc.next().charAt(0);
-        if (s.indexOf(word)>0){
+        if (s.indexOf(word)>=0){
             System.out.println(s.indexOf(word));
         }else{
             System.out.println("No");
