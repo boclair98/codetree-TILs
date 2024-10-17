@@ -17,3 +17,4 @@ for _ in range(n):
                 print(c,end='')
             else:
                 print(i,end='')
+        print()
