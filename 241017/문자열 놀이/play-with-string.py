@@ -12,9 +12,7 @@ for _ in range(n):
         s[c-1] = temp 
         print("".join(map(str,s)))
     elif a == '2':
-        for i in s:
-            if i == b:
-                print(c,end='')
-            else:
-                print(i,end='')
-        print()
+        for i in range(len(s)):
+            if s[i] ==b:
+                s[i] = c
+        print("".join(map(str,s)))
