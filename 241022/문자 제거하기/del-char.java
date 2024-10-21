@@ -6,7 +6,7 @@ public class Main {
         String s = sc.next();
         while(true){
             int idx = sc.nextInt();
-            if (idx > s.length()){
+            if (idx >= s.length()){
                 s = s.substring(0,s.length()-1);
                 System.out.println(s);
             }else {
