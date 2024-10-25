@@ -14,11 +14,11 @@ public class Main {
                 s = s.substring(s.length()-1,s.length()) + s.substring(0,s.length()-1);
 
             } else if(n == 3){
-                String s1 = "";
-                for (int i = s.length()-1; i>=0; i--){
-                    s1+= s.charAt(i); 
-                }
-                s = s1;
+                StringBuffer sb = new StringBuffer(s);
+                s = sb.reverse().toString();
+                
+
+                
             }
             System.out.println(s);
             state++;
