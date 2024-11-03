@@ -7,6 +7,6 @@ public class Main {
         String s = sc.next();
         String str = f + s;
         String str2 = s + f;
-        System.out.print(Integer.ParseInt(str)+Integer.ParseInt(str2));
+        System.out.print(Integer.parseInt(str)+Integer.parseInt(str2));
     }
 }
