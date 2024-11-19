@@ -2,13 +2,14 @@ n,m = map(int,input().split())
 
 
 def gcm(n,m):
-    num = max(n,m)
-    cnt = 1
-    while True:
-        if num % n == 0 and num % m == 0:
-            print(num)
+    count = 0 
+
+    for i in range(min(n,m),-1,-1):
+        if n % i == 0 and m % i == 0:
+            count = i
             break
-        cnt+=1
-        num*=cnt
+    
+    total =  (n // count) * (m//count) * count 
+    print(total)
 
 gcm(n,m)
