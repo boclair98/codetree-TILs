@@ -2,9 +2,13 @@ import java.util.Scanner;
 public class Main {
 
     public static boolean year(int num){
-        if (num % 4 == 0){
+        if(num % 4 !=0){
+            return false;
+        }
+        if (num %100!=0){
             return true;
-        } else if( num % 100 !=0 ){
+        }
+        if(num % 400 == 0){
             return true;
         }
         return false;
