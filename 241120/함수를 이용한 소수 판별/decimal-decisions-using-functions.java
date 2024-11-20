@@ -4,7 +4,7 @@ public class Main {
     public static boolean issosu(int num){
         boolean iss = true;
         if (num == 1){
-            return true;
+            return false;
         }
 
         for(int i =2; i<num; i++){
