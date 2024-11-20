@@ -4,7 +4,7 @@ public class Main {
     public static boolean year(int num){
         if (num % 4 == 0){
             return true;
-        } else if( num % 100 ==0 && num %400 == 0){
+        } else if( num % 100 !=0 ){
             return true;
         }
         return false;
