@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static boolean check(String s, char[] arr){
         for (int i = s.length(); i>0; i--){
-            arr[s.length()-i] = s.charAt(s.length()-i);
+            arr[s.length()-i] = s.charAt(i-1);
         }
         boolean isarr = false;
 
