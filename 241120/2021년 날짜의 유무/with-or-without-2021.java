@@ -9,19 +9,9 @@ public class Main {
         return 31;
     }
 
-    public static boolean month(int n){
-        if (n == 2){
-            if (1>=day(n) && day(n)<=28){
-                return true;
-            }
-        }else if( n == 4 || n == 6 || n == 9 || n==11 ){
-            if (1>=day(n) && day(n)<=30){
-                return true;
-            }
-        } else if(n == 1 || n == 3 || n== 5 || n==7 || n ==8 || n ==10 || n==12){
-            if (1>=day(n) && day(n)<=31){
-                return true;
-            }
+    public static boolean month(int m,int d){
+        if(m<=12 && d<=day(m)){
+            return true;
         }
         return false;
     }
@@ -32,7 +22,7 @@ public class Main {
         int m = sc.nextInt();
         int d = sc.nextInt();
 
-        if (month(m)){
+        if (month(m,d)){
             System.out.println("Yes");
         }else{
             System.out.println("No");
