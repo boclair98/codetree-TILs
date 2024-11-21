@@ -10,7 +10,7 @@ public class Main {
         System.out.println();
     }
     public static void recur(int cnt){
-        if(cnt == n){
+        if(cnt == k){
             print();
             return;
         }
