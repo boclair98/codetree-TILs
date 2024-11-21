@@ -14,7 +14,7 @@ public class Main {
             print();
             return;
         }
-        for(int i =1; i<=k; i++){
+        for(int i =1; i<=n; i++){
             al.add(i);
             recur(cnt+1);
             al.remove(al.size()-1);
