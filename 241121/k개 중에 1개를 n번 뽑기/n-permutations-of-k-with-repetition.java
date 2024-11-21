@@ -1,8 +1,8 @@
 import java.util.*;
 public class Main {
-    private static int n;
-    private static int k;
-    private static ArrayList<Integer> al = new ArrayList<>();
+    public static int n;
+    public static int k;
+    public static ArrayList<Integer> al = new ArrayList<>();
     public static void print(){
         for(int i =0; i<al.size(); i++){
             System.out.print(al.get(i)+" ");
