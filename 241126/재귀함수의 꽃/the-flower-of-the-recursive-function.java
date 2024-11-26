@@ -4,9 +4,9 @@ public class Main {
         if(number == 0){
             return;
         }
-        System.out.println(number+" ");
+        System.out.print(number+" ");
         numberPrint(number-1);
-        System.out.println(number+" ");
+        System.out.print(number+" ");
     }
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
