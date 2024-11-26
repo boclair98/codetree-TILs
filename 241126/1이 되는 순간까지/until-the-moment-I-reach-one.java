@@ -6,12 +6,12 @@ public class Main {
         int n = sc.nextInt();
         System.out.print(sum(n));
     }
-    public void int sum(int number){
+    public static int sum(int number){
         if(number ==1 ){
             return 0;
         }
 
-        if ((number%2 == 0)){
+        if (number%2 == 0){
             return sum(number / 2) + 1;
         }else{
             return sum(number/ 3) +1;
