@@ -29,8 +29,26 @@ public class Main {
                     d1--;
                     idx--;
                 }
+            }else{
+                while (true){
+                    if(d1 == d2){
+                        break;
+                    }
+                
+                    if(d1<day[m1]){
+                        m1++;
+                        d1 = 1;
+                    }
+                    if(idx>6){
+                        idx = 0; 
+                    }
+                    d1++;
+                    idx++;
+                }
+
             }
             System.out.println(days[idx]);
+            
         }
         
     }
