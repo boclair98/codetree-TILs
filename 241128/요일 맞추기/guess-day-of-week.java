@@ -31,7 +31,7 @@ public class Main {
             System.out.println(days[idx]);
         }else{
             int total = second - first;
-            System.out.print(days[total%7]);
+            System.out.print(days[total%6]);
         }
         
     }
