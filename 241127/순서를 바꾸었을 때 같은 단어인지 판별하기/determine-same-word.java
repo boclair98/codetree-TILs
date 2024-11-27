@@ -10,8 +10,10 @@ public class Main {
         
         char[] arr2 = str2.toCharArray();
         Arrays.sort(arr2);
+        String word1 = new String(arr);
+        String word2 = new String(arr2);
 
-        if(str1.equals(str2)){
+        if(word2.equals(word1)){
             System.out.print("Yes");
         }else{
             System.out.print("No");
