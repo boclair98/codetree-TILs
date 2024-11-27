@@ -11,9 +11,10 @@ public class Main {
         System.out.print(arr[0]+" ");
         for(int i = 2; i<n; i+=2){
             int[] total = new int[i+1];
-            for(int s = 0; s<i; s++){
+            for(int s = 0; s<=i; s++){
                 total[s] = arr[s];
             }
+            Arrays.sort(total);
             System.out.print(total[i/2]+" ");
         }
     }
