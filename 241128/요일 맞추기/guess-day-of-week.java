@@ -29,9 +29,11 @@ public class Main {
                 }
             }
             System.out.println(days[idx]);
-        }else{
+        }else if (second>first){
             int total = second - first;
             System.out.print(days[total%6]);
+        }else{
+            System.out.print(days[1]);
         }
         
     }
