@@ -5,7 +5,21 @@ public class Main {
     private static int m1,d1,m2,d2,idx;
 
     public static int calucion(int a, int b){
-        return day[a] + b; 
+        int x = 1;
+        int y = 1;
+        int cnt = 0;
+        while (true){
+            if(a == x && b == y){
+                break;
+            }
+            cnt++;
+            y++;
+            if(day[x]<y){
+                x++;
+                y = 1;
+            }
+        }
+        return cnt;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
