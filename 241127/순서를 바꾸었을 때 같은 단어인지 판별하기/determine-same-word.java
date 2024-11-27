@@ -9,7 +9,7 @@ public class Main {
         Arrays.sort(arr);
         
         char[] arr2 = str2.toCharArray();
-        Arrays.sort(str2);
+        Arrays.sort(arr2);
 
         if(str1.equals(str2)){
             System.out.print("Yes");
