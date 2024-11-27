@@ -52,7 +52,7 @@ public class Main {
                 idx++;
                 total--;
             }
-            System.out.print(days[idx%6]);
+            System.out.print(days[idx%7]);
         }else{
             System.out.print(days[1]);
         }
