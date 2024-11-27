@@ -30,10 +30,10 @@ public class Main {
             }
             System.out.println(days[idx]);
         }else if (second>first){
-            int total = second - first;
+            int total = second - first + idx;
             System.out.print(days[total%6]);
         }else{
-            System.out.print(days[1]);
+            System.out.print(days[6]);
         }
         
     }
