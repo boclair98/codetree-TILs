@@ -45,7 +45,14 @@ public class Main {
             System.out.println(days[idx]);
         }else if (second>first){
             int total = second - first ;
-            System.out.print(days[total%6]);
+            while (true){
+                if(total == 0){
+                    break;
+                }
+                idx++;
+                total--;
+            }
+            System.out.print(days[idx%6]);
         }else{
             System.out.print(days[1]);
         }
