@@ -11,7 +11,7 @@ public class Main {
         int total = 0 ;
 
         for(int i = 0; i<c.length(); i++ ){
-            total = 8 * total + (c.charAt(i) -'0');
+            total = a * total + (c.charAt(i) -'0');
         }
         
         while(true){
