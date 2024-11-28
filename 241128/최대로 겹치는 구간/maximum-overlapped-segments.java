@@ -19,7 +19,7 @@ public class Main {
             }
         }
         int max_val = 0;
-        for(int i = 1; i<201; i++){
+        for(int i = 0; i<201; i++){
             if(arr[i]> max_val){
                 max_val = arr[i];
             }
