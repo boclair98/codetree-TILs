@@ -21,7 +21,7 @@ public class Main {
             }
         }
         int count = 0;
-        for(int i =1; i<201; i++){
+        for(int i =0; i<201; i++){
             if(arr[i]>=2){
                 count++;
             }
