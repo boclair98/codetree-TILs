@@ -27,7 +27,7 @@ public class Main {
                 m1 ++;
                 d1 = 1;
             }
-            if(days[idx].equals("Sat")){
+            if(days[idx] == day){
                 cnt++;
             }
             
