@@ -8,15 +8,22 @@ public class Main {
         for(int i = 0; i<n; i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
+            if( a< 0 ){
+                a+=100;
+            }
+            if(b<0){
+                b+=100;
+            }
             for(int s = a; s<=b; s++){
                 arr[s] = arr[s] + 1;
             }
         }
         int max_val = 0;
-        for(int i = 1; i<101; i++){
+        for(int i = 1; i<201; i++){
             if(arr[i]> max_val){
                 max_val = arr[i];
             }
         }
+        System.out.println(max_val);
     }
 }
