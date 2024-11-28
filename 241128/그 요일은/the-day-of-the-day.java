@@ -18,16 +18,19 @@ public class Main {
             if(m1 == m2 && d1 == d2){
                 break;
             }
-            
+            d1++;
+            idx++;
+            if(idx > 6){
+                idx = 0;
+            }
             if(d1 > arr[m1]){
                 m1++;
                 d1 = 1;
             }
-            if(days[idx%7] == "Sat"){
+            if(days[idx] == "Sat"){
                 cnt++;
             }
-            d1++;
-            idx++;
+            
         }
         System.out.println(cnt);
     }
