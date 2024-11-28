@@ -24,10 +24,10 @@ public class Main {
                 idx = 0;
             }
             if(d1 > arr[m1]){
-                m1++;
+                m1 ++;
                 d1 = 1;
             }
-            if(days[idx] == "Sat"){
+            if(days[idx].equals("Sat")){
                 cnt++;
             }
             
