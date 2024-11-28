@@ -14,7 +14,7 @@ public class Main {
                 }
                 now = now + a;
             }else{
-                for(int s = now; s > now-a; s--){
+                for(int s = now-1; s >= now-a; s--){
                     arr[s] = arr[s] + 1;
                 }
                 now = now - a;
