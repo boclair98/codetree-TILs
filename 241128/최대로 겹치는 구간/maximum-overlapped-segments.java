@@ -9,10 +9,10 @@ public class Main {
             int a = sc.nextInt();
             int b = sc.nextInt();
             if( a< 0 ){
-                a+=100;
+                a=-a;
             }
             if(b<0){
-                b+=100;
+                b=  -b;
             }
             for(int s = a; s<=b; s++){
                 arr[s] = arr[s] + 1;
