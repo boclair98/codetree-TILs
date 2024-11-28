@@ -6,15 +6,19 @@ public class Main {
         int n = sc.nextInt();
         int idx = 0;
         int[] arr = new int[100];
-        while (true){
-            if( n < 1){
-                break;
+        if (n == 0){
+            System.out.print(0);
+        }else{
+            while (true){
+                if( n < 1){
+                    break;
+                }
+                arr[idx++] = n % 2;
+                n = n / 2;
             }
-            arr[idx++] = n % 2;
-            n = n / 2;
-        }
-        for(int i = idx-1 ; i>=0; i--){
-            System.out.print(arr[i]);
-        }
+            for(int i = idx-1 ; i>=0; i--){
+                System.out.print(arr[i]);
+            }
     }
+}
 }
