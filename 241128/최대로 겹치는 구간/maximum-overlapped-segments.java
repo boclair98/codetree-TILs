@@ -8,12 +8,8 @@ public class Main {
         for(int i = 0; i<n; i++){
             int a = sc.nextInt();
             int b = sc.nextInt();
-            if( a< 0 ){
-                a=-a;
-            }
-            if(b<0){
-                b=  -b;
-            }
+            a+=100;
+            b+=100;
             for(int s = a; s<=b; s++){
                 arr[s] = arr[s] + 1;
             }
