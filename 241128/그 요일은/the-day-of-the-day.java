@@ -19,8 +19,6 @@ public class Main {
                 break;
             }
             
-            d1++;
-            idx++;
             if(d1 > arr[m1]){
                 m1++;
                 d1 = 1;
@@ -28,6 +26,8 @@ public class Main {
             if(days[idx%7] == "Sat"){
                 cnt++;
             }
+            d1++;
+            idx++;
         }
         System.out.println(cnt);
     }
