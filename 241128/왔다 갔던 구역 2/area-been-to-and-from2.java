@@ -9,12 +9,12 @@ public class Main {
             int a = sc.nextInt();
             char word = sc.next().charAt(0);
             if(word == 'R'){
-                for(int s =now; s<=now+a; s++){
+                for(int s =now; s<now+a; s++){
                     arr[s] = arr[s] + 1;
                 }
                 now = now + a;
             }else{
-                for(int s = now; s >= now-a; s--){
+                for(int s = now; s > now-a; s--){
                     arr[s] = arr[s] + 1;
                 }
                 now = now - a;
