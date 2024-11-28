@@ -10,7 +10,7 @@ public class Main {
             int b = sc.nextInt();
             a+=100;
             b+=100;
-            for(int s = a; s<=b; s++){
+            for(int s = a; s<b; s++){
                 arr[s] = arr[s] + 1;
             }
         }
