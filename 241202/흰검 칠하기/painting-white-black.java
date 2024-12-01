@@ -9,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        now = 100;
+        now = 1000;
         for(int s = 0; s<n; s++){
             int number = sc.nextInt();
             char word = sc.next().charAt(0);
