@@ -1,15 +1,15 @@
 import java.util.*;
 public class Main {
-    private static String[] color = new String[200001];
-    private static int[] blackcolor = new int[200001];
-    private static int[] yellowcolor = new int[200001];
-    private static int[] first = new int[200001];
+    private static String[] color = new String[10000];
+    private static int[] blackcolor = new int[10000];
+    private static int[] yellowcolor = new int[10000];
+    private static int[] first = new int[10000];
     private static int white,black,gray,now;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        now = 10000;
+        now = 100;
         for(int s = 0; s<n; s++){
             int number = sc.nextInt();
             char word = sc.next().charAt(0);
