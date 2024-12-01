@@ -21,16 +21,16 @@ public class Main {
                     
                     
                 }
-                now = now + number;
+                now = now + number-1;
             }else{
-                for(int i = now-1; i>=now-number; i--){
+                for(int i = now; i>now-number; i--){
                     color[i] = color[i] + 1;
                     if (colors[i] != "white"){
                         first[i] = first[i]+1;
                         colors[i] = "white";
                     }
                 }
-                now = now - number;
+                now = now - number+1;
             }
         }
 
@@ -45,7 +45,7 @@ public class Main {
         }
         System.out.println(white+" "+black+" "+gray);
         // for(int i = 995; i<1010; i++){
-        //    System.out.print(color[i]+" ");
+        //    System.out.print(first[i]+" ");
         // } 
     }
 }
