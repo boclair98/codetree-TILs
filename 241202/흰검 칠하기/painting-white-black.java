@@ -29,7 +29,7 @@ public class Main {
             }
         }
 
-        for(int i = 0; i<2001; i++){
+        for(int i = 0; i<20001; i++){
             if(blackcolor[i]>=2 && yellowcolor[i]>=2){
                 gray++;
             }else if(color[i]=="black"){
