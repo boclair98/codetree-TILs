@@ -1,15 +1,15 @@
 import java.util.*;
 public class Main {
-    private static String[] color = new String[10000];
-    private static int[] blackcolor = new int[10000];
-    private static int[] yellowcolor = new int[10000];
-    private static int[] first = new int[10000];
+    private static String[] color = new String[100001];
+    private static int[] blackcolor = new int[100001];
+    private static int[] yellowcolor = new int[100001];
+    private static int[] first = new int[100001];
     private static int white,black,gray,now;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        now = 1000;
+        now = 10000;
         for(int s = 0; s<n; s++){
             int number = sc.nextInt();
             char word = sc.next().charAt(0);
@@ -29,7 +29,7 @@ public class Main {
             }
         }
 
-        for(int i = 0; i<10000; i++){
+        for(int i = 0; i<100001; i++){
             if(blackcolor[i]>=2 && yellowcolor[i]>=2){
                 gray++;
             }else if(color[i]=="black"){
