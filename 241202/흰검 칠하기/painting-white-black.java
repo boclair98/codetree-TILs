@@ -2,6 +2,7 @@ import java.util.*;
 public class Main {
     private static int[] color = new int[2001];
     private static String[] colors = new String[2001];
+    private static int[] first = new int[2001];
     private static int white,black,gray,now;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -13,20 +14,28 @@ public class Main {
             if(word =='R'){
                 for(int i = now; i<now+number; i++ ){
                     color[i] = color[i] + 1;
-                    colors[i] = "black";
+                    if (colors[i] != "black"){
+                        first[i] = first[i]+1;
+                        colors[i] = "black";
+                    }
+                    
+                    
                 }
-                now = now + number;
+                now = now + number-1;
             }else{
-                for(int i = now-1; i>=now-number; i--){
+                for(int i = now; i>now-number; i--){
                     color[i] = color[i] + 1;
-                    colors[i] = "white";
+                    if (colors[i] != "white"){
+                        first[i] = first[i]+1;
+                        colors[i] = "white";
+                    }
                 }
-                now = now - number;
+                now = now - number+1;
             }
         }
 
         for(int i = 0; i<2001; i++){
-            if(color[i]>=4){
+            if(first[i]>=4){
                 gray++;
             }else if(colors[i]=="white"){
                 white++;
@@ -36,7 +45,7 @@ public class Main {
         }
         System.out.println(white+" "+black+" "+gray);
         // for(int i = 995; i<1010; i++){
-        //     System.out.print(color[i]+" ");
-        // }
+        //    System.out.print(color[i]+" ");
+        // } 
     }
 }
