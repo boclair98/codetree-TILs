@@ -35,6 +35,7 @@ public class Main {
             }
             
         }
+        
 
         for(int i = 0; i<2001; i++){
             max_y = 0;
