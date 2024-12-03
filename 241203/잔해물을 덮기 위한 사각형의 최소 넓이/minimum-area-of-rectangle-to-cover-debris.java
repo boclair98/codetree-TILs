@@ -29,11 +29,11 @@ public class Main {
                 if(paper[i][j] == 1){
                     max_x++;
                 }
-            }
             if(max_x>maxx_val){
                 maxx_val = max_x;
             }
-            
+            }
+        
         }
         
 
