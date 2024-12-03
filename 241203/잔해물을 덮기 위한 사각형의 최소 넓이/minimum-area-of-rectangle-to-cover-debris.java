@@ -15,10 +15,10 @@ public class Main {
             int y2 = sc.nextInt();
             for(int i = x1+now; i<x2+now; i++){
                 for(int j = y1 + now; j<y2+now; j++){
-                    if(s%2 == 0){
-                        paper[i][j] = 1;
+                    if(s == 0){
+                        paper[i][j]++;
                     }else{
-                        paper[i][j] = 2;
+                        paper[i][j]--;
                     }
                 }
             }
@@ -29,14 +29,13 @@ public class Main {
                 if(paper[i][j] == 1){
                     max_x++;
                 }
+            }
             if(max_x>maxx_val){
                 maxx_val = max_x;
-            }
             }
         
         }
         
-
         for(int i = 0; i<2001; i++){
             max_y = 0;
             for(int j = 0; j < 2001; j++){
@@ -49,6 +48,8 @@ public class Main {
             }
             
         }
+        // System.out.println(maxx_val);
+        // System.out.println(maxy_val);
         System.out.println(maxx_val*maxy_val);
         
 
