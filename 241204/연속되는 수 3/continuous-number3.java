@@ -6,7 +6,7 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
-        int reset = 1;
+        int reset = 0;
 
         for(int i = 0; i<n; i++){
             num[i] = sc.nextInt();
@@ -18,18 +18,9 @@ public class Main {
             } else if(num[i-1]>=0 && num[i]>=0){
                 reset++;
             }
-            else{
-                if(reset>max_val){
-                    max_val = reset;
-                    reset = 1;
-                }
-            }
+            max_val = Math.max(reset,max_val);
         }
-        if(max_val == 1){
-            System.out.println(reset);
-        }else{
-            System.out.println(max_val);
-        }
+        System.out.println(max_val);
         
 
     }
