@@ -17,6 +17,8 @@ public class Main {
                 reset++;
             } else if(num[i-1]>=0 && num[i]>=0){
                 reset++;
+            }else{
+                reset = 1;
             }
             max_val = Math.max(reset,max_val);
         }
