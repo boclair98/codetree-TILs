@@ -1,12 +1,11 @@
 import java.util.*;
 public class Main {
     public static int[][] paper = new int[2001][2001];
-    public static int size,total,max_x,max_y,maxx_val,maxy_val;
+    public static int size,total,max_x,max_y,min_x,min_y;
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
-        maxx_val = -1;
-        maxy_val = -1;
+        
         int now = 1000;
         for(int s = 0; s<2; s++){
             int x1 = sc.nextInt();
@@ -23,38 +22,27 @@ public class Main {
                 }
             }
         }
+        min_x = 1000001;
+        min_y = 1000001;
+        boolean square = false;
         for(int i = 0; i<2001; i++){
-            max_x = 0;
-            for(int j = 0; j < 2001; j++){
+            for(int j = 0; j<2001; j++){
                 if(paper[i][j] == 1){
-                    max_x++;
-                }else if(paper[i][j]==2){
-                    break;
+                    square = true;
+                    min_x = Math.min(min_x,i);
+                    max_x = Math.max(max_x,i);
+                    min_y = Math.min(min_y,j);
+                    max_y = Math.max(max_y,j);
                 }
             }
-            if(max_x>maxx_val){
-                maxx_val = max_x;
-            }
-        
+        }
+        if(!square){
+            System.out.println(0);
+        }else{
+            System.out.println((max_x-min_x+1)*(max_y-min_y+1));
         }
         
-        for(int i = 0; i<2001; i++){
-            max_y = 0;
-            for(int j = 0; j < 2001; j++){
-                if(paper[j][i] == 1){
-                    max_y++;
-                }else if(paper[j][i]==2){
-                    break;
-                }
-            }
-            if(max_y>maxy_val){
-                maxy_val = max_y;
-            }
-            
-        }
-        // System.out.println(maxx_val);
-        // System.out.println(maxy_val);
-        System.out.println(maxx_val*maxy_val);
+        
         
 
     }
