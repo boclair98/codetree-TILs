@@ -22,11 +22,15 @@ public class Main {
                 if(reset>max_val){
                     max_val = reset;
                     reset = 1;
-                    
                 }
             }
         }
-        System.out.println(max_val);
+        if(max_val == 1){
+            System.out.println(reset);
+        }else{
+            System.out.println(max_val);
+        }
+        
 
     }
 }
