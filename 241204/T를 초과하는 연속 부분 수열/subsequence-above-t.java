@@ -17,7 +17,7 @@ public class Main {
                 if(arr[i]>arr[i-1]){
                     reset++;
                 }else{
-                    reset = 1;
+                    reset ++;
                 }
             }else{
                 reset = 1;
