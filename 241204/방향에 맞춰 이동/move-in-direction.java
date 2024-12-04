@@ -27,7 +27,7 @@ public class Main {
             }else if(word =='W'){
                 for(int j = 0; j<cnt; j++){
                     x = x + dx[2];
-                    y = y + dy[3];    
+                    y = y + dy[2];    
                 }
             }else{
                 for(int j = 0; j<cnt; j++){
