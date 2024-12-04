@@ -28,6 +28,8 @@ public class Main {
             for(int j = 0; j < 2001; j++){
                 if(paper[i][j] == 1){
                     max_x++;
+                }else if(paper[i][j]==2){
+                    break;
                 }
             }
             if(max_x>maxx_val){
@@ -41,6 +43,8 @@ public class Main {
             for(int j = 0; j < 2001; j++){
                 if(paper[j][i] == 1){
                     max_y++;
+                }else if(paper[j][i]==2){
+                    break;
                 }
             }
             if(max_y>maxy_val){
