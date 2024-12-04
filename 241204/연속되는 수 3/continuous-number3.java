@@ -11,7 +11,7 @@ public class Main {
         for(int i = 0; i<n; i++){
             num[i] = sc.nextInt();
         }
-        int max_val = 1 ;
+        int max_val = 0 ;
         for(int i =1; i<n; i++){
             if(num[i-1]<0 && num[i]<0){
                 reset++;
