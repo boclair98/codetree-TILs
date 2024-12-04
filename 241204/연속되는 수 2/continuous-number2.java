@@ -10,7 +10,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         total = 1;
-        int max_val = 0 ;
+        int max_val = 1 ;
         for(int i =1; i<n; i++){
             if(arr[i]==arr[i-1]){
                 total++;
