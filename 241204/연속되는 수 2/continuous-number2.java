@@ -10,16 +10,15 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         total = 1;
-        int max_val = 1 ;
+        int max_val = 0 ;
         for(int i =1; i<n; i++){
             if(arr[i]==arr[i-1]){
                 total++;
             }else{
-                if(total>max_val){
-                    max_val = total;
-                    total = 1;
-        
-                }
+                total = 1;
+            }
+            if(total>max_val){
+                max_val = total;
             }
         }
         System.out.println(max_val);
