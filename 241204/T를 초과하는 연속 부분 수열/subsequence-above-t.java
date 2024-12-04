@@ -11,7 +11,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         reset = 1;
-        int max_val = 1; 
+        int max_val = 0; 
         for(int i = 1; i<n; i++){
             if(arr[i]>t && arr[i-1]>t){
                 if(arr[i]>arr[i-1]){
