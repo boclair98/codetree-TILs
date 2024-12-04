@@ -1,7 +1,7 @@
 import java.util.*;
 public class Main {
     public static int n,t,reset;
-    public static int[] num = new int[2001];
+    public static int[] arr = new int[2001];
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc = new Scanner(System.in);
