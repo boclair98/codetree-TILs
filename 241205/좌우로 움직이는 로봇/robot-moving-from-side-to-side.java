@@ -37,11 +37,15 @@ public class Main {
                 idx_b++;
             }
         }
-        for(int i = 2; i<Math.max(idx_b,idx_a); i++){
+        for(int i = 1; i<Math.max(idx_b,idx_a)-1; i++){
             // System.out.println(a[i]+" "+b[i]);
-            if(a[i] != b[i]){
-                if(a[i-1] ==b[i-1]){
+            if(a[i] == b[i]){
+                if(a[i-1] != b[i-1]){
                     total++;
+                }else{
+                    if(a[i+1]!=b[i+1]){
+                        total++;
+                    }
                 }
             }
         }
