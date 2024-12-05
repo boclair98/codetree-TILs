@@ -10,51 +10,42 @@ public class Main {
         a = new int[2000001];
         b = new int[2000001];
         int now = 1000000;
-        for(int s = 0 ; s<n; s++){
-            int number = sc.nextInt();
-            char word = sc.next().charAt(0);
-            if(word =='R'){
-                for(int i = now ; i<now+number; i++){
-                    a[i] = cnt ;
-                    cnt++;
+        int idx_a = 1;
+        int idx_b = 1;
+        for(int s = 0; s<n; s++){
+            int count = sc.nextInt();
+            char alpha = sc.next().charAt(0);
+            while(count-- > 0){
+                if(alpha == 'R'){
+                    a[idx_a] = a[idx_a-1] + 1 ;
+                }else{
+                    a[idx_a] = a[idx_a-1] - 1 ;
                 }
-                now = now + number;
-            }else{
-                for(int i = now; i<now+number; i++){
-                    a[i] = cnt;
-                    cnt--;
-                }
-                now = now + number;
+                idx_a++;
             }
         }
 
-        int now2 = 1000000;
-        for(int s = 0 ; s<m; s++){
-            int number = sc.nextInt();
-            char word = sc.next().charAt(0);
-            if(word =='R'){
-                for(int i = now2 ; i<now2+number; i++){
-                    b[i] = cnt2 ;
-                    cnt2++;
+        for(int s = 0; s<m; s++){
+            int count = sc.nextInt();
+            char alpha = sc.next().charAt(0);
+            while(count-- > 0){
+                if(alpha == 'R'){
+                    b[idx_b] = b[idx_b-1] + 1 ;
+                }else{
+                    b[idx_b] = b[idx_b-1] - 1 ;
                 }
-                now2 = now2 + number;
-            }else{
-                for(int i = now2; i<now2+number; i++){
-                    b[i] = cnt2;
-                    cnt2--;
-                }
-                now2 = now2 + number;
+                idx_b++;
             }
         }
-
-        for(int i = 0; i<2000001; i++){
-            if(a[i]!=0 && b[i]!=0){
-                if(a[i] == b[i]){
+        for(int i = 1; i<Math.max(idx_b,idx_a); i++){
+            // System.out.println(a[i]+" "+b[i]);
+            if(a[i] == b[i]){
+                if(a[i-1]!=b[i-1]){
                     total++;
                 }
             }
         }
-        System.out.println(total);
+        System.out.println(total + 1);
 
     }
 }
