@@ -1,11 +1,11 @@
 import java.util.*;
 public class Main {
     public static int n,m,cnt,cnt2;
-    public static int[] a = new int[2001];
-    public static int[] b = new int[2001];
+    public static int[] a = new int[200001];
+    public static int[] b = new int[200001];
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int now = 1000;
+        int now = 100000;
         n = sc.nextInt();
         m = sc.nextInt();
         for(int s = 0; s<n; s++){
@@ -25,7 +25,7 @@ public class Main {
                 now = now + num  ;
             }
         }
-        int now2 = 1000;
+        int now2 = 100000;
         for(int s = 0; s<m; s++){
             char word = sc.next().charAt(0);
             int num = sc.nextInt();
@@ -44,10 +44,10 @@ public class Main {
             }
         }
         boolean check = false;
-        for(int i = 0; i<2001; i++){
+        for(int i = 0; i<200001; i++){
             if(a[i]!=0 && b[i] != 0){
                 if(a[i] == b[i]){
-                    System.out.println(i-1000);
+                    System.out.println(i-100000);
                     check = true;
                     break;
                 }
