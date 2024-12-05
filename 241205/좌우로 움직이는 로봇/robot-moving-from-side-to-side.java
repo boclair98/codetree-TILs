@@ -39,13 +39,13 @@ public class Main {
         }
         for(int i = 1; i<Math.max(idx_b,idx_a); i++){
             // System.out.println(a[i]+" "+b[i]);
-            if(a[i] == b[i]){
-                if(a[i-1]!=b[i-1]){
+            if(a[i] != b[i]){
+                if(a[i-1] ==b[i-1]){
                     total++;
                 }
             }
         }
-        System.out.println(total + 1);
+        System.out.println(total );
 
     }
 }
