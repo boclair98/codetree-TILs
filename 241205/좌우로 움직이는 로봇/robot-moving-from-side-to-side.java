@@ -37,7 +37,7 @@ public class Main {
                 idx_b++;
             }
         }
-        for(int i = 1; i<Math.max(idx_b,idx_a); i++){
+        for(int i = 0; i<Math.max(idx_b,idx_a); i++){
             // System.out.println(a[i]+" "+b[i]);
             if(a[i] != b[i]){
                 if(a[i-1] ==b[i-1]){
