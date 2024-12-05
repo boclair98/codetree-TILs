@@ -45,7 +45,7 @@ public class Main {
         }
         boolean check = false;
         for(int i = 0; i<2001; i++){
-            if(a[i]>0 && b[i] > 0){
+            if(a[i]!=0 && b[i] != 0){
                 if(a[i] == b[i]){
                     System.out.println(i-1000);
                     check = true;
@@ -56,6 +56,10 @@ public class Main {
         if(!check){
             System.out.println(-1);
         }
+
+        // for(int i = 990; i< 1015; i++){
+        //     System.out.println(a[i]+" "+b[i]);
+        // }
         
 
     }
