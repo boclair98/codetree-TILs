@@ -16,13 +16,13 @@ public class Main {
                     a[i] =cnt;
                     cnt++;
                 }
-                now = now + num ;
+                now = now + num  ;
             }else{
                 for(int i = now; i<now+num; i++){
                     a[i] = cnt;
                     cnt--;
                 }
-                now = now + num ;
+                now = now + num  ;
             }
         }
         int now2 = 1000;
