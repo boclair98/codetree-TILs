@@ -18,6 +18,7 @@ public class Main {
                 check = true;
                 break;
             }
+            m--;
         }
         if(!check){
         System.out.print(-1);
