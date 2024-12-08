@@ -21,11 +21,11 @@ while num :
             if virus[p] > 0:
                 people[x] = 1
                 people[c] = 1
-                k-=1
+                
         else:
             people[x] = 1
             people[c] = 1
-            k-=1
+            
     if x == p:
         virus[p]-=1
     if c == p:
