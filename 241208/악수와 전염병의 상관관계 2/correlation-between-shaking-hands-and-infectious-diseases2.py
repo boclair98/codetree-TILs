@@ -2,8 +2,7 @@ from collections import deque
 # n명의 개발자들이 있으며 t번에 걸쳐 t초에 x개발자가 y개발자와 악수
 n,k,p,t = map(int,input().split())
 people = [0 for _ in range(n+1)]
-virus = [0 for _ in range(n+1)]
-virus[p] = k
+virus = [k for _ in range(n+1)]
 people[p] = 1
 num = []
 for _ in range(t):
@@ -15,15 +14,15 @@ num = deque(num)
 while num : 
     z,x,c = num.popleft()
     if people[x] == 1 and people[c] == 1:
-        continue
+        virus[x]-=1
+        virus[c]-=1
     elif people[x] == 1 or people[c] == 1:
-        if x == p or c == p:
-            if virus[p] > 0:
-                people[x] = 1
-                people[c] = 1
-                virus[p]-=1   
-        
-            
+        if people[x] == 1 and virus[x] > 0:
+            people[c] = 1
+            virus[x]-=1
+        elif people[c] == 1 and virus[c] > 0:
+            people[x] = 1
+            virus[c]-=1
     
 
     
