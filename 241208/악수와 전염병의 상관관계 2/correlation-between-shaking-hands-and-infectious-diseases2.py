@@ -14,8 +14,9 @@ while k > 0 :
     if (people[x] == 1 or people[c] == 1):
         people[x] = 1
         people[c] = 1
-    k -=1
-
+        k -=1
+    elif people[x] == 1 and people[c] == 1:
+        k-=1
 for i in range(1,len(people)):
     print(people[i],end='')
 
