@@ -12,17 +12,20 @@ for _ in range(t):
 num.sort(key = lambda x:x[0])
 num = deque(num)
 
-while k > 0 : 
+while num : 
     z,x,c = num.popleft()
     if people[x] == 1 and people[c] == 1:
-        k-=1
+        continue
     elif people[x] == 1 or people[c] == 1:
         if x == p or c == p:
             if virus[p] > 0:
                 people[x] = 1
                 people[c] = 1
                 k-=1
-        
+        else:
+            people[x] = 1
+            people[c] = 1
+            k-=1
     if x == p:
         virus[p]-=1
     if c == p:
