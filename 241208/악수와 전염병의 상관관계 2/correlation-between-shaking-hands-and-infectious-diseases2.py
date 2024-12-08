@@ -21,11 +21,8 @@ while num :
             if virus[p] > 0:
                 people[x] = 1
                 people[c] = 1
-                virus[p]-=1
-                
-        else:
-            people[x] = 1
-            people[c] = 1
+                virus[p]-=1   
+        
             
     
 
