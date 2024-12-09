@@ -17,7 +17,7 @@ for _ in range(m):
 
 rank = []
 
-for i in range(1,1001):
+for i in range(1,1000001):
     if len(rank) == 0:
         if a[i] > b[i]:
             rank.append('a')
@@ -35,6 +35,8 @@ for i in range(1,1001):
         elif a[i] == b[i] and a[i]>0:
             if rank[-1] !=("a",'b'):
                 rank.append(('a','b'))
+        elif a[i] == 0 and b[i] == 0:
+            break
 # print(a[:10])
 # print(b[:10])
 print(len(rank))
