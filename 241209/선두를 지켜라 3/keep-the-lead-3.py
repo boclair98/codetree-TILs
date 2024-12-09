@@ -27,12 +27,14 @@ for i in range(1,1001):
             rank.append(('a','b'))
     elif len(rank) > 0:
         if (a[i] > b[i]):
-            if rank[-1] =='b' or rank[-1] ==("a","b"):
+            if rank[-1] !='a':
                 rank.append('a')
         elif a[i] < b[i]:
-            if rank[-1] =='a' or rank[-1] ==("a","b"):
+            if rank[-1] !='b':
                 rank.append('b')
-        else:
-            if(rank[-1] == 'a' or rank[-1]) =='b':
+        elif a[i] == b[i] and a[i]>0:
+            if rank[-1] !=("a",'b'):
                 rank.append(('a','b'))
+# print(a[:10])
+# print(b[:10])
 print(len(rank))
