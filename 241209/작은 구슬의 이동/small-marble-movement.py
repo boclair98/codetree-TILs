@@ -46,34 +46,34 @@ elif alpha == 'U':
     while t > 0:
         if (shape == 'up'):
             x-=1
+            t-=1
             if x == 1:
                 t-=2
                 shape ="down"
-            else:
-                t-=1
+            
         else:
             x+=1
+            t-=1
             if x == n:
                 t-=2
                 shape = "up"
-            else:
-                t-=1
-    print(x+1,y)
+            
+    print(x,y)
 elif alpha == 'D':
     shape = "down"
     while t > 0:
         if (shape == 'down'):
             x+=1
+            t-=1
             if x == n:
                 t-=2
                 shape ="up"
-            else:
-                t-=1
+            
         else:
             x-=1
+            t-=1
             if x == 1:
                 t-=2
                 shape = "down"
-            else:
-                t-=1
-    print(x+1,y)
+            
+    print(x,y)
