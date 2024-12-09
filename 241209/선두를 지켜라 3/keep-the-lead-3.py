@@ -6,14 +6,14 @@ idx2 = 0
 for _ in range(n):
     v,t = map(int,input().split())
     for i in range(idx+1,t+idx+1):
-        a[idx] = a[idx-1]+ v
+        a[i] = a[i-1]+ v
         idx+=1
 
 
 for _ in range(m):
     v,t = map(int,input().split())
     for i in range(idx2+1,t+idx2+1):
-        b[idx2] = b[idx2-1]+ v
+        b[i] = b[i-1]+ v
         idx2+=1
 
 rank = [] 
