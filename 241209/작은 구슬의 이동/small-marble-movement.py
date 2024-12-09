@@ -9,18 +9,18 @@ if alpha =='R':
     while t > 0:
         if shape == 'Right':
             y+=1
+            t-=1
             if y == n:
                 t -=1
                 shape ='Left'
-            else:
-                t-=1
+            
         else:
             y-=1
+            t-=1
             if y == 1:
                 t-=1
                 shape ="Right"
-            else:
-                t-=1 
+            
     print(x,y)
 elif alpha == "L":
     shape = "Left"
