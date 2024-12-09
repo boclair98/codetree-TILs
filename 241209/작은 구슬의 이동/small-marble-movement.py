@@ -10,7 +10,7 @@ if alpha =='R':
         if shape == 'Right':
             y+=1
             if y == n-1:
-                t -=2
+                t -=1
                 shape ='Left'
             else:
                 t-=1
