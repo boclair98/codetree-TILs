@@ -17,7 +17,7 @@ if alpha =='R':
         else:
             y-=1
             if y == 0:
-                t-=2
+                t-=1
                 shape ="Right"
             else:
                 t-=1 
