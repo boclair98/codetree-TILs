@@ -57,7 +57,7 @@ elif alpha == 'U':
                 shape = "up"
             else:
                 t-=1
-    print(x+1,y)
+    print(x+1,y+1)
 elif alpha == 'D':
     shape = "down"
     while t > 0:
@@ -75,4 +75,4 @@ elif alpha == 'D':
                 shape = "down"
             else:
                 t-=1
-    print(x+1,y)
+    print(x+1,y+1)
