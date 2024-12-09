@@ -1,7 +1,7 @@
 n,m = map(int,input().split())
-a = [0]*10001
+a = [0]*1000001
 idx = 1 
-b = [0]*10001
+b = [0]*1000001
 idx2 = 1
 for _ in range(n):
     v,t = map(int,input().split())
