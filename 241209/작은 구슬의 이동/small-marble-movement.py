@@ -48,14 +48,14 @@ elif alpha == 'U':
             x-=1
             t-=1
             if x == 1:
-                t-=2
+                t-=1
                 shape ="down"
             
         else:
             x+=1
             t-=1
             if x == n:
-                t-=2
+                t-=1
                 shape = "up"
             
     print(x,y)
@@ -66,14 +66,14 @@ elif alpha == 'D':
             x+=1
             t-=1
             if x == n:
-                t-=2
+                t-=1
                 shape ="up"
             
         else:
             x-=1
             t-=1
             if x == 1:
-                t-=2
+                t-=1
                 shape = "down"
             
     print(x,y)
