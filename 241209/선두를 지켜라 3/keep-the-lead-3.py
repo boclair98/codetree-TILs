@@ -5,14 +5,14 @@ b = [0]*10001
 idx2 = 1
 for _ in range(n):
     v,t = map(int,input().split())
-    for i in range(idx,idx+t):
-        a[i] = a[i-1] + v
+    for i in range(t):
+        a[idx] = a[idx-1] + v
         idx+=1
 
 for _ in range(m):
     v,t = map(int,input().split())
-    for i in range(idx2,idx2+t):
-        b[i] = b[i-1] + v
+    for i in range(t):
+        b[idx2] = b[idx2-1] + v
         idx2+=1
 
 rank = []
