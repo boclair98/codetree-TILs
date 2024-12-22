@@ -12,11 +12,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] str = br.readLine().split("");
-        num = new int[100][100];
-        num[50][50] = 0;
+        num = new int[1000][1000];
+        num[500][500] = 0;
         int cnt = 1;
-        x = 50;
-        y = 50;
+        x = 500;
+        y = 500;
         boolean start = false;
         for(int i = 0; i<str.length; i++){
 //            System.out.println(x+" "+y);
@@ -36,7 +36,7 @@ public class Main {
             if (c == 'F'){
                 int nx = x + dx[idx];
                 int ny = y  +dy[idx];
-                if (nx == 50 && ny == 50){
+                if (nx == 500 && ny == 500){
                     start = true;
                 }
                 if(range(nx,ny)){
@@ -48,7 +48,7 @@ public class Main {
 
 
         }
-        int first = num[50][50];
+        int first = num[500][500];
         if(first == 0){
             System.out.println(-1);
         }else{
@@ -58,6 +58,6 @@ public class Main {
     }
 
     private static boolean range(int nx, int ny){
-        return 0<=nx && nx<100 && 0<=ny && ny<100;
+        return 0<=nx && nx<1000 && 0<=ny && ny<1000;
     }
 }
