@@ -19,30 +19,18 @@ public class Main {
         y = 50;
         boolean start = false;
         for(int i = 0; i<str.length; i++){
+//            System.out.println(x+" "+y);
+//            System.out.println(num[x][y]);
             if (start){
                 break;
             }
             char c = str[i].charAt(0);
             if(c == 'R'){
                 idx = (idx+1) % 4;
-                int nx = x + dx[idx];
-                int ny = y + dy[idx];
-                if (nx == 50 && ny == 50){
-                    start = true;
-                }
-                if(range(nx,ny)){
-                    num[nx][ny] = cnt ++;
-                }
+                cnt++;
             } else if(c == 'L'){
-                idx = Math.abs((idx-1)) % 4;
-                int nx = x + dx[idx];
-                int ny = y + dy[idx];
-                if (nx == 50 && ny == 50){
-                    start = true;
-                }
-                if(range(nx,ny)){
-                    num[nx][ny] = cnt ++;
-                }
+                idx = Math.abs((idx+3)) % 4;
+                cnt++;
             }
 
             if (c == 'F'){
@@ -57,6 +45,7 @@ public class Main {
                     y = ny;
                 }
             }
+
 
         }
         int first = num[50][50];
