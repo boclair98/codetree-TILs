@@ -25,7 +25,7 @@ public class Main {
         for(int i = 0; i<n; i++){
             int money = s - (arr[i][0]/2 - arr[i][1]);
             count = 0;
-            if(money < 0){
+            if(money <= 0){
                 continue;
             }
             count++;
