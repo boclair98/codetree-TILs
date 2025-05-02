@@ -21,13 +21,13 @@ public class Main {
         }
         Arrays.sort(arr,(a,b) -> Integer.compare(a[2],b[2]));
 
-
+        int count = 0;
         for(int i = 0; i<n; i++){
             int money = s - (arr[i][0]/2 - arr[i][1]);
             if(money < 0){
                 continue;
             }
-            int count = 1;
+            count++;
             for(int j = 0; j<n; j++){
                 if(i == j){
                     continue;
