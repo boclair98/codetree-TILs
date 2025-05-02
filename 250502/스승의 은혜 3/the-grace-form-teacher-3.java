@@ -27,24 +27,26 @@ public class Main {
             for(int j = i; j<n; j++){
                 if(count > 0){
                     count--;
-                    cost-=(arr1[i]/2);
-                    cost-=arr2[i];
+                    cost-=(arr1[j]/2);
+                    cost-=arr2[j];
                     if(cost < 0){
                         break;
                     }else{
                         cnt++;
                     }
                 }else{
-                    cost-=arr1[i];
-                    cost-=arr2[i];
+                    cost-=arr1[j];
+                    cost-=arr2[j];
                     if(cost<0){
                         break;
                     }else{
                         cnt++;
                     }
                 }
+//                System.out.println(cost);
             }
             total = Math.max(total,cnt);
+
         }
         System.out.println(total);
     }
