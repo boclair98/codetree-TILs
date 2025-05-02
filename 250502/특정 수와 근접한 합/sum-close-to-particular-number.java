@@ -14,33 +14,23 @@ public class Main {
         s = Integer.parseInt(st.nextToken());
         total = Integer.MAX_VALUE;
         arr = new int[n];
-        visited = new boolean[n];
+        int num = 0;
         st = new StringTokenizer(br.readLine());
         for(int i = 0; i<n; i++){
             arr[i] = Integer.parseInt(st.nextToken());
+            num+=arr[i];
         }
-        DFS(0,0);
+        for(int i = 0; i<n; i++){
+            for(int j = i+1; j<n; j++){
+                for(int k = j+1; k<n; k++){
+                    if(Math.abs(s-(num-arr[j]-arr[k])) < total){
+                        total = Math.abs(s-(num-arr[j]-arr[k]));
+                    }
+                }
+            }
+        }
         System.out.println(total);
     }
-
-    private static void DFS(int idx,int start) {
-        if(idx == n-2){
-            int sum = 0;
-            for (Integer ss : list) {
-                sum+=ss;
-            }
-            total = Math.min(total,sum-s);
-            return;
-        }
-        for(int i = start; i<n; i++){
-            
-                
-                list.add(arr[i]);
-                DFS(idx+1,i+1);
-                
-                list.remove(list.size()-1);
-            }
-        }
     }
 
 
