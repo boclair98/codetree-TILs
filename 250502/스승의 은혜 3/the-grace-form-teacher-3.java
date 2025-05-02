@@ -23,9 +23,10 @@ public class Main {
 
         int count = 0;
         for(int i = 0; i<n; i++){
-            int money = s - (arr[i][0]/2 - arr[i][1]);
+            int money = s - ((arr[i][0])/2) - (arr[i][1]);
+//            System.out.println(money);
             count = 0;
-            if(money <= 0){
+            if(money < 0){
                 continue;
             }
             count++;
@@ -37,8 +38,8 @@ public class Main {
                     money = money - arr[j][0] - arr[j][1];
                     count++;
                 }
-
             }
+//            System.out.println(count);
             total = Math.max(total,count);
         }
         System.out.println(total);
