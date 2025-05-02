@@ -33,15 +33,15 @@ public class Main {
             return;
         }
         for(int i = start; i<n; i++){
-            if(!visited[i]){
-                visited[i] = true;
+            
+                
                 list.add(arr[i]);
                 DFS(idx+1,i+1);
-                visited[i] = false;
+                
                 list.remove(list.size()-1);
             }
         }
     }
 
 
-}
+
