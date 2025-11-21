@@ -7,7 +7,7 @@ import java.util.*;
 public class Main {
     static int n;
     static Deque<int[]> dq = new ArrayDeque<>();
-    static boolean[] visited = new boolean[1000001];
+    static boolean[] visited = new boolean[10000010];
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         n = Integer.parseInt(br.readLine());
