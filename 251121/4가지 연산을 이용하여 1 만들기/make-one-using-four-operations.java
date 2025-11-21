@@ -20,7 +20,7 @@ public class Main {
                 System.out.println(count);
                 return;
             }
-            if(!visited[num-1]){
+            if(!visited[num-1] && num -1 >=1){
                 visited[num-1] = true;
                 dq.add(new int[]{num-1,count+1});
             }
@@ -28,13 +28,13 @@ public class Main {
                 visited[num+1] = true;
                 dq.add(new int[]{num+1,count+1});
             }
-            if(num%2 == 0){
+            if(num%2 == 0 && num/2>=1){
                 if(!visited[num/2]){
                     visited[num/2] = true;
                     dq.add(new int[]{num/2,count+1});
                 }
             }
-            if(num%3==0){
+            if(num%3 == 0 && num/3 >=1){
                 if(!visited[num/3]){
                     visited[num/3] = true;
                     dq.add(new int[]{num/3,count+1});
