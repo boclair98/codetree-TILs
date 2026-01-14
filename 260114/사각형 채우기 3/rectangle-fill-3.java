@@ -11,6 +11,7 @@ public class Main {
     static int[] dp = new int[1010];
     static int recur(int size){
         if(dp[size] != -1) return dp[size];
+        if(size < 0 ) return 0;
         if(size == 0) return 1;
         if(size == 1) return 2;
         if(size == 2) return 7;
