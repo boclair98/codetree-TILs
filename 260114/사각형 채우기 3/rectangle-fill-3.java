@@ -26,6 +26,4 @@ public class Main {
         Arrays.fill(dp,-1);
         System.out.println(recur(n));
     }
-}712public class Main {    static int recur(int size){
-
-$0
+}
