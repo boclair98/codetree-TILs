@@ -14,7 +14,7 @@ public class Main {
         if(size == 0) return 1;
         if(size == 1) return 2;
         if(size == 2) return 7;
-        dp[size] = recur(size-1) * 3 + recur(size-2) - recur(size-3);
+        dp[size] = (recur(size-1) * 3 + recur(size-2) - recur(size-3)) % 1000000007;
         return dp[size] % 1000000007;
     }
     public static void main(String[] args) throws IOException {
