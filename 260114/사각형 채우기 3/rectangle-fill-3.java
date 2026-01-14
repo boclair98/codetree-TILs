@@ -18,7 +18,7 @@ public class Main {
             return 7;
         }
         dp[size] = recur(size - 1) * 3 + 1;
-        return dp[size];
+        return dp[size] % 1000000007;
     }
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
