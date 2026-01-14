@@ -17,7 +17,7 @@ public class Main {
         if(size == 2){
             return 7;
         }
-        dp[size] = recur(size - 1) * 3 + 1;
+        dp[size] = (recur(size - 1) * 3 + 1) % 1000000007;
         return dp[size] % 1000000007;
     }
     public static void main(String[] args) throws IOException {
@@ -26,4 +26,6 @@ public class Main {
         Arrays.fill(dp,-1);
         System.out.println(recur(n));
     }
-}
+}712public class Main {    static int recur(int size){
+
+$0
