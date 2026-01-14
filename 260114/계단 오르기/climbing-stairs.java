@@ -16,7 +16,7 @@ public class Main {
         int ans = 0;
         ans += recur(step + 2);
         ans += recur(step + 3);
-        return dp[step] = ans;
+        return dp[step] = ans % 10007;
     }
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
